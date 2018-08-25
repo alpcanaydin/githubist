@@ -1,0 +1,38 @@
+// FONT FACES
+// -------------------------
+
+@mixin font-face(
+  $font-name,
+  $font-folder,
+  $font-file-name,
+  $font-weight: normal,
+  $font-style: normal
+) {
+  @font-face {
+    font-family: $font-name;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    src: url('fonts/#{$font-folder}/#{$font-file-name}.eot');
+    src: url('fonts/#{$font-folder}/#{$font-file-name}.eot?#iefix') format('embedded-opentype'),
+      url('fonts/#{$font-folder}/#{$font-file-name}.woff') format('woff'),
+      url('fonts/#{$font-folder}/#{$font-file-name}.ttf') format('truetype'),
+      url('fonts/#{$font-folder}/#{$font-file-name}.svg##{$font-file-name}') format('svg');
+  }
+}
+
+@mixin font-face-modern(
+  $font-name,
+  $font-folder,
+  $font-file-name,
+  $font-weight: normal,
+  $font-style: normal
+) {
+  @font-face {
+    font-family: $font-name;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    src: url('fonts/#{$font-folder}/#{$font-file-name}.woff2') format('woff2'),
+      url('fonts/#{$font-folder}/#{$font-file-name}.woff') format('woff'),
+      url('fonts/#{$font-folder}/#{$font-file-name}.ttf') format('truetype'); // Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }
+}

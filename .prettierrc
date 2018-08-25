@@ -1,0 +1,11 @@
+{
+  "printWidth": 100,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "overrides": [
+    {
+      "files": ".babelrc",
+      "options": { "parser": "json" }
+    }
+  ]
+}

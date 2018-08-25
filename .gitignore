@@ -1,0 +1,14 @@
+node_modules
+ncp-debug.log
+npm-debug.log
+.DS_STORE
+.DS_Store
+node_modules
+build
+coverage
+build
+dist
+.env.local
+.env
+yarn-error.log
+bundle-report.html

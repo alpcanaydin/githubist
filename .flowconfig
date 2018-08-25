@@ -1,0 +1,25 @@
+[ignore]
+<PROJECT_ROOT>/node_modules/react-universal-component/.*.flow
+<PROJECT_ROOT>/node_modules/webpack-flush-chunks/dist/.*.flow
+<PROJECT_ROOT>/node_modules/graphql/.*.js.flow
+
+[include]
+
+[libs]
+flow-typed
+libdefs.js
+
+[lints]
+
+[options]
+esproposal.class_static_fields=enable
+esproposal.class_instance_fields=enable
+
+suppress_comment=.*\\$FlowIgnoreNextLine
+
+module.name_mapper='.*\(.s?css\)' -> 'empty/object'
+module.name_mapper='.*\(.graphql\)' -> 'empty/object'
+module.name_mapper='.*\(.gql\)' -> 'empty/object'
+module.ignore_non_literal_requires=true
+
+[strict]

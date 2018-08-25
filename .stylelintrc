@@ -1,0 +1,68 @@
+{
+  "extends": ["stylelint-config-sass-guidelines", "stylelint-config-prettier"],
+  "plugins": [
+    "stylelint-declaration-strict-value",
+    "stylelint-declaration-block-no-ignored-properties",
+    "stylelint-order",
+    "stylelint-scss"
+  ],
+  "rules": {
+    "media-query-list-comma-space-after": "always-single-line",
+    "selector-class-pattern": null,
+    "scale-unlimited/declaration-strict-value": [
+      ["color", "z-index"], {
+        "ignoreKeywords": "inherit"
+      }
+    ],
+    "plugin/declaration-block-no-ignored-properties": true,
+    "max-nesting-depth": 2,
+    "order/properties-alphabetical-order": null,
+    "order/properties-order": [
+      [
+        "position",
+        "z-index",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "display",
+        "overflow",
+        "width",
+        "min-width",
+        "max-width",
+        "height",
+        "min-height",
+        "max-height",
+        "box-sizing",
+        "flex",
+        "flex-basis",
+        "flex-direction",
+        "flex-flow",
+        "flex-grow",
+        "flex-shrink",
+        "flex-wrap",
+        "align-content",
+        "align-items",
+        "align-self",
+        "justify-content",
+        "order",
+        "padding",
+        "padding-top",
+        "padding-right",
+        "padding-bottom",
+        "padding-left",
+        "border",
+        "border-top",
+        "border-right",
+        "border-bottom",
+        "border-left",
+        "margin",
+        "margin-top",
+        "margin-right",
+        "margin-bottom",
+        "margin-left"
+      ],
+      { "unspecified": "bottomAlphabetical" }
+    ]
+  }
+}

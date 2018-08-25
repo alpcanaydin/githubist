@@ -1,0 +1,16 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": "current",
+          "browsers": ["last 2 versions"]
+        }
+      }
+    ],
+    "stage-0",
+    "react"
+  ],
+  "plugins": ["universal-import", "react-hot-loader/babel"]
+}

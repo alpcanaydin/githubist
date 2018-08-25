@@ -1,0 +1,24 @@
+{
+  // Editor Rules
+  "editor.formatOnSave": true,
+  "editor.rulers": [120],
+  "files.associations": {
+    ".stylelintrc": "json"
+  },
+
+  // Prettier
+  "prettier.stylelintIntegration": true,
+  "prettier.eslintIntegration": true,
+
+  // ESLint
+  "javascript.validate.enable": false,
+  "eslint.enable": true,
+  "eslint.provideLintTask": true,
+
+  // Flow
+  "flow.useNPMPackagedFlow": true,
+
+  // Stylelint
+  "stylelint.enable": true,
+  "css.validate": false
+}
