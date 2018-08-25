@@ -39,6 +39,7 @@
     "react-hot-loader": "^4.3.5",
     "react-router-dom": "^4.3.1",
     "react-universal-component": "^3.0.0",
+    "waait": "^1.0.2",
     "webpack-flush-chunks": "^2.0.1"
   },
   "devDependencies": {
@@ -86,6 +87,7 @@
     "fs-extra": "^7.0.0",
     "husky": "^0.14.3",
     "jest": "^23.4.2",
+    "jest-transform-graphql": "^2.1.0",
     "lint-staged": "^7.2.0",
     "node-sass": "^4.9.2",
     "optimize-css-assets-webpack-plugin": "^5.0.0",
@@ -117,6 +119,7 @@
   },
   "jest": {
     "transform": {
+      ".(gql|graphql)": "jest-transform-graphql",
       ".(js|jsx)": "babel-jest"
     },
     "testRegex": "(\\.(test|spec))\\.(jsx|js)$",

@@ -1,0 +1,8 @@
+query {
+  turkey {
+    totalDevelopers
+    totalLanguages
+    totalLocations
+    totalRepositories
+  }
+}
