@@ -1,0 +1,32 @@
+@import '../src/theme/normalize';
+@import '../src/theme/theme';
+
+html {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@at-root {
+  // stylelint-disable at-rule-no-vendor-prefix, csstree/validator
+  @-ms-viewport {
+    width: device-width;
+  }
+}
+
+body {
+  color: $body-color;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  text-align: left;
+}
+
+[tabindex='-1']:focus {
+  outline: 0 !important;
+}

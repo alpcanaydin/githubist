@@ -2,6 +2,9 @@
 
 import { configure } from '@storybook/react';
 
+// Load app styles
+import './base.scss';
+
 /* $FlowIgnoreNextLine */
 const req = require.context('../src/components', true, /\.stories\.jsx$/);
 
