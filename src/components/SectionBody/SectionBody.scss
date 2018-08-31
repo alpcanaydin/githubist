@@ -1,0 +1,5 @@
+@import '../../theme/theme';
+
+.sectionBody {
+  padding: map-get($spacers, 2x-large) 0;
+}
