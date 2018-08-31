@@ -1,0 +1,21 @@
+@import '../../theme/theme';
+
+.sectionTitle {
+  text-align: center;
+}
+
+.subject {
+  color: $primary-color;
+  font-size: map-get($font-sizes, x-small);
+  font-weight: 600;
+  letter-spacing: px-to-rem(2px);
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  color: $black-color;
+  font-size: map-get($heading-sizes, h2);
+  font-weight: 600;
+  line-height: $heading-line-height;
+}

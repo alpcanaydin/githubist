@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className=""
+>
+  <small>
+    Subject
+  </small>
+  <h2>
+    Hello world
+  </h2>
+</div>
+`;
+
+exports[`renders correctly without subject 1`] = `
+<div
+  className=""
+>
+  <h2>
+    Hello world
+  </h2>
+</div>
+`;
