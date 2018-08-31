@@ -25,7 +25,7 @@ it('renders correctly secondary', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('passes custom classnames to image', () => {
+it('passes custom classnames', () => {
   const wrapper = shallow(
     <Section className="testClassName">
       <p>Hello world</p>

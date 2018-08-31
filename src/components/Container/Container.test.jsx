@@ -15,7 +15,7 @@ it('renders correctly', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('passes custom classnames to image', () => {
+it('passes custom classnames', () => {
   const wrapper = shallow(
     <Container className="testClassName">
       <p>Hello world</p>

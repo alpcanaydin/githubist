@@ -11,7 +11,7 @@ it('renders correctly', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('passes custom classnames to image', () => {
+it('passes custom classnames', () => {
   const wrapper = shallow(<Logo className="testClassName" />);
 
   expect(wrapper.find('img').hasClass('testClassName')).toBe(true);
