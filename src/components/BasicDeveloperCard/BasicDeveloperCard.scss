@@ -1,0 +1,40 @@
+@import '../../theme/theme';
+
+.basicDeveloperCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  margin-bottom: map-get($spacers, normal);
+}
+
+.nameAndUsername {
+  text-decoration: none;
+
+  &:hover {
+    color: $black-color;
+    text-decoration: underline;
+  }
+}
+
+.name {
+  color: $black-color;
+  font-weight: 600;
+}
+
+.username {
+  margin-left: map-get($spacers, 2x-small);
+  color: $body-color;
+}
+
+.info {
+  overflow: hidden;
+  width: 100%;
+  margin: map-get($spacers, 2x-small) 0 0 0;
+  font-size: map-get($font-sizes, small);
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

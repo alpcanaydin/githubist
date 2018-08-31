@@ -1,6 +1,7 @@
 // @flow
 
 export { default as Avatar } from './Avatar';
+export { default as BasicDeveloperCard } from './BasicDeveloperCard';
 export { default as Container } from './Container';
 export { default as Header } from './Header';
 export { default as Hero } from './Hero';

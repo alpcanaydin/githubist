@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<MemoryRouter
+  keyLength={0}
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <BasicDeveloperCard
+      info="@Atolye15"
+      name="Alpcan Aydın"
+      profilePicture="https://via.placeholder.com/150"
+      username="alpcanaydin"
+    >
+      <div>
+        <Link
+          replace={false}
+          to="/alpcanaydin"
+        >
+          <a
+            href="/alpcanaydin"
+            onClick={[Function]}
+          >
+            <Avatar
+              alt="Alpcan Aydın"
+              size="default"
+              url="https://via.placeholder.com/150"
+            >
+              <img
+                alt="Alpcan Aydın"
+                className=""
+                src="https://via.placeholder.com/150"
+              />
+            </Avatar>
+          </a>
+        </Link>
+        <Link
+          replace={false}
+          to="/alpcanaydin"
+        >
+          <a
+            href="/alpcanaydin"
+            onClick={[Function]}
+          >
+            <span>
+              Alpcan Aydın
+            </span>
+            <span>
+              alpcanaydin
+            </span>
+          </a>
+        </Link>
+        <p>
+          @Atolye15
+        </p>
+      </div>
+    </BasicDeveloperCard>
+  </Router>
+</MemoryRouter>
+`;
+
+exports[`renders correctly without info 1`] = `
+<MemoryRouter
+  keyLength={0}
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <BasicDeveloperCard
+      name="Alpcan Aydın"
+      profilePicture="https://via.placeholder.com/150"
+      username="alpcanaydin"
+    >
+      <div>
+        <Link
+          replace={false}
+          to="/alpcanaydin"
+        >
+          <a
+            href="/alpcanaydin"
+            onClick={[Function]}
+          >
+            <Avatar
+              alt="Alpcan Aydın"
+              size="default"
+              url="https://via.placeholder.com/150"
+            >
+              <img
+                alt="Alpcan Aydın"
+                className=""
+                src="https://via.placeholder.com/150"
+              />
+            </Avatar>
+          </a>
+        </Link>
+        <Link
+          replace={false}
+          to="/alpcanaydin"
+        >
+          <a
+            href="/alpcanaydin"
+            onClick={[Function]}
+          >
+            <span>
+              Alpcan Aydın
+            </span>
+            <span>
+              alpcanaydin
+            </span>
+          </a>
+        </Link>
+      </div>
+    </BasicDeveloperCard>
+  </Router>
+</MemoryRouter>
+`;
