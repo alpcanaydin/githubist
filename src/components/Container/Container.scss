@@ -1,0 +1,6 @@
+@import '../../theme/theme';
+
+.container {
+  @include make-grid-container();
+  @include make-grid-container-max-widths();
+}
