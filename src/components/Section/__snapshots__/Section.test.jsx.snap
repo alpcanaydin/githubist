@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<section
+  className=""
+>
+  <p>
+    Hello world
+  </p>
+</section>
+`;
+
+exports[`renders correctly secondary 1`] = `
+<section
+  className="undefined"
+>
+  <p>
+    Hello world
+  </p>
+</section>
+`;
