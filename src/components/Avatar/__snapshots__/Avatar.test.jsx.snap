@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<img
+  alt="Default image"
+  className=""
+  src="https://via.placeholder.com/150"
+/>
+`;
+
+exports[`renders correctly as small 1`] = `
+<img
+  alt="Default image"
+  className="undefined"
+  src="https://via.placeholder.com/150"
+/>
+`;
