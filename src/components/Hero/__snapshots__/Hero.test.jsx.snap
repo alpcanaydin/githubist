@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <Container
+    className=""
+  >
+    <div>
+      <div>
+        <h6>
+          2018
+        </h6>
+        <h1>
+          Github
+          <br />
+          Türkiye İstatistikleri
+        </h1>
+        <p>
+          Lorem ipsum dolar sit amet.
+        </p>
+      </div>
+      <img
+        alt="Github"
+        height={420}
+        src={
+          Object {
+            "process": [Function],
+          }
+        }
+        width={431}
+      />
+    </div>
+  </Container>
+</div>
+`;

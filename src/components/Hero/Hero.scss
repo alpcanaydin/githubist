@@ -1,0 +1,29 @@
+@import '../../theme/theme';
+
+.hero {
+  padding: $section-gap 0;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.badge {
+  margin: 0 0 map-get($spacers, 2x-small) 0;
+  color: $primary-color;
+  font-size: map-get($heading-sizes, h6);
+}
+
+.title {
+  margin: 0 0 map-get($spacers, x-small) 0;
+  color: $black-color;
+  font-size: map-get($heading-sizes, h1);
+  font-weight: 600;
+  line-height: $heading-line-height;
+}
+
+.image {
+  margin-left: map-get($spacers, 2x-large);
+}
