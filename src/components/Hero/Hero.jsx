@@ -23,7 +23,7 @@ const Hero = ({ description }: Props) => (
             <br />
             Türkiye İstatistikleri
           </h1>
-          <p>{description}</p>
+          <p className={styles.description}>{description}</p>
         </div>
 
         <img src={githubLogo} className={styles.image} alt="Github" width={431} height={420} />

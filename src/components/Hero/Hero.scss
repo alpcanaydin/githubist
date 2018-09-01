@@ -24,6 +24,10 @@
   line-height: $heading-line-height;
 }
 
+.description {
+  font-size: map-get($heading-sizes, h3);
+}
+
 .image {
   margin-left: map-get($spacers, 2x-large);
 }
