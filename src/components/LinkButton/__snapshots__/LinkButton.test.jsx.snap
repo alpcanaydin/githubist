@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly primary button 1`] = `
+<MemoryRouter
+  keyLength={0}
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <LinkButton
+      className=""
+      primary={true}
+      secondary={false}
+      small={false}
+      to="/"
+    >
+      <Link
+        className=""
+        replace={false}
+        to="/"
+      >
+        <a
+          className=""
+          href="/"
+          onClick={[Function]}
+        >
+          Button
+        </a>
+      </Link>
+    </LinkButton>
+  </Router>
+</MemoryRouter>
+`;
+
+exports[`renders correctly secondary button 1`] = `
+<MemoryRouter
+  keyLength={0}
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <LinkButton
+      className=""
+      primary={false}
+      secondary={true}
+      small={false}
+      to="/"
+    >
+      <Link
+        className=""
+        replace={false}
+        to="/"
+      >
+        <a
+          className=""
+          href="/"
+          onClick={[Function]}
+        >
+          Button
+        </a>
+      </Link>
+    </LinkButton>
+  </Router>
+</MemoryRouter>
+`;
+
+exports[`renders correctly small button 1`] = `
+<MemoryRouter
+  keyLength={0}
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <LinkButton
+      className=""
+      primary={false}
+      secondary={false}
+      small={true}
+      to="/"
+    >
+      <Link
+        className="undefined"
+        replace={false}
+        to="/"
+      >
+        <a
+          className="undefined"
+          href="/"
+          onClick={[Function]}
+        >
+          Button
+        </a>
+      </Link>
+    </LinkButton>
+  </Router>
+</MemoryRouter>
+`;
