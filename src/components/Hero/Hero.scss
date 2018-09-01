@@ -25,6 +25,7 @@
 }
 
 .description {
+  margin: map-get($spacers, normal) 0 0 0;
   font-size: map-get($heading-sizes, h3);
 }
 
