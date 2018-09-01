@@ -6,8 +6,8 @@ import { storiesOf } from '@storybook/react';
 import Section from './Section';
 
 storiesOf('Section', module)
-  .add('default', () => (
-    <Section>
+  .add('primary', () => (
+    <Section primary>
       <div>Section text</div>
     </Section>
   ))

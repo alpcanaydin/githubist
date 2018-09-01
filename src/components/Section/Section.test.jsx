@@ -5,9 +5,9 @@ import { shallow } from 'enzyme';
 
 import Section from './Section';
 
-it('renders correctly', () => {
+it('renders correctly primary', () => {
   const wrapper = shallow(
-    <Section>
+    <Section primary>
       <p>Hello world</p>
     </Section>,
   );
