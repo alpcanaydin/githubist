@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly primary button 1`] = `
+<button
+  className=""
+  disabled={false}
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`renders correctly secondary button 1`] = `
+<button
+  className=""
+  disabled={false}
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`renders correctly small button 1`] = `
+<button
+  className="undefined"
+  disabled={false}
+  type="button"
+>
+  Button
+</button>
+`;

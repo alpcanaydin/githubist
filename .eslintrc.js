@@ -62,6 +62,7 @@ module.exports = {
       },
     ],
     'react/jsx-one-expression-per-line': 'off',
+    'react/button-has-type': 'off',
     'graphql/template-strings': [
       'error',
       {
