@@ -11,7 +11,9 @@ const Header = () => (
   <header className={styles.header}>
     <Container>
       <div className={styles.inner}>
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
 
         <nav className={styles.menu}>
           <Link to="/developers" className={styles.menuItem}>
