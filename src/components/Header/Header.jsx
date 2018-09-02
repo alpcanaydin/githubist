@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 import { Container, Logo } from '..';
 
@@ -16,18 +16,18 @@ const Header = () => (
         </Link>
 
         <nav className={styles.menu}>
-          <Link to="/developers" className={styles.menuItem}>
+          <NavLink to="/developers" className={styles.menuItem} activeClassName={styles.isActive}>
             Geliştiriciler
-          </Link>
-          <Link to="/cities" className={styles.menuItem}>
+          </NavLink>
+          <NavLink to="/cities" className={styles.menuItem} activeClassName={styles.isActive}>
             Şehirler
-          </Link>
-          <Link to="/languages" className={styles.menuItem}>
+          </NavLink>
+          <NavLink to="/languages" className={styles.menuItem} activeClassName={styles.isActive}>
             Diller
-          </Link>
-          <Link to="/repositories" className={styles.menuItem}>
+          </NavLink>
+          <NavLink to="/repositories" className={styles.menuItem} activeClassName={styles.isActive}>
             Repolar
-          </Link>
+          </NavLink>
         </nav>
       </div>
     </Container>
