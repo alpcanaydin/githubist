@@ -6,7 +6,7 @@ import Helmet from 'react-helmet';
 import './App.scss';
 
 import Routes from './routes';
-import { Header } from './components';
+import { Header, Footer } from './components';
 
 const App = () => (
   <Fragment>
@@ -19,6 +19,8 @@ const App = () => (
     <div id="main">
       <Routes />
     </div>
+
+    <Footer />
   </Fragment>
 );
 
