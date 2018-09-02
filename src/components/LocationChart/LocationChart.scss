@@ -1,6 +1,6 @@
 @import '../../theme/theme';
 
-.barChart {
+.locationChart {
   display: grid;
   padding: map-get($spacers, 2x-large) 0;
   grid-row-gap: map-get($spacers, normal);
@@ -24,7 +24,7 @@
   position: relative;
   width: 100%;
   margin-left: map-get($spacers, normal);
-  background-color: #8dbfc3;
+  background-color: transparentize($secondary-color, 0.75);
   border-radius: px-to-rem(2px);
 }
 

@@ -2,9 +2,9 @@
 
 import React, { PureComponent, type Node } from 'react';
 
-import styles from './BarChart.scss';
+import styles from './LocationChart.scss';
 
-import BarChartItem from './Item';
+import LocationChartItem from './Item';
 
 type Item = {
   name: string,
@@ -21,7 +21,7 @@ type State = {
   maxScore: number,
 };
 
-class BarChart extends PureComponent<Props, State> {
+class LocationChart extends PureComponent<Props, State> {
   constructor(props: Props) {
     super(props);
 
@@ -44,19 +44,19 @@ class BarChart extends PureComponent<Props, State> {
     const { items, children } = this.props;
 
     return (
-      <div className={styles.barChart}>
+      <div className={styles.locationChart}>
         {items.map((item, index) => (
-          <BarChartItem
+          <LocationChartItem
             key={item.slug}
             rank={index + 1}
             percentage={this.calculatePercantage(item.score)}
           >
             {children(item)}
-          </BarChartItem>
+          </LocationChartItem>
         ))}
       </div>
     );
   }
 }
 
-export default BarChart;
+export default LocationChart;

@@ -1,9 +1,9 @@
 // @flow
 
 import React from 'react';
-import { shallow } from 'enzyme';
+import { storiesOf } from '@storybook/react';
 
-import BarChart from './BarChart';
+import LocationChart from './LocationChart';
 
 const items = [
   {
@@ -23,8 +23,6 @@ const items = [
   },
 ];
 
-it('renders correctly', () => {
-  const wrapper = shallow(<BarChart items={items}>{item => <div>{item.name}</div>}</BarChart>);
-
-  expect(wrapper).toMatchSnapshot();
-});
+storiesOf('LocationChart', module).add('default', () => (
+  <LocationChart items={items}>{item => <div>{item.name}</div>}</LocationChart>
+));

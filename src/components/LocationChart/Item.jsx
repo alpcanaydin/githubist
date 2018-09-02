@@ -2,7 +2,7 @@
 
 import React, { type Node } from 'react';
 
-import styles from './BarChart.scss';
+import styles from './LocationChart.scss';
 
 type Props = {
   rank: number,
