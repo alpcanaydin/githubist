@@ -1,0 +1,45 @@
+@import '../../theme/theme';
+
+.repoCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: map-get($spacers, large);
+  background-color: $white;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.05);
+}
+
+.name {
+  color: $black-color;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.description {
+  margin: 0;
+}
+
+.meta {
+  display: flex;
+  flex-direction: row;
+  margin: map-get($spacers, normal) 0 0 0;
+}
+
+.metaItem {
+  margin-right: map-get($spacers, normal);
+  font-size: map-get($font-sizes, small);
+  font-weight: 600;
+}
+
+.language {
+  color: $secondary-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
