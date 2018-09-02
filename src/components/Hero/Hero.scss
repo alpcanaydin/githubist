@@ -1,13 +1,10 @@
 @import '../../theme/theme';
 
 .hero {
-  padding: $section-gap * 2 0;
-}
-
-.inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: $section-gap * 2 0;
 }
 
 .badge {
