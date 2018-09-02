@@ -20,7 +20,7 @@ type Props = {
 const RepoCard = ({ slug, description, language, stars, forks }: Props) => (
   <div className={styles.repoCard}>
     <div>
-      <Link to={`/repo/${slug}`} className={styles.name}>
+      <Link to={`/repository/${slug}`} className={styles.name}>
         {slug}
       </Link>
       {description && <p className={styles.description}>{description}</p>}

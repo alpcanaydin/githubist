@@ -52,10 +52,10 @@ exports[`renders correctly 1`] = `
         <div>
           <Link
             replace={false}
-            to="/repo/alpcanaydin/github.ist"
+            to="/repository/alpcanaydin/github.ist"
           >
             <a
-              href="/repo/alpcanaydin/github.ist"
+              href="/repository/alpcanaydin/github.ist"
               onClick={[Function]}
             >
               alpcanaydin/github.ist
@@ -146,10 +146,10 @@ exports[`renders correctly without description 1`] = `
         <div>
           <Link
             replace={false}
-            to="/repo/alpcanaydin/github.ist"
+            to="/repository/alpcanaydin/github.ist"
           >
             <a
-              href="/repo/alpcanaydin/github.ist"
+              href="/repository/alpcanaydin/github.ist"
               onClick={[Function]}
             >
               alpcanaydin/github.ist
