@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <Item
+    key="item1"
+    percentage={100}
+    rank={1}
+  >
+    <div>
+      Item 1
+    </div>
+  </Item>
+  <Item
+    key="item2"
+    percentage={80}
+    rank={2}
+  >
+    <div>
+      Item 2
+    </div>
+  </Item>
+  <Item
+    key="item3"
+    percentage={10}
+    rank={3}
+  >
+    <div>
+      Item 3
+    </div>
+  </Item>
+</div>
+`;
