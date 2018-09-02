@@ -49,20 +49,22 @@ exports[`renders correctly 1`] = `
       stars={200}
     >
       <div>
-        <Link
-          replace={false}
-          to="/repo/alpcanaydin/github.ist"
-        >
-          <a
-            href="/repo/alpcanaydin/github.ist"
-            onClick={[Function]}
+        <div>
+          <Link
+            replace={false}
+            to="/repo/alpcanaydin/github.ist"
           >
-            alpcanaydin/github.ist
-          </a>
-        </Link>
-        <p>
-          Github Türkiye istatistikleri 2018
-        </p>
+            <a
+              href="/repo/alpcanaydin/github.ist"
+              onClick={[Function]}
+            >
+              alpcanaydin/github.ist
+            </a>
+          </Link>
+          <p>
+            Github Türkiye istatistikleri 2018
+          </p>
+        </div>
         <div>
           <Link
             className=""
@@ -141,17 +143,19 @@ exports[`renders correctly without description 1`] = `
       stars={200}
     >
       <div>
-        <Link
-          replace={false}
-          to="/repo/alpcanaydin/github.ist"
-        >
-          <a
-            href="/repo/alpcanaydin/github.ist"
-            onClick={[Function]}
+        <div>
+          <Link
+            replace={false}
+            to="/repo/alpcanaydin/github.ist"
           >
-            alpcanaydin/github.ist
-          </a>
-        </Link>
+            <a
+              href="/repo/alpcanaydin/github.ist"
+              onClick={[Function]}
+            >
+              alpcanaydin/github.ist
+            </a>
+          </Link>
+        </div>
         <div>
           <Link
             className=""
