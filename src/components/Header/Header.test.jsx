@@ -28,7 +28,7 @@ it('has links to subroutes', () => {
   expect(
     wrapper.containsAllMatchingElements([
       <Link to="/developers">Geliştiriciler</Link>,
-      <Link to="/cities">Şehirler</Link>,
+      <Link to="/locations">Şehirler</Link>,
       <Link to="/languages">Diller</Link>,
       <Link to="/repositories">Repolar</Link>,
     ]),

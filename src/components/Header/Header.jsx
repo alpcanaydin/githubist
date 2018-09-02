@@ -19,7 +19,7 @@ const Header = () => (
           <NavLink to="/developers" className={styles.menuItem} activeClassName={styles.isActive}>
             Geliştiriciler
           </NavLink>
-          <NavLink to="/cities" className={styles.menuItem} activeClassName={styles.isActive}>
+          <NavLink to="/locations" className={styles.menuItem} activeClassName={styles.isActive}>
             Şehirler
           </NavLink>
           <NavLink to="/languages" className={styles.menuItem} activeClassName={styles.isActive}>
