@@ -1,0 +1,13 @@
+@import '../../theme/theme';
+
+.languageBox {
+  display: flex;
+  width: 100%;
+  height: px-to-rem(160px);
+  align-items: center;
+  justify-content: center;
+  border-radius: px-to-rem(2px);
+  font-size: map-get($heading-sizes, h3);
+  font-weight: 600;
+  text-decoration: none;
+}

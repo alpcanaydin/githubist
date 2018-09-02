@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<MemoryRouter
+  keyLength={0}
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <LanguageBox
+      name="JavaScript"
+      slug="javascript"
+      style={
+        Object {
+          "backgroundColor": "#FFC157",
+          "color": "#000",
+        }
+      }
+    >
+      <Link
+        replace={false}
+        style={
+          Object {
+            "backgroundColor": "#FFC157",
+            "color": "#000",
+          }
+        }
+        to="/language/javascript"
+      >
+        <a
+          href="/language/javascript"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#FFC157",
+              "color": "#000",
+            }
+          }
+        >
+          JavaScript
+        </a>
+      </Link>
+    </LanguageBox>
+  </Router>
+</MemoryRouter>
+`;
+
+exports[`renders correctly light box 1`] = `
+<MemoryRouter
+  keyLength={0}
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <LanguageBox
+      name="Java"
+      slug="java"
+      style={
+        Object {
+          "backgroundColor": "5781FF",
+          "color": "#fff",
+        }
+      }
+    >
+      <Link
+        replace={false}
+        style={
+          Object {
+            "backgroundColor": "5781FF",
+            "color": "#fff",
+          }
+        }
+        to="/language/java"
+      >
+        <a
+          href="/language/java"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "5781FF",
+              "color": "#fff",
+            }
+          }
+        >
+          Java
+        </a>
+      </Link>
+    </LanguageBox>
+  </Router>
+</MemoryRouter>
+`;
