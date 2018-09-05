@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Section
+  className=""
+  primary={false}
+  secondary={false}
+>
+  <Container
+    className=""
+  >
+    <h1>
+      Repos
+    </h1>
+    <p>
+      Lorem ipsum dolar sit amet.
+    </p>
+  </Container>
+</Section>
+`;
+
+exports[`renders correctly without subtitle 1`] = `
+<Section
+  className=""
+  primary={false}
+  secondary={false}
+>
+  <Container
+    className=""
+  >
+    <h1>
+      Repos
+    </h1>
+  </Container>
+</Section>
+`;

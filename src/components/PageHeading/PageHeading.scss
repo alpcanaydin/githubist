@@ -1,0 +1,13 @@
+@import '../../theme/theme';
+
+.title {
+  margin: 0;
+  color: $black-color;
+  font-size: map-get($heading-sizes, h1);
+}
+
+.subtitle {
+  margin: 0 0 map-get($spacers, small) 0;
+  color: $body-color;
+  font-size: map-get($font-sizes, large);
+}
