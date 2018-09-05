@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import { Container, Section } from '..';
+import { Container } from '..';
 
 import styles from './PageHeading.scss';
 
@@ -12,12 +12,12 @@ type Props = {
 };
 
 const PageHeading = ({ title, subtitle }: Props) => (
-  <Section>
+  <section className={styles.container}>
     <Container>
       <h1 className={styles.title}>{title}</h1>
       {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
     </Container>
-  </Section>
+  </section>
 );
 
 PageHeading.defaultProps = {

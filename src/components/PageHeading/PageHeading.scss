@@ -1,9 +1,14 @@
 @import '../../theme/theme';
 
+.container {
+  padding: $section-gap / 2 0;
+}
+
 .title {
   margin: 0;
   color: $black-color;
   font-size: map-get($heading-sizes, h1);
+  font-weight: 600;
 }
 
 .subtitle {

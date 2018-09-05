@@ -1,11 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<Section
-  className=""
-  primary={false}
-  secondary={false}
->
+<section>
   <Container
     className=""
   >
@@ -16,15 +12,11 @@ exports[`renders correctly 1`] = `
       Lorem ipsum dolar sit amet.
     </p>
   </Container>
-</Section>
+</section>
 `;
 
 exports[`renders correctly without subtitle 1`] = `
-<Section
-  className=""
-  primary={false}
-  secondary={false}
->
+<section>
   <Container
     className=""
   >
@@ -32,5 +24,5 @@ exports[`renders correctly without subtitle 1`] = `
       Repos
     </h1>
   </Container>
-</Section>
+</section>
 `;
