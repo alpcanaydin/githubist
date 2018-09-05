@@ -16,9 +16,9 @@ const App = () => (
 
     <Header />
 
-    <div id="main">
+    <main>
       <Routes />
-    </div>
+    </main>
 
     <Footer />
   </Fragment>

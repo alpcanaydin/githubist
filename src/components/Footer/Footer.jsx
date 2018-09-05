@@ -8,7 +8,7 @@ import { Container, Logo, Section } from '..';
 import styles from './Footer.scss';
 
 const Footer = () => (
-  <footer>
+  <footer className={styles.footer}>
     <Section>
       <Container>
         <div className={styles.inner}>

@@ -20,6 +20,9 @@ html {
 }
 
 body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
   background-color: $body-bg;
   color: $body-color;
   font-family: $font-family-base;
@@ -30,4 +33,9 @@ body {
 
 [tabindex='-1']:focus {
   outline: 0 !important;
+}
+
+main {
+  min-height: 50vw;
+  flex: 1 0 auto;
 }
