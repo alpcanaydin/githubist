@@ -10,6 +10,7 @@ export { default as Footer } from './Footer';
 export { default as Header } from './Header';
 export { default as Hero } from './Hero';
 export { default as LanguageBox } from './LanguageBox';
+export { default as LinkBar, LinkBarItem } from './LinkBar';
 export { default as LinkButton } from './LinkButton';
 export { default as Loading } from './Loading';
 export { default as Logo } from './Logo';

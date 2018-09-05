@@ -1,0 +1,18 @@
+@import '../../theme/theme';
+
+.linkBar {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  margin-right: map-get($spacers, normal);
+  color: $text-muted;
+  font-size: map-get($font-sizes, large);
+  text-decoration: none;
+
+  &:hover,
+  &.isActive {
+    color: $black-color;
+  }
+}
