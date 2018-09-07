@@ -6,7 +6,7 @@ import Helmet from 'react-helmet';
 import './App.scss';
 
 import Routes from './routes';
-import { Header, Footer } from './components';
+import { Header, Footer, ScrollToTop } from './components';
 
 const App = () => (
   <Fragment>
@@ -17,7 +17,9 @@ const App = () => (
     <Header />
 
     <main>
-      <Routes />
+      <ScrollToTop>
+        <Routes />
+      </ScrollToTop>
     </main>
 
     <Footer />
