@@ -1,0 +1,10 @@
+fragment BasicRepository on Repository {
+  slug
+  description
+  language {
+    name
+    slug
+  }
+  stars
+  forks
+}

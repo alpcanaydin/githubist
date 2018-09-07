@@ -1,0 +1,5 @@
+fragment BasicDeveloper on Developer {
+  name
+  username
+  avatarUrl
+}
