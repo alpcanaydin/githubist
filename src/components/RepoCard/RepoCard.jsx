@@ -4,9 +4,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
 
+import toDateString from '../../utils/toDateString';
+
 import styles from './RepoCard.scss';
 
 type Props = {
+  rank?: number,
   slug: string,
   description?: string,
   language: {
@@ -15,13 +18,14 @@ type Props = {
   },
   stars: number,
   forks: number,
+  githubCreatedAt?: string,
 };
 
-const RepoCard = ({ slug, description, language, stars, forks }: Props) => (
+const RepoCard = ({ rank, slug, description, language, stars, forks, githubCreatedAt }: Props) => (
   <div className={styles.repoCard}>
     <div>
-      <Link to={`/repository/${slug}`} className={styles.name}>
-        {slug}
+      <Link to={`/${slug}`} className={styles.name}>
+        {rank ? `#${rank} ${slug}` : slug}
       </Link>
       {description && <p className={styles.description}>{description}</p>}
     </div>
@@ -32,12 +36,19 @@ const RepoCard = ({ slug, description, language, stars, forks }: Props) => (
       </Link>
       <span className={styles.metaItem}>{stars.toLocaleString()} Star</span>
       <span className={styles.metaItem}>{forks.toLocaleString()} Fork</span>
+      {githubCreatedAt && (
+        <span className={cx(styles.metaItem, styles.githubCreatedAt)}>
+          {toDateString(githubCreatedAt)}
+        </span>
+      )}
     </div>
   </div>
 );
 
 RepoCard.defaultProps = {
+  rank: undefined,
   description: '',
+  githubCreatedAt: '',
 };
 
 export default RepoCard;

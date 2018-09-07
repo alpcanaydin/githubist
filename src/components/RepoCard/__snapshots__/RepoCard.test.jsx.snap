@@ -39,6 +39,7 @@ exports[`renders correctly 1`] = `
     <RepoCard
       description="Github Türkiye istatistikleri 2018"
       forks={30}
+      githubCreatedAt=""
       language={
         Object {
           "name": "JavaScript",
@@ -52,13 +53,209 @@ exports[`renders correctly 1`] = `
         <div>
           <Link
             replace={false}
-            to="/repository/alpcanaydin/github.ist"
+            to="/alpcanaydin/github.ist"
           >
             <a
-              href="/repository/alpcanaydin/github.ist"
+              href="/alpcanaydin/github.ist"
               onClick={[Function]}
             >
               alpcanaydin/github.ist
+            </a>
+          </Link>
+          <p>
+            Github Türkiye istatistikleri 2018
+          </p>
+        </div>
+        <div>
+          <Link
+            className=""
+            replace={false}
+            to="/language/javascript"
+          >
+            <a
+              className=""
+              href="/language/javascript"
+              onClick={[Function]}
+            >
+              JavaScript
+            </a>
+          </Link>
+          <span>
+            200
+             Star
+          </span>
+          <span>
+            30
+             Fork
+          </span>
+        </div>
+      </div>
+    </RepoCard>
+  </Router>
+</MemoryRouter>
+`;
+
+exports[`renders correctly with github creation date 1`] = `
+<MemoryRouter
+  keyLength={0}
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <RepoCard
+      description="Github Türkiye istatistikleri 2018"
+      forks={30}
+      githubCreatedAt="2014-03-24T13:12:26.000000Z"
+      language={
+        Object {
+          "name": "JavaScript",
+          "slug": "javascript",
+        }
+      }
+      slug="alpcanaydin/github.ist"
+      stars={200}
+    >
+      <div>
+        <div>
+          <Link
+            replace={false}
+            to="/alpcanaydin/github.ist"
+          >
+            <a
+              href="/alpcanaydin/github.ist"
+              onClick={[Function]}
+            >
+              alpcanaydin/github.ist
+            </a>
+          </Link>
+          <p>
+            Github Türkiye istatistikleri 2018
+          </p>
+        </div>
+        <div>
+          <Link
+            className=""
+            replace={false}
+            to="/language/javascript"
+          >
+            <a
+              className=""
+              href="/language/javascript"
+              onClick={[Function]}
+            >
+              JavaScript
+            </a>
+          </Link>
+          <span>
+            200
+             Star
+          </span>
+          <span>
+            30
+             Fork
+          </span>
+          <span
+            className=""
+          >
+            24 Mart 2014
+          </span>
+        </div>
+      </div>
+    </RepoCard>
+  </Router>
+</MemoryRouter>
+`;
+
+exports[`renders correctly with rank 1`] = `
+<MemoryRouter
+  keyLength={0}
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <RepoCard
+      description="Github Türkiye istatistikleri 2018"
+      forks={30}
+      githubCreatedAt=""
+      language={
+        Object {
+          "name": "JavaScript",
+          "slug": "javascript",
+        }
+      }
+      rank={1}
+      slug="alpcanaydin/github.ist"
+      stars={200}
+    >
+      <div>
+        <div>
+          <Link
+            replace={false}
+            to="/alpcanaydin/github.ist"
+          >
+            <a
+              href="/alpcanaydin/github.ist"
+              onClick={[Function]}
+            >
+              #1 alpcanaydin/github.ist
             </a>
           </Link>
           <p>
@@ -133,6 +330,7 @@ exports[`renders correctly without description 1`] = `
     <RepoCard
       description=""
       forks={30}
+      githubCreatedAt=""
       language={
         Object {
           "name": "JavaScript",
@@ -146,10 +344,10 @@ exports[`renders correctly without description 1`] = `
         <div>
           <Link
             replace={false}
-            to="/repository/alpcanaydin/github.ist"
+            to="/alpcanaydin/github.ist"
           >
             <a
-              href="/repository/alpcanaydin/github.ist"
+              href="/alpcanaydin/github.ist"
               onClick={[Function]}
             >
               alpcanaydin/github.ist
