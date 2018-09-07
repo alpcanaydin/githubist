@@ -12,7 +12,7 @@
 }
 
 .subtitle {
-  margin: 0 0 map-get($spacers, small) 0;
+  margin: map-get($spacers, 2x-small) 0 0 0;
   color: $body-color;
   font-size: map-get($font-sizes, large);
 }

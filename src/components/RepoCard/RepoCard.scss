@@ -5,8 +5,10 @@
   flex-direction: column;
   justify-content: space-between;
   padding: map-get($spacers, large);
+  border: 1px solid $text-muted;
   background-color: $white;
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.05);
+  border-radius: px-to-rem(2px);
+  box-shadow: 3px 3px 0 #d5d5d6;
 }
 
 .name {

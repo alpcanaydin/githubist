@@ -2,27 +2,19 @@
 
 exports[`renders correctly 1`] = `
 <section>
-  <Container
-    className=""
-  >
-    <h1>
-      Repos
-    </h1>
-    <p>
-      Lorem ipsum dolar sit amet.
-    </p>
-  </Container>
+  <h1>
+    Repos
+  </h1>
+  <p>
+    Lorem ipsum dolar sit amet.
+  </p>
 </section>
 `;
 
 exports[`renders correctly without subtitle 1`] = `
 <section>
-  <Container
-    className=""
-  >
-    <h1>
-      Repos
-    </h1>
-  </Container>
+  <h1>
+    Repos
+  </h1>
 </section>
 `;
