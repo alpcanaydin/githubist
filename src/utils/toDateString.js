@@ -18,7 +18,7 @@ const months = [
 const toDateString = (dateString: string): string => {
   const date = new Date(dateString);
 
-  return `${date.getDay()} ${months[date.getMonth()]} ${date.getFullYear()}`;
+  return `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
 };
 
 export default toDateString;
