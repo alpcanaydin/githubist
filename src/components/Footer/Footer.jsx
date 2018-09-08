@@ -48,7 +48,7 @@ const Footer = () => (
           </div>
 
           <div className={styles.menu}>
-            <h5 className={styles.menuTitle}>Data</h5>
+            <h5 className={styles.menuTitle}>Veri</h5>
             <ul className={styles.menuLinks}>
               <li className={styles.menuItem}>
                 <a
