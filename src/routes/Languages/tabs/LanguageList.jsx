@@ -4,32 +4,27 @@ import React, { Fragment, PureComponent } from 'react';
 import Helmet from 'react-helmet';
 import { type QueryRenderProps } from 'react-apollo';
 
-import { type RepositoryOrder } from '../../../types/repository';
+import { type LanguageOrder } from '../../../types/language';
 
-import RepositoryListQuery, { type Data, type Variables } from './RepositoryListQuery';
-import query from './RepositoryList.graphql';
+import LanguageListQuery, { type Data, type Variables } from './LanguageListQuery';
+import query from './LanguageList.graphql';
 
-import { ErrorState, Loading, RepoCard, ScrollOnBottom } from '../../../components';
+import { ErrorState, Loading, LanguageCard, ScrollOnBottom } from '../../../components';
 
-import styles from './RepositoryList.scss';
+import styles from './LanguageList.scss';
 
 type Props = {
   title: string,
-  orderBy: RepositoryOrder,
-  includeDate?: boolean,
+  orderBy: LanguageOrder,
 };
 
 type State = {
   stopScrollListening: boolean,
 };
 
-class RepositoryList extends PureComponent<Props, State> {
+class LanguageList extends PureComponent<Props, State> {
   state = {
     stopScrollListening: false,
-  };
-
-  static defaultProps = {
-    includeDate: false,
   };
 
   getMore = ({ loading, error, data, fetchMore }: $Shape<QueryRenderProps<Data, Variables>>) => {
@@ -37,44 +32,43 @@ class RepositoryList extends PureComponent<Props, State> {
       return;
     }
 
-    if (error || !data || !data.repositories) {
+    if (error || !data || !data.languages) {
       this.setState({ stopScrollListening: true });
       return;
     }
 
     fetchMore({
       variables: {
-        offset: data.repositories.length,
+        offset: data.languages.length,
       },
       updateQuery: (prev, { fetchMoreResult }) => {
         if (!fetchMoreResult) {
           return prev;
         }
 
-        if (fetchMoreResult.repositories.length === 0) {
+        if (fetchMoreResult.languages.length === 0) {
           this.setState({ stopScrollListening: true }, () => prev);
         }
 
         return {
           ...prev,
-          repositories: [...prev.repositories, ...fetchMoreResult.repositories],
+          languages: [...prev.languages, ...fetchMoreResult.languages],
         };
       },
     });
   };
 
   render() {
-    const { title, orderBy, includeDate = false } = this.props;
+    const { title, orderBy } = this.props;
     const { stopScrollListening } = this.state;
 
     return (
-      <RepositoryListQuery
+      <LanguageListQuery
         query={query}
         variables={{
           limit: 30,
           offset: 0,
           orderBy,
-          includeDate,
         }}
         fetchPolicy="cache-and-network"
       >
@@ -87,7 +81,7 @@ class RepositoryList extends PureComponent<Props, State> {
             return <ErrorState />;
           }
 
-          if (!data || !data.repositories) {
+          if (!data || !data.languages) {
             return null;
           }
 
@@ -104,17 +98,15 @@ class RepositoryList extends PureComponent<Props, State> {
                   this.getMore({ loading, data, error, fetchMore });
                 }}
               >
-                <div className={styles.repositories}>
-                  {data.repositories.map((repo, index) => (
-                    <RepoCard
-                      key={repo.slug}
+                <div className={styles.languages}>
+                  {data.languages.map((language, index) => (
+                    <LanguageCard
+                      key={language.slug}
                       rank={index + 1}
-                      slug={repo.slug}
-                      description={repo.description}
-                      language={repo.language}
-                      stars={repo.stars}
-                      forks={repo.forks}
-                      githubCreatedAt={repo.githubCreatedAt}
+                      name={language.name}
+                      slug={language.slug}
+                      totalRepositories={language.totalRepositories}
+                      totalDevelopers={language.totalDevelopers}
                     />
                   ))}
                 </div>
@@ -124,9 +116,9 @@ class RepositoryList extends PureComponent<Props, State> {
             </Fragment>
           );
         }}
-      </RepositoryListQuery>
+      </LanguageListQuery>
     );
   }
 }
 
-export default RepositoryList;
+export default LanguageList;

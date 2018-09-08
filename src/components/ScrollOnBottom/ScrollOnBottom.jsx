@@ -6,9 +6,14 @@ type Props = {
   children: Node,
   threshold: number,
   onReach: () => void,
+  stopListening?: boolean,
 };
 
 class ScrollOnBottom extends PureComponent<Props> {
+  static defaultProps = {
+    stopListening: false,
+  };
+
   componentDidMount() {
     if (!window) {
       return;
@@ -22,7 +27,11 @@ class ScrollOnBottom extends PureComponent<Props> {
   }
 
   onScroll = () => {
-    const { threshold, onReach } = this.props;
+    const { threshold, onReach, stopListening } = this.props;
+
+    if (stopListening) {
+      return;
+    }
 
     if (
       (document.documentElement: any).getBoundingClientRect().bottom - threshold <=

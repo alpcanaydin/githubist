@@ -1,0 +1,7 @@
+#import "../../../fragments/basicLanguage.graphql"
+
+query($limit: Int!, $offset: Int!, $orderBy: LanguageOrder!) {
+  languages(limit: $limit, offset: $offset, orderBy: $orderBy) {
+    ...BasicLanguage
+  }
+}
