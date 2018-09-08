@@ -1,0 +1,46 @@
+@import '../../theme/theme';
+
+.buttonContainer {
+  text-align: center;
+}
+
+.top8 {
+  display: grid;
+  padding: map-get($spacers, 2x-large);
+  grid-column-gap: map-get($spacers, x-large);
+  grid-row-gap: map-get($spacers, x-large);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.locationLink {
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.languages {
+  display: grid;
+  padding: map-get($spacers, 2x-large) 0;
+  grid-column-gap: map-get($spacers, x-large);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.firstExplorers {
+  display: grid;
+  padding: map-get($spacers, 2x-large) map-get($spacers, 2x-large) 0 map-get($spacers, 2x-large);
+  grid-column-gap: map-get($spacers, x-large);
+  grid-row-gap: map-get($spacers, x-large);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.repositories {
+  display: grid;
+  padding: map-get($spacers, 2x-large) 0;
+  grid-auto-rows: 1fr;
+  grid-column-gap: map-get($spacers, large);
+  grid-row-gap: map-get($spacers, large);
+  grid-template-columns: 1fr 1fr;
+}

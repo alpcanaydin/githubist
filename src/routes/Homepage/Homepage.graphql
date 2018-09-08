@@ -1,8 +1,43 @@
-query {
+#import "../../fragments/basicDeveloper.graphql"
+#import "../../fragments/basicLanguage.graphql"
+#import "../../fragments/basicLocation.graphql"
+#import "../../fragments/basicRepository.graphql"
+
+query(
+  $developersLimit: Int!
+  $locationsLimit: Int!
+  $languagesLimit: Int!
+  $explorersLimit: Int!
+  $repositoriesLimit: Int!
+) {
   turkey {
     totalDevelopers
-    totalLanguages
-    totalLocations
     totalRepositories
+  }
+
+  top8: developers(limit: $developersLimit, orderBy: { field: SCORE, direction: DESC }) {
+    ...BasicDeveloper
+    company
+  }
+
+  locations(limit: $locationsLimit, orderBy: { field: SCORE, direction: DESC }) {
+    ...BasicLocation
+    score
+  }
+
+  languages(limit: $languagesLimit, orderBy: { field: SCORE, direction: DESC }) {
+    ...BasicLanguage
+  }
+
+  firstExplorers: developers(
+    limit: $explorersLimit
+    orderBy: { field: GITHUB_CREATED_AT, direction: ASC }
+  ) {
+    ...BasicDeveloper
+    githubCreatedAt
+  }
+
+  repositories(limit: $repositoriesLimit, orderBy: { field: STARS, direction: DESC }) {
+    ...BasicRepository
   }
 }
