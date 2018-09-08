@@ -1,0 +1,8 @@
+#import "../../../fragments/basicRepository.graphql"
+
+query($limit: Int!, $offset: Int!, $orderBy: RepositoryOrder!, $includeDate: Boolean!) {
+  repositories(limit: $limit, offset: $offset, orderBy: $orderBy) {
+    ...BasicRepository
+    githubCreatedAt @include(if: $includeDate)
+  }
+}
