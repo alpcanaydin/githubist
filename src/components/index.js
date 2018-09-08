@@ -17,6 +17,7 @@ export { default as Logo } from './Logo';
 export { default as PageHeading } from './PageHeading';
 export { default as RepoCard } from './RepoCard';
 export { default as ScrollToTop } from './ScrollToTop';
+export { default as ScrollOnBottom } from './ScrollOnBottom';
 export { default as Section } from './Section';
 export { default as SectionBody } from './SectionBody';
 export { default as SectionTitle } from './SectionTitle';
