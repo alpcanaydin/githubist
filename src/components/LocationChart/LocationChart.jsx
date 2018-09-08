@@ -10,6 +10,8 @@ type Item = {
   name: string,
   score: number,
   slug: string,
+  totalRepositories: number,
+  totalDevelopers: number,
 };
 
 type Props = {
