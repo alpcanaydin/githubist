@@ -1,4 +1,6 @@
 fragment BasicLocation on Location {
   name
   slug
+  totalDevelopers
+  totalRepositories
 }
