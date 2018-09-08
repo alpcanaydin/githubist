@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<MemoryRouter
+  keyLength={0}
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <LocationCard
+      name="İzmir"
+      slug="izmir"
+      totalDevelopers={768}
+      totalRepositories={2150}
+    >
+      <div>
+        <Link
+          replace={false}
+          to="/location/izmir"
+        >
+          <a
+            href="/location/izmir"
+            onClick={[Function]}
+          >
+            İzmir
+          </a>
+        </Link>
+        <div>
+          <Link
+            replace={false}
+            to="/location/izmir/developers"
+          >
+            <a
+              href="/location/izmir/developers"
+              onClick={[Function]}
+            >
+              768
+               Geliştirici
+            </a>
+          </Link>
+          <Link
+            replace={false}
+            to="/location/izmir/repositories"
+          >
+            <a
+              href="/location/izmir/repositories"
+              onClick={[Function]}
+            >
+              2,150
+               Repo
+            </a>
+          </Link>
+        </div>
+      </div>
+    </LocationCard>
+  </Router>
+</MemoryRouter>
+`;
+
+exports[`renders correctly with rank 1`] = `
+<MemoryRouter
+  keyLength={0}
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <LocationCard
+      name="İzmir"
+      rank={1}
+      slug="izmir"
+      totalDevelopers={768}
+      totalRepositories={2150}
+    >
+      <div>
+        <Link
+          replace={false}
+          to="/location/izmir"
+        >
+          <a
+            href="/location/izmir"
+            onClick={[Function]}
+          >
+            #1 İzmir
+          </a>
+        </Link>
+        <div>
+          <Link
+            replace={false}
+            to="/location/izmir/developers"
+          >
+            <a
+              href="/location/izmir/developers"
+              onClick={[Function]}
+            >
+              768
+               Geliştirici
+            </a>
+          </Link>
+          <Link
+            replace={false}
+            to="/location/izmir/repositories"
+          >
+            <a
+              href="/location/izmir/repositories"
+              onClick={[Function]}
+            >
+              2,150
+               Repo
+            </a>
+          </Link>
+        </div>
+      </div>
+    </LocationCard>
+  </Router>
+</MemoryRouter>
+`;

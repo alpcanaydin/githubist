@@ -1,7 +1,6 @@
 // @flow
 
 export { default as Avatar } from './Avatar';
-export { default as LocationChart } from './LocationChart';
 export { default as BasicDeveloperCard } from './BasicDeveloperCard';
 export { default as Button } from './Button';
 export { default as Container } from './Container';
@@ -14,6 +13,8 @@ export { default as LanguageCard } from './LanguageCard';
 export { default as LinkBar, LinkBarItem } from './LinkBar';
 export { default as LinkButton } from './LinkButton';
 export { default as Loading } from './Loading';
+export { default as LocationCard } from './LocationCard';
+export { default as LocationChart } from './LocationChart';
 export { default as Logo } from './Logo';
 export { default as PageHeading } from './PageHeading';
 export { default as RepoCard } from './RepoCard';

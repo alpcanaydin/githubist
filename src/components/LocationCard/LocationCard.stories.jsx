@@ -5,29 +5,24 @@ import { storiesOf } from '@storybook/react';
 import backgrounds from '@storybook/addon-backgrounds';
 import { MemoryRouter } from 'react-router-dom';
 
-import LanguageCard from './LanguageCard';
+import LocationCard from './LocationCard';
 
-storiesOf('LanguageCard', module)
+storiesOf('LocationCard', module)
   .addDecorator(backgrounds([{ name: 'light', value: '#fcfafa', default: true }]))
   .add('default', () => (
     <MemoryRouter>
       <div style={{ width: '320px', margin: '16px' }}>
-        <LanguageCard
-          name="JavaScript"
-          slug="javascript"
-          totalRepositories={2150}
-          totalDevelopers={768}
-        />
+        <LocationCard name="İzmir" slug="izmir" totalRepositories={2150} totalDevelopers={768} />
       </div>
     </MemoryRouter>
   ))
   .add('with rank', () => (
     <MemoryRouter>
       <div style={{ width: '320px', margin: '16px' }}>
-        <LanguageCard
+        <LocationCard
           rank={1}
-          name="JavaScript"
-          slug="javascript"
+          name="İzmir"
+          slug="izmir"
           totalRepositories={2150}
           totalDevelopers={768}
         />
