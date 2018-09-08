@@ -9,7 +9,13 @@ import LocationCard from './LocationCard';
 it('renders correctly', () => {
   const wrapper = mount(
     <MemoryRouter keyLength={0}>
-      <LocationCard name="İzmir" slug="izmir" totalRepositories={2150} totalDevelopers={768} />
+      <LocationCard
+        name="İzmir"
+        slug="izmir"
+        totalRepositories={2150}
+        totalDevelopers={768}
+        language={{ name: 'JavaScript', slug: 'javascript' }}
+      />
     </MemoryRouter>,
   );
 
@@ -17,6 +23,23 @@ it('renders correctly', () => {
 });
 
 it('renders correctly with rank', () => {
+  const wrapper = mount(
+    <MemoryRouter keyLength={0}>
+      <LocationCard
+        rank={1}
+        name="İzmir"
+        slug="izmir"
+        totalRepositories={2150}
+        totalDevelopers={768}
+        language={{ name: 'JavaScript', slug: 'javascript' }}
+      />
+    </MemoryRouter>,
+  );
+
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('renders correctly without language', () => {
   const wrapper = mount(
     <MemoryRouter keyLength={0}>
       <LocationCard
