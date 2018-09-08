@@ -3,5 +3,11 @@
 query($limit: Int!, $offset: Int!, $orderBy: LocationOrder!) {
   locations(limit: $limit, offset: $offset, orderBy: $orderBy) {
     ...BasicLocation
+    languageUsage(limit: 1) {
+      language {
+        name
+        slug
+      }
+    }
   }
 }

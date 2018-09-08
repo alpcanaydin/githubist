@@ -4,8 +4,10 @@ import { Query } from 'react-apollo';
 
 import { type BasicLocation, type LocationOrder } from '../../../types/location';
 
+type LanguageUsage = Array<{ language: { name: string, slug: string } }>;
+
 export type Data = {
-  locations: Array<BasicLocation>,
+  locations: Array<BasicLocation & { languageUsage: LanguageUsage }>,
 };
 
 export type Variables = {

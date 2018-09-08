@@ -20,11 +20,13 @@ type Props = {
 
 type State = {
   stopScrollListening: boolean,
+  loadMoreLoading: boolean,
 };
 
 class LanguageList extends PureComponent<Props, State> {
   state = {
     stopScrollListening: false,
+    loadMoreLoading: false,
   };
 
   getMore = ({ loading, error, data, fetchMore }: $Shape<QueryRenderProps<Data, Variables>>) => {
@@ -37,30 +39,34 @@ class LanguageList extends PureComponent<Props, State> {
       return;
     }
 
-    fetchMore({
-      variables: {
-        offset: data.languages.length,
-      },
-      updateQuery: (prev, { fetchMoreResult }) => {
-        if (!fetchMoreResult) {
-          return prev;
-        }
+    this.setState({ loadMoreLoading: true }, () => {
+      fetchMore({
+        variables: {
+          offset: data.languages.length,
+        },
+        updateQuery: (prev, { fetchMoreResult }) => {
+          if (!fetchMoreResult) {
+            return prev;
+          }
 
-        if (fetchMoreResult.languages.length === 0) {
-          this.setState({ stopScrollListening: true }, () => prev);
-        }
+          if (fetchMoreResult.languages.length === 0) {
+            this.setState({ stopScrollListening: true, loadMoreLoading: false }, () => prev);
+          }
 
-        return {
-          ...prev,
-          languages: [...prev.languages, ...fetchMoreResult.languages],
-        };
-      },
+          this.setState({ loadMoreLoading: false });
+
+          return {
+            ...prev,
+            languages: [...prev.languages, ...fetchMoreResult.languages],
+          };
+        },
+      });
     });
   };
 
   render() {
     const { title, orderBy } = this.props;
-    const { stopScrollListening } = this.state;
+    const { stopScrollListening, loadMoreLoading } = this.state;
 
     return (
       <LanguageListQuery
@@ -73,7 +79,7 @@ class LanguageList extends PureComponent<Props, State> {
         fetchPolicy="cache-and-network"
       >
         {({ loading, error, data, fetchMore }) => {
-          if (loading && !data) {
+          if (loading && !loadMoreLoading) {
             return <Loading />;
           }
 

@@ -20,11 +20,13 @@ type Props = {
 
 type State = {
   stopScrollListening: boolean,
+  loadMoreLoading: boolean,
 };
 
 class LocationList extends PureComponent<Props, State> {
   state = {
     stopScrollListening: false,
+    loadMoreLoading: false,
   };
 
   getMore = ({ loading, error, data, fetchMore }: $Shape<QueryRenderProps<Data, Variables>>) => {
@@ -37,30 +39,35 @@ class LocationList extends PureComponent<Props, State> {
       return;
     }
 
-    fetchMore({
-      variables: {
-        offset: data.locations.length,
-      },
-      updateQuery: (prev, { fetchMoreResult }) => {
-        if (!fetchMoreResult) {
-          return prev;
-        }
+    this.setState({ loadMoreLoading: true }, () => {
+      fetchMore({
+        variables: {
+          offset: data.locations.length,
+        },
+        updateQuery: (prev, { fetchMoreResult }) => {
+          if (!fetchMoreResult) {
+            return prev;
+          }
 
-        if (fetchMoreResult.locations.length === 0) {
-          this.setState({ stopScrollListening: true }, () => prev);
-        }
+          if (fetchMoreResult.locations.length === 0) {
+            this.setState({ stopScrollListening: true, loadMoreLoading: false });
+            return prev;
+          }
 
-        return {
-          ...prev,
-          locations: [...prev.locations, ...fetchMoreResult.locations],
-        };
-      },
+          this.setState({ loadMoreLoading: false });
+
+          return {
+            ...prev,
+            locations: [...prev.locations, ...fetchMoreResult.locations],
+          };
+        },
+      });
     });
   };
 
   render() {
     const { title, orderBy } = this.props;
-    const { stopScrollListening } = this.state;
+    const { stopScrollListening, loadMoreLoading } = this.state;
 
     return (
       <LocationListQuery
@@ -73,7 +80,7 @@ class LocationList extends PureComponent<Props, State> {
         fetchPolicy="cache-and-network"
       >
         {({ loading, error, data, fetchMore }) => {
-          if (loading && !data) {
+          if (loading && !loadMoreLoading) {
             return <Loading />;
           }
 
@@ -99,7 +106,7 @@ class LocationList extends PureComponent<Props, State> {
                 }}
               >
                 <div className={styles.locations}>
-                  {data.locations.map((location, index) => (
+                  {data.locations.map((location, index) => [
                     <LocationCard
                       key={location.slug}
                       rank={index + 1}
@@ -107,8 +114,13 @@ class LocationList extends PureComponent<Props, State> {
                       slug={location.slug}
                       totalRepositories={location.totalRepositories}
                       totalDevelopers={location.totalDevelopers}
-                    />
-                  ))}
+                      language={
+                        location.languageUsage.length > 0
+                          ? location.languageUsage[0].language
+                          : undefined
+                      }
+                    />,
+                  ])}
                 </div>
 
                 {loading && <Loading />}
