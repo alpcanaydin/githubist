@@ -1,0 +1,85 @@
+@import '../../theme/theme';
+
+.developerCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: map-get($spacers, large);
+  border: 1px solid $text-muted;
+  background-color: $white;
+  border-radius: px-to-rem(2px);
+  box-shadow: 3px 3px 0 #d5d5d6;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.avatar {
+  line-height: 0;
+}
+
+.info {
+  margin-left: map-get($spacers, normal);
+}
+
+.nameAndUsername {
+  text-decoration: none;
+
+  &:hover {
+    color: $black-color;
+    text-decoration: underline;
+  }
+}
+
+.rank {
+  margin-right: map-get($spacers, 2x-small);
+}
+
+.rank,
+.name {
+  color: $black-color;
+  font-weight: 600;
+}
+
+.username {
+  margin-left: map-get($spacers, 2x-small);
+  color: $body-color;
+}
+
+.company {
+  margin: 0;
+  color: $body-color;
+  font-size: map-get($font-sizes, small);
+}
+
+.bio {
+  margin: map-get($spacers, normal) 0 0 0;
+}
+
+.meta {
+  display: flex;
+  flex-direction: row;
+  margin: map-get($spacers, normal) 0 0 0;
+}
+
+.metaItem {
+  margin-right: map-get($spacers, normal);
+  font-size: map-get($font-sizes, small);
+  font-weight: 600;
+}
+
+.location {
+  color: $secondary-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.githubCreatedAt {
+  margin-left: auto;
+}

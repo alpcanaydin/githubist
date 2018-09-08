@@ -24,47 +24,41 @@ storiesOf('RepoCard', module)
   ))
   .add('with rank', () => (
     <MemoryRouter>
-      <MemoryRouter>
-        <div style={{ width: '600px', margin: '16px' }}>
-          <RepoCard
-            rank={1}
-            slug="alpcanaydin/github.ist"
-            description="Github Türkiye istatistikleri 2018"
-            language={{ name: 'JavaScript', slug: 'javascript' }}
-            stars={200}
-            forks={30}
-          />
-        </div>
-      </MemoryRouter>
+      <div style={{ width: '600px', margin: '16px' }}>
+        <RepoCard
+          rank={1}
+          slug="alpcanaydin/github.ist"
+          description="Github Türkiye istatistikleri 2018"
+          language={{ name: 'JavaScript', slug: 'javascript' }}
+          stars={200}
+          forks={30}
+        />
+      </div>
     </MemoryRouter>
   ))
   .add('with github creation date', () => (
     <MemoryRouter>
-      <MemoryRouter>
-        <div style={{ width: '600px', margin: '16px' }}>
-          <RepoCard
-            slug="alpcanaydin/github.ist"
-            description="Github Türkiye istatistikleri 2018"
-            language={{ name: 'JavaScript', slug: 'javascript' }}
-            stars={200}
-            forks={30}
-            githubCreatedAt="2014-03-24T13:12:26.000000Z"
-          />
-        </div>
-      </MemoryRouter>
+      <div style={{ width: '600px', margin: '16px' }}>
+        <RepoCard
+          slug="alpcanaydin/github.ist"
+          description="Github Türkiye istatistikleri 2018"
+          language={{ name: 'JavaScript', slug: 'javascript' }}
+          stars={200}
+          forks={30}
+          githubCreatedAt="2014-03-24T13:12:26.000000Z"
+        />
+      </div>
     </MemoryRouter>
   ))
   .add('without description', () => (
     <MemoryRouter>
-      <MemoryRouter>
-        <div style={{ width: '600px', margin: '16px' }}>
-          <RepoCard
-            slug="alpcanaydin/github.ist"
-            language={{ name: 'JavaScript', slug: 'javascript' }}
-            stars={200}
-            forks={30}
-          />
-        </div>
-      </MemoryRouter>
+      <div style={{ width: '600px', margin: '16px' }}>
+        <RepoCard
+          slug="alpcanaydin/github.ist"
+          language={{ name: 'JavaScript', slug: 'javascript' }}
+          stars={200}
+          forks={30}
+        />
+      </div>
     </MemoryRouter>
   ));
