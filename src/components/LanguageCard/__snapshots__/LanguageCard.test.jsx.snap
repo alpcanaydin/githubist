@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<MemoryRouter
+  keyLength={0}
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <LanguageCard
+      name="JavaScript"
+      slug="javascript"
+      totalDevelopers={768}
+      totalRepositories={2150}
+    >
+      <div>
+        <Link
+          replace={false}
+          to="/language/javascript"
+        >
+          <a
+            href="/language/javascript"
+            onClick={[Function]}
+          >
+            JavaScript
+          </a>
+        </Link>
+        <div>
+          <span>
+            768
+             Geliştirici
+          </span>
+          <span>
+            2,150
+             Repo
+          </span>
+        </div>
+      </div>
+    </LanguageCard>
+  </Router>
+</MemoryRouter>
+`;
+
+exports[`renders correctly with rank 1`] = `
+<MemoryRouter
+  keyLength={0}
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <LanguageCard
+      name="JavaScript"
+      rank={1}
+      slug="javascript"
+      totalDevelopers={768}
+      totalRepositories={2150}
+    >
+      <div>
+        <Link
+          replace={false}
+          to="/language/javascript"
+        >
+          <a
+            href="/language/javascript"
+            onClick={[Function]}
+          >
+            #1 JavaScript
+          </a>
+        </Link>
+        <div>
+          <span>
+            768
+             Geliştirici
+          </span>
+          <span>
+            2,150
+             Repo
+          </span>
+        </div>
+      </div>
+    </LanguageCard>
+  </Router>
+</MemoryRouter>
+`;
