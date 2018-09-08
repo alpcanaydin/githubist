@@ -79,7 +79,7 @@ class LanguageList extends PureComponent<Props, State> {
         fetchPolicy="cache-and-network"
       >
         {({ loading, error, data, fetchMore }) => {
-          if (loading && !loadMoreLoading) {
+          if (loading && !loadMoreLoading && (data && !data.languages)) {
             return <Loading />;
           }
 

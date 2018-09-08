@@ -39,6 +39,7 @@ exports[`renders correctly 1`] = `
     <DeveloperCard
       bio="Node.js and Javascript Developer at Atolye15"
       company="@Atolye15"
+      followers={404}
       githubCreatedAt=""
       location={
         Object {
@@ -54,27 +55,6 @@ exports[`renders correctly 1`] = `
     >
       <div>
         <div>
-          <Link
-            replace={false}
-            to="/alpcanaydin"
-          >
-            <a
-              href="/alpcanaydin"
-              onClick={[Function]}
-            >
-              <Avatar
-                alt="Alpcan Aydın"
-                size="small"
-                url="https://avatars2.githubusercontent.com/u/1801024?v=4"
-              >
-                <img
-                  alt="Alpcan Aydın"
-                  className="undefined"
-                  src="https://avatars2.githubusercontent.com/u/1801024?v=4"
-                />
-              </Avatar>
-            </a>
-          </Link>
           <div>
             <Link
               replace={false}
@@ -84,22 +64,45 @@ exports[`renders correctly 1`] = `
                 href="/alpcanaydin"
                 onClick={[Function]}
               >
-                <span>
-                  Alpcan Aydın
-                </span>
-                <span>
-                  alpcanaydin
-                </span>
+                <Avatar
+                  alt="Alpcan Aydın"
+                  size="small"
+                  url="https://avatars2.githubusercontent.com/u/1801024?v=4"
+                >
+                  <img
+                    alt="Alpcan Aydın"
+                    className="undefined"
+                    src="https://avatars2.githubusercontent.com/u/1801024?v=4"
+                  />
+                </Avatar>
               </a>
             </Link>
-            <p>
-              @Atolye15
-            </p>
+            <div>
+              <Link
+                replace={false}
+                to="/alpcanaydin"
+              >
+                <a
+                  href="/alpcanaydin"
+                  onClick={[Function]}
+                >
+                  <span>
+                    Alpcan Aydın
+                  </span>
+                  <span>
+                    alpcanaydin
+                  </span>
+                </a>
+              </Link>
+              <p>
+                @Atolye15
+              </p>
+            </div>
           </div>
+          <p>
+            Node.js and Javascript Developer at Atolye15
+          </p>
         </div>
-        <p>
-          Node.js and Javascript Developer at Atolye15
-        </p>
         <div>
           <Link
             className=""
@@ -117,6 +120,10 @@ exports[`renders correctly 1`] = `
           <span>
             612
              Star'lanma
+          </span>
+          <span>
+            404
+             Takipçi
           </span>
           <span>
             23
@@ -168,6 +175,7 @@ exports[`renders correctly with github creation date 1`] = `
     <DeveloperCard
       bio=""
       company="@Atolye15"
+      followers={404}
       githubCreatedAt="2012-05-31T22:02:23.000000Z"
       location={
         Object {
@@ -183,27 +191,6 @@ exports[`renders correctly with github creation date 1`] = `
     >
       <div>
         <div>
-          <Link
-            replace={false}
-            to="/alpcanaydin"
-          >
-            <a
-              href="/alpcanaydin"
-              onClick={[Function]}
-            >
-              <Avatar
-                alt="Alpcan Aydın"
-                size="small"
-                url="https://avatars2.githubusercontent.com/u/1801024?v=4"
-              >
-                <img
-                  alt="Alpcan Aydın"
-                  className="undefined"
-                  src="https://avatars2.githubusercontent.com/u/1801024?v=4"
-                />
-              </Avatar>
-            </a>
-          </Link>
           <div>
             <Link
               replace={false}
@@ -213,17 +200,40 @@ exports[`renders correctly with github creation date 1`] = `
                 href="/alpcanaydin"
                 onClick={[Function]}
               >
-                <span>
-                  Alpcan Aydın
-                </span>
-                <span>
-                  alpcanaydin
-                </span>
+                <Avatar
+                  alt="Alpcan Aydın"
+                  size="small"
+                  url="https://avatars2.githubusercontent.com/u/1801024?v=4"
+                >
+                  <img
+                    alt="Alpcan Aydın"
+                    className="undefined"
+                    src="https://avatars2.githubusercontent.com/u/1801024?v=4"
+                  />
+                </Avatar>
               </a>
             </Link>
-            <p>
-              @Atolye15
-            </p>
+            <div>
+              <Link
+                replace={false}
+                to="/alpcanaydin"
+              >
+                <a
+                  href="/alpcanaydin"
+                  onClick={[Function]}
+                >
+                  <span>
+                    Alpcan Aydın
+                  </span>
+                  <span>
+                    alpcanaydin
+                  </span>
+                </a>
+              </Link>
+              <p>
+                @Atolye15
+              </p>
+            </div>
           </div>
         </div>
         <div>
@@ -243,6 +253,10 @@ exports[`renders correctly with github creation date 1`] = `
           <span>
             612
              Star'lanma
+          </span>
+          <span>
+            404
+             Takipçi
           </span>
           <span>
             23
@@ -299,6 +313,7 @@ exports[`renders correctly with rank 1`] = `
     <DeveloperCard
       bio=""
       company="@Atolye15"
+      followers={404}
       githubCreatedAt=""
       location={
         Object {
@@ -315,27 +330,6 @@ exports[`renders correctly with rank 1`] = `
     >
       <div>
         <div>
-          <Link
-            replace={false}
-            to="/alpcanaydin"
-          >
-            <a
-              href="/alpcanaydin"
-              onClick={[Function]}
-            >
-              <Avatar
-                alt="Alpcan Aydın"
-                size="small"
-                url="https://avatars2.githubusercontent.com/u/1801024?v=4"
-              >
-                <img
-                  alt="Alpcan Aydın"
-                  className="undefined"
-                  src="https://avatars2.githubusercontent.com/u/1801024?v=4"
-                />
-              </Avatar>
-            </a>
-          </Link>
           <div>
             <Link
               replace={false}
@@ -345,21 +339,44 @@ exports[`renders correctly with rank 1`] = `
                 href="/alpcanaydin"
                 onClick={[Function]}
               >
-                <span>
-                  #
-                  1
-                </span>
-                <span>
-                  Alpcan Aydın
-                </span>
-                <span>
-                  alpcanaydin
-                </span>
+                <Avatar
+                  alt="Alpcan Aydın"
+                  size="small"
+                  url="https://avatars2.githubusercontent.com/u/1801024?v=4"
+                >
+                  <img
+                    alt="Alpcan Aydın"
+                    className="undefined"
+                    src="https://avatars2.githubusercontent.com/u/1801024?v=4"
+                  />
+                </Avatar>
               </a>
             </Link>
-            <p>
-              @Atolye15
-            </p>
+            <div>
+              <Link
+                replace={false}
+                to="/alpcanaydin"
+              >
+                <a
+                  href="/alpcanaydin"
+                  onClick={[Function]}
+                >
+                  <span>
+                    #
+                    1
+                  </span>
+                  <span>
+                    Alpcan Aydın
+                  </span>
+                  <span>
+                    alpcanaydin
+                  </span>
+                </a>
+              </Link>
+              <p>
+                @Atolye15
+              </p>
+            </div>
           </div>
         </div>
         <div>
@@ -379,6 +396,10 @@ exports[`renders correctly with rank 1`] = `
           <span>
             612
              Star'lanma
+          </span>
+          <span>
+            404
+             Takipçi
           </span>
           <span>
             23
@@ -430,6 +451,7 @@ exports[`renders correctly without bio 1`] = `
     <DeveloperCard
       bio=""
       company="@Atoyle15"
+      followers={404}
       githubCreatedAt=""
       location={
         Object {
@@ -445,27 +467,6 @@ exports[`renders correctly without bio 1`] = `
     >
       <div>
         <div>
-          <Link
-            replace={false}
-            to="/alpcanaydin"
-          >
-            <a
-              href="/alpcanaydin"
-              onClick={[Function]}
-            >
-              <Avatar
-                alt="Alpcan Aydın"
-                size="small"
-                url="https://avatars2.githubusercontent.com/u/1801024?v=4"
-              >
-                <img
-                  alt="Alpcan Aydın"
-                  className="undefined"
-                  src="https://avatars2.githubusercontent.com/u/1801024?v=4"
-                />
-              </Avatar>
-            </a>
-          </Link>
           <div>
             <Link
               replace={false}
@@ -475,17 +476,40 @@ exports[`renders correctly without bio 1`] = `
                 href="/alpcanaydin"
                 onClick={[Function]}
               >
-                <span>
-                  Alpcan Aydın
-                </span>
-                <span>
-                  alpcanaydin
-                </span>
+                <Avatar
+                  alt="Alpcan Aydın"
+                  size="small"
+                  url="https://avatars2.githubusercontent.com/u/1801024?v=4"
+                >
+                  <img
+                    alt="Alpcan Aydın"
+                    className="undefined"
+                    src="https://avatars2.githubusercontent.com/u/1801024?v=4"
+                  />
+                </Avatar>
               </a>
             </Link>
-            <p>
-              @Atoyle15
-            </p>
+            <div>
+              <Link
+                replace={false}
+                to="/alpcanaydin"
+              >
+                <a
+                  href="/alpcanaydin"
+                  onClick={[Function]}
+                >
+                  <span>
+                    Alpcan Aydın
+                  </span>
+                  <span>
+                    alpcanaydin
+                  </span>
+                </a>
+              </Link>
+              <p>
+                @Atoyle15
+              </p>
+            </div>
           </div>
         </div>
         <div>
@@ -505,6 +529,10 @@ exports[`renders correctly without bio 1`] = `
           <span>
             612
              Star'lanma
+          </span>
+          <span>
+            404
+             Takipçi
           </span>
           <span>
             23
@@ -556,6 +584,7 @@ exports[`renders correctly without bio and company 1`] = `
     <DeveloperCard
       bio=""
       company=""
+      followers={404}
       githubCreatedAt=""
       location={
         Object {
@@ -571,27 +600,6 @@ exports[`renders correctly without bio and company 1`] = `
     >
       <div>
         <div>
-          <Link
-            replace={false}
-            to="/alpcanaydin"
-          >
-            <a
-              href="/alpcanaydin"
-              onClick={[Function]}
-            >
-              <Avatar
-                alt="Alpcan Aydın"
-                size="small"
-                url="https://avatars2.githubusercontent.com/u/1801024?v=4"
-              >
-                <img
-                  alt="Alpcan Aydın"
-                  className="undefined"
-                  src="https://avatars2.githubusercontent.com/u/1801024?v=4"
-                />
-              </Avatar>
-            </a>
-          </Link>
           <div>
             <Link
               replace={false}
@@ -601,14 +609,37 @@ exports[`renders correctly without bio and company 1`] = `
                 href="/alpcanaydin"
                 onClick={[Function]}
               >
-                <span>
-                  Alpcan Aydın
-                </span>
-                <span>
-                  alpcanaydin
-                </span>
+                <Avatar
+                  alt="Alpcan Aydın"
+                  size="small"
+                  url="https://avatars2.githubusercontent.com/u/1801024?v=4"
+                >
+                  <img
+                    alt="Alpcan Aydın"
+                    className="undefined"
+                    src="https://avatars2.githubusercontent.com/u/1801024?v=4"
+                  />
+                </Avatar>
               </a>
             </Link>
+            <div>
+              <Link
+                replace={false}
+                to="/alpcanaydin"
+              >
+                <a
+                  href="/alpcanaydin"
+                  onClick={[Function]}
+                >
+                  <span>
+                    Alpcan Aydın
+                  </span>
+                  <span>
+                    alpcanaydin
+                  </span>
+                </a>
+              </Link>
+            </div>
           </div>
         </div>
         <div>
@@ -628,6 +659,10 @@ exports[`renders correctly without bio and company 1`] = `
           <span>
             612
              Star'lanma
+          </span>
+          <span>
+            404
+             Takipçi
           </span>
           <span>
             23
@@ -679,6 +714,7 @@ exports[`renders correctly without company 1`] = `
     <DeveloperCard
       bio="Node.js and Javascript Developer at Atolye15"
       company=""
+      followers={404}
       githubCreatedAt=""
       location={
         Object {
@@ -694,27 +730,6 @@ exports[`renders correctly without company 1`] = `
     >
       <div>
         <div>
-          <Link
-            replace={false}
-            to="/alpcanaydin"
-          >
-            <a
-              href="/alpcanaydin"
-              onClick={[Function]}
-            >
-              <Avatar
-                alt="Alpcan Aydın"
-                size="small"
-                url="https://avatars2.githubusercontent.com/u/1801024?v=4"
-              >
-                <img
-                  alt="Alpcan Aydın"
-                  className="undefined"
-                  src="https://avatars2.githubusercontent.com/u/1801024?v=4"
-                />
-              </Avatar>
-            </a>
-          </Link>
           <div>
             <Link
               replace={false}
@@ -724,19 +739,42 @@ exports[`renders correctly without company 1`] = `
                 href="/alpcanaydin"
                 onClick={[Function]}
               >
-                <span>
-                  Alpcan Aydın
-                </span>
-                <span>
-                  alpcanaydin
-                </span>
+                <Avatar
+                  alt="Alpcan Aydın"
+                  size="small"
+                  url="https://avatars2.githubusercontent.com/u/1801024?v=4"
+                >
+                  <img
+                    alt="Alpcan Aydın"
+                    className="undefined"
+                    src="https://avatars2.githubusercontent.com/u/1801024?v=4"
+                  />
+                </Avatar>
               </a>
             </Link>
+            <div>
+              <Link
+                replace={false}
+                to="/alpcanaydin"
+              >
+                <a
+                  href="/alpcanaydin"
+                  onClick={[Function]}
+                >
+                  <span>
+                    Alpcan Aydın
+                  </span>
+                  <span>
+                    alpcanaydin
+                  </span>
+                </a>
+              </Link>
+            </div>
           </div>
+          <p>
+            Node.js and Javascript Developer at Atolye15
+          </p>
         </div>
-        <p>
-          Node.js and Javascript Developer at Atolye15
-        </p>
         <div>
           <Link
             className=""
@@ -754,6 +792,10 @@ exports[`renders correctly without company 1`] = `
           <span>
             612
              Star'lanma
+          </span>
+          <span>
+            404
+             Takipçi
           </span>
           <span>
             23

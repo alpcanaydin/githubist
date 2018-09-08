@@ -70,7 +70,7 @@ const Homepage = () => (
               </div>
 
               <div className={styles.buttonContainer}>
-                <LinkButton to="/locations" primary>
+                <LinkButton to="/developers" primary>
                   Tümünü Görüntüle
                 </LinkButton>
               </div>
@@ -90,7 +90,7 @@ const Homepage = () => (
               </LocationChart>
 
               <div className={styles.buttonContainer}>
-                <LinkButton to="/developers" primary>
+                <LinkButton to="/locations" primary>
                   Şehirlere Gözat
                 </LinkButton>
               </div>

@@ -16,6 +16,7 @@ it('renders correctly', () => {
         company="@Atolye15"
         bio="Node.js and Javascript Developer at Atolye15"
         totalStarred={612}
+        followers={404}
         repositoriesCount={23}
         location={{ name: 'İzmir', slug: 'izmir' }}
       />
@@ -35,6 +36,7 @@ it('renders correctly with rank', () => {
         profilePicture="https://avatars2.githubusercontent.com/u/1801024?v=4"
         company="@Atolye15"
         totalStarred={612}
+        followers={404}
         repositoriesCount={23}
         location={{ name: 'İzmir', slug: 'izmir' }}
       />
@@ -53,6 +55,7 @@ it('renders correctly with github creation date', () => {
         profilePicture="https://avatars2.githubusercontent.com/u/1801024?v=4"
         company="@Atolye15"
         totalStarred={612}
+        followers={404}
         repositoriesCount={23}
         location={{ name: 'İzmir', slug: 'izmir' }}
         githubCreatedAt="2012-05-31T22:02:23.000000Z"
@@ -72,6 +75,7 @@ it('renders correctly without company', () => {
         bio="Node.js and Javascript Developer at Atolye15"
         profilePicture="https://avatars2.githubusercontent.com/u/1801024?v=4"
         totalStarred={612}
+        followers={404}
         repositoriesCount={23}
         location={{ name: 'İzmir', slug: 'izmir' }}
       />
@@ -90,6 +94,7 @@ it('renders correctly without bio', () => {
         company="@Atoyle15"
         profilePicture="https://avatars2.githubusercontent.com/u/1801024?v=4"
         totalStarred={612}
+        followers={404}
         repositoriesCount={23}
         location={{ name: 'İzmir', slug: 'izmir' }}
       />
@@ -107,6 +112,7 @@ it('renders correctly without bio and company', () => {
         username="alpcanaydin"
         profilePicture="https://avatars2.githubusercontent.com/u/1801024?v=4"
         totalStarred={612}
+        followers={404}
         repositoriesCount={23}
         location={{ name: 'İzmir', slug: 'izmir' }}
       />

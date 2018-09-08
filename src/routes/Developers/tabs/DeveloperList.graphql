@@ -1,0 +1,19 @@
+#import "../../../fragments/basicDeveloper.graphql"
+
+query($limit: Int!, $offset: Int!, $orderBy: DeveloperOrder!, $includeDate: Boolean!) {
+  developers(limit: $limit, offset: $offset, orderBy: $orderBy) {
+    ...BasicDeveloper
+    totalStarred
+    followers
+    bio
+    company
+    stats {
+      repositoriesCount
+    }
+    location {
+      name
+      slug
+    }
+    githubCreatedAt @include(if: $includeDate)
+  }
+}

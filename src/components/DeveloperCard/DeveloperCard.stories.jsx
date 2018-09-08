@@ -18,6 +18,7 @@ storiesOf('DeveloperCard', module)
           profilePicture="https://avatars2.githubusercontent.com/u/1801024?v=4"
           company="@Atolye15"
           bio="Node.js and Javascript Developer at Atolye15"
+          followers={404}
           totalStarred={612}
           repositoriesCount={23}
           location={{ name: 'İzmir', slug: 'izmir' }}
@@ -34,6 +35,7 @@ storiesOf('DeveloperCard', module)
           username="alpcanaydin"
           profilePicture="https://avatars2.githubusercontent.com/u/1801024?v=4"
           company="@Atolye15"
+          followers={404}
           totalStarred={612}
           repositoriesCount={23}
           location={{ name: 'İzmir', slug: 'izmir' }}
@@ -49,6 +51,7 @@ storiesOf('DeveloperCard', module)
           username="alpcanaydin"
           profilePicture="https://avatars2.githubusercontent.com/u/1801024?v=4"
           company="@Atolye15"
+          followers={404}
           totalStarred={612}
           repositoriesCount={23}
           location={{ name: 'İzmir', slug: 'izmir' }}
@@ -66,6 +69,7 @@ storiesOf('DeveloperCard', module)
           bio="Node.js and Javascript Developer at Atolye15"
           profilePicture="https://avatars2.githubusercontent.com/u/1801024?v=4"
           totalStarred={612}
+          followers={404}
           repositoriesCount={23}
           location={{ name: 'İzmir', slug: 'izmir' }}
         />
@@ -81,6 +85,7 @@ storiesOf('DeveloperCard', module)
           company="@Atoyle15"
           profilePicture="https://avatars2.githubusercontent.com/u/1801024?v=4"
           totalStarred={612}
+          followers={404}
           repositoriesCount={23}
           location={{ name: 'İzmir', slug: 'izmir' }}
         />
@@ -95,6 +100,7 @@ storiesOf('DeveloperCard', module)
           username="alpcanaydin"
           profilePicture="https://avatars2.githubusercontent.com/u/1801024?v=4"
           totalStarred={612}
+          followers={404}
           repositoriesCount={23}
           location={{ name: 'İzmir', slug: 'izmir' }}
         />

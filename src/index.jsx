@@ -4,14 +4,20 @@ import React from 'react';
 import { AppContainer } from 'react-hot-loader';
 import { hydrate } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import ApolloClient, { InMemoryCache } from 'apollo-boost';
+import { ApolloClient, InMemoryCache } from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
+import { createHttpLink } from 'apollo-link-http';
 
 import App from './App';
 
 const client = new ApolloClient({
-  cache: new InMemoryCache().restore(window.__APOLLO_STATE__),
-  uri: process.env.GRAPHQL_URL,
+  ssrForceFetchDelay: 100,
+  connectToDevTools: true,
+  link: createHttpLink({
+    uri: (process.env.GRAPHQL_URL: any),
+    fetch,
+  }),
+  cache: new InMemoryCache({}).restore(window.__APOLLO_STATE__),
 });
 
 const render = Component => {

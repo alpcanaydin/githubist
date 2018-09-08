@@ -1,4 +1,5 @@
 fragment BasicDeveloper on Developer {
+  id
   name
   username
   avatarUrl

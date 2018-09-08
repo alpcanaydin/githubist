@@ -56,7 +56,7 @@
 }
 
 .bio {
-  margin: map-get($spacers, normal) 0 0 0;
+  margin: map-get($spacers, small) 0 0 0;
 }
 
 .meta {
@@ -81,5 +81,6 @@
 }
 
 .githubCreatedAt {
+  margin-right: 0;
   margin-left: auto;
 }

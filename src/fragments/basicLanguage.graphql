@@ -1,4 +1,5 @@
 fragment BasicLanguage on Language {
+  id
   name
   slug
   totalRepositories

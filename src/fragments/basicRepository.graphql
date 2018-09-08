@@ -1,4 +1,5 @@
 fragment BasicRepository on Repository {
+  id
   slug
   description
   language {

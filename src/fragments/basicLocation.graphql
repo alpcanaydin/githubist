@@ -1,4 +1,5 @@
 fragment BasicLocation on Location {
+  id
   name
   slug
   totalDevelopers

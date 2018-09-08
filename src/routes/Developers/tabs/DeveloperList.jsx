@@ -4,18 +4,19 @@ import React, { Fragment, PureComponent } from 'react';
 import Helmet from 'react-helmet';
 import { type QueryRenderProps } from 'react-apollo';
 
-import { type LocationOrder } from '../../../types/location';
+import { type DeveloperOrder } from '../../../types/developer';
 
-import LocationListQuery, { type Data, type Variables } from './LocationListQuery';
-import query from './LocationList.graphql';
+import DeveloperListQuery, { type Data, type Variables } from './DeveloperListQuery';
+import query from './DeveloperList.graphql';
 
-import { ErrorState, Loading, LocationCard, ScrollOnBottom } from '../../../components';
+import { ErrorState, Loading, DeveloperCard, ScrollOnBottom } from '../../../components';
 
-import styles from './LocationList.scss';
+import styles from './DeveloperList.scss';
 
 type Props = {
   title: string,
-  orderBy: LocationOrder,
+  orderBy: DeveloperOrder,
+  includeDate?: boolean,
 };
 
 type State = {
@@ -23,10 +24,14 @@ type State = {
   loadMoreLoading: boolean,
 };
 
-class LocationList extends PureComponent<Props, State> {
+class DeveloperList extends PureComponent<Props, State> {
   state = {
     stopScrollListening: false,
     loadMoreLoading: false,
+  };
+
+  static defaultProps = {
+    includeDate: false,
   };
 
   getMore = ({ loading, error, data, fetchMore }: $Shape<QueryRenderProps<Data, Variables>>) => {
@@ -34,7 +39,7 @@ class LocationList extends PureComponent<Props, State> {
       return;
     }
 
-    if (error || !data || !data.locations) {
+    if (error || !data || !data.developers) {
       this.setState({ stopScrollListening: true });
       return;
     }
@@ -42,23 +47,22 @@ class LocationList extends PureComponent<Props, State> {
     this.setState({ loadMoreLoading: true }, () => {
       fetchMore({
         variables: {
-          offset: data.locations.length,
+          offset: data.developers.length,
         },
         updateQuery: (prev, { fetchMoreResult }) => {
           if (!fetchMoreResult) {
             return prev;
           }
 
-          if (fetchMoreResult.locations.length === 0) {
-            this.setState({ stopScrollListening: true, loadMoreLoading: false });
-            return prev;
+          if (fetchMoreResult.developers.length === 0) {
+            this.setState({ stopScrollListening: true, loadMoreLoading: false }, () => prev);
           }
 
           this.setState({ loadMoreLoading: false });
 
           return {
             ...prev,
-            locations: [...prev.locations, ...fetchMoreResult.locations],
+            developers: [...prev.developers, ...fetchMoreResult.developers],
           };
         },
       });
@@ -66,21 +70,22 @@ class LocationList extends PureComponent<Props, State> {
   };
 
   render() {
-    const { title, orderBy } = this.props;
+    const { title, orderBy, includeDate = false } = this.props;
     const { stopScrollListening, loadMoreLoading } = this.state;
 
     return (
-      <LocationListQuery
+      <DeveloperListQuery
         query={query}
         variables={{
           limit: 30,
           offset: 0,
           orderBy,
+          includeDate,
         }}
         fetchPolicy="cache-and-network"
       >
         {({ loading, error, data, fetchMore }) => {
-          if (loading && !loadMoreLoading && (data && !data.locations)) {
+          if (loading && !loadMoreLoading && (data && !data.developers)) {
             return <Loading />;
           }
 
@@ -88,7 +93,7 @@ class LocationList extends PureComponent<Props, State> {
             return <ErrorState />;
           }
 
-          if (!data || !data.locations) {
+          if (!data || !data.developers) {
             return null;
           }
 
@@ -105,22 +110,23 @@ class LocationList extends PureComponent<Props, State> {
                   this.getMore({ loading, data, error, fetchMore });
                 }}
               >
-                <div className={styles.locations}>
-                  {data.locations.map((location, index) => [
-                    <LocationCard
-                      key={location.slug}
+                <div className={styles.developers}>
+                  {data.developers.map((developer, index) => (
+                    <DeveloperCard
+                      key={developer.username}
                       rank={index + 1}
-                      name={location.name}
-                      slug={location.slug}
-                      totalRepositories={location.totalRepositories}
-                      totalDevelopers={location.totalDevelopers}
-                      language={
-                        location.languageUsage.length > 0
-                          ? location.languageUsage[0].language
-                          : undefined
-                      }
-                    />,
-                  ])}
+                      name={developer.name}
+                      username={developer.username}
+                      profilePicture={developer.avatarUrl}
+                      company={developer.company}
+                      bio={developer.bio}
+                      totalStarred={developer.totalStarred}
+                      followers={developer.followers}
+                      repositoriesCount={developer.stats.repositoriesCount}
+                      location={developer.location}
+                      githubCreatedAt={developer.githubCreatedAt}
+                    />
+                  ))}
                 </div>
 
                 {loading && <Loading />}
@@ -128,9 +134,9 @@ class LocationList extends PureComponent<Props, State> {
             </Fragment>
           );
         }}
-      </LocationListQuery>
+      </DeveloperListQuery>
     );
   }
 }
 
-export default LocationList;
+export default DeveloperList;
