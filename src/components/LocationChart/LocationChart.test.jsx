@@ -30,3 +30,11 @@ it('renders correctly', () => {
 
   expect(wrapper).toMatchSnapshot();
 });
+
+it('sets maxScore to 1 if no location provided', () => {
+  const wrapper = shallow(
+    <LocationChart items={[]}>{item => <div>{item.name}</div>}</LocationChart>,
+  );
+
+  expect(wrapper.state('maxScore')).toEqual(1);
+});
