@@ -20,8 +20,12 @@ const LanguageCard = ({ rank, name, slug, totalRepositories, totalDevelopers }: 
     </Link>
 
     <div className={styles.meta}>
-      <span className={styles.metaItem}>{totalDevelopers.toLocaleString()} Geliştirici</span>
-      <span className={styles.metaItem}>{totalRepositories.toLocaleString()} Repo</span>
+      <Link to={`/language/${slug}/developers`} className={styles.metaItem}>
+        {totalDevelopers.toLocaleString()} Geliştirici
+      </Link>
+      <Link to={`/language/${slug}/repositories`} className={styles.metaItem}>
+        {totalRepositories.toLocaleString()} Repo
+      </Link>
     </div>
   </div>
 );

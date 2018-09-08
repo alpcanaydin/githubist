@@ -55,14 +55,30 @@ exports[`renders correctly 1`] = `
           </a>
         </Link>
         <div>
-          <span>
-            768
-             Geliştirici
-          </span>
-          <span>
-            2,150
-             Repo
-          </span>
+          <Link
+            replace={false}
+            to="/language/javascript/developers"
+          >
+            <a
+              href="/language/javascript/developers"
+              onClick={[Function]}
+            >
+              768
+               Geliştirici
+            </a>
+          </Link>
+          <Link
+            replace={false}
+            to="/language/javascript/repositories"
+          >
+            <a
+              href="/language/javascript/repositories"
+              onClick={[Function]}
+            >
+              2,150
+               Repo
+            </a>
+          </Link>
         </div>
       </div>
     </LanguageCard>
@@ -126,14 +142,30 @@ exports[`renders correctly with rank 1`] = `
           </a>
         </Link>
         <div>
-          <span>
-            768
-             Geliştirici
-          </span>
-          <span>
-            2,150
-             Repo
-          </span>
+          <Link
+            replace={false}
+            to="/language/javascript/developers"
+          >
+            <a
+              href="/language/javascript/developers"
+              onClick={[Function]}
+            >
+              768
+               Geliştirici
+            </a>
+          </Link>
+          <Link
+            replace={false}
+            to="/language/javascript/repositories"
+          >
+            <a
+              href="/language/javascript/repositories"
+              onClick={[Function]}
+            >
+              2,150
+               Repo
+            </a>
+          </Link>
         </div>
       </div>
     </LanguageCard>

@@ -29,5 +29,11 @@
 
 .metaItem {
   margin-right: map-get($spacers, normal);
+  color: $body-color;
   font-size: map-get($font-sizes, small);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
