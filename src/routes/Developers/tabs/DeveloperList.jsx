@@ -119,7 +119,6 @@ class DeveloperList extends PureComponent<Props, State> {
                       username={developer.username}
                       profilePicture={developer.avatarUrl}
                       company={developer.company}
-                      bio={developer.bio}
                       totalStarred={developer.totalStarred}
                       followers={developer.followers}
                       repositoriesCount={developer.stats.repositoriesCount}

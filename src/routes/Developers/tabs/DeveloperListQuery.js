@@ -6,7 +6,6 @@ import { type BasicDeveloper, type DeveloperOrder } from '../../../types/develop
 
 type ExtraFields = {
   totalStarred: number,
-  bio?: string,
   company?: string,
   followers: number,
   stats: {

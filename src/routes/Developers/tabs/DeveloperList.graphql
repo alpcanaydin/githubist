@@ -5,7 +5,6 @@ query($limit: Int!, $offset: Int!, $orderBy: DeveloperOrder!, $includeDate: Bool
     ...BasicDeveloper
     totalStarred
     followers
-    bio
     company
     stats {
       repositoriesCount

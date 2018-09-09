@@ -16,7 +16,6 @@ type Props = {
   username: string,
   profilePicture: string,
   company?: string,
-  bio?: string,
   followers: number,
   totalStarred: number,
   repositoriesCount: number,
@@ -30,7 +29,6 @@ const DeveloperCard = ({
   username,
   profilePicture,
   company,
-  bio,
   followers,
   totalStarred,
   repositoriesCount,
@@ -38,23 +36,19 @@ const DeveloperCard = ({
   githubCreatedAt,
 }: Props) => (
   <div className={styles.developerCard}>
-    <div>
-      <div className={styles.profile}>
-        <Link to={`/${username}`} className={styles.avatar}>
-          <Avatar size="small" url={profilePicture} alt={name} />
+    <div className={styles.profile}>
+      <Link to={`/${username}`} className={styles.avatar}>
+        <Avatar size="small" url={profilePicture} alt={name} />
+      </Link>
+
+      <div className={styles.info}>
+        <Link to={`/${username}`} className={styles.nameAndUsername}>
+          {rank && <span className={styles.rank}>#{rank}</span>}
+          <span className={styles.name}>{name}</span>
+          <span className={styles.username}>{username}</span>
         </Link>
-
-        <div className={styles.info}>
-          <Link to={`/${username}`} className={styles.nameAndUsername}>
-            {rank && <span className={styles.rank}>#{rank}</span>}
-            <span className={styles.name}>{name}</span>
-            <span className={styles.username}>{username}</span>
-          </Link>
-          {company && <p className={styles.company}>{company}</p>}
-        </div>
+        {company && <p className={styles.company}>{company}</p>}
       </div>
-
-      {bio && <p className={styles.bio}>{bio}</p>}
     </div>
 
     <div className={styles.meta}>
@@ -77,7 +71,6 @@ DeveloperCard.defaultProps = {
   rank: undefined,
   githubCreatedAt: '',
   company: '',
-  bio: '',
 };
 
 export default DeveloperCard;

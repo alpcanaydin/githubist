@@ -55,10 +55,6 @@
   font-size: map-get($font-sizes, small);
 }
 
-.bio {
-  margin: map-get($spacers, small) 0 0 0;
-}
-
 .meta {
   display: flex;
   flex-direction: row;
