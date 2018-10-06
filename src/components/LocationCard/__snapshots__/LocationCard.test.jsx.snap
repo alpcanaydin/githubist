@@ -48,58 +48,64 @@ exports[`renders correctly 1`] = `
       totalDevelopers={768}
       totalRepositories={2150}
     >
-      <div>
-        <Link
-          replace={false}
-          to="/location/izmir"
+      <Box
+        className=""
+      >
+        <div
+          className=""
         >
-          <a
-            href="/location/izmir"
-            onClick={[Function]}
-          >
-            İzmir
-          </a>
-        </Link>
-        <div>
           <Link
             replace={false}
-            to="/location/izmir/developers"
+            to="/location/izmir"
           >
             <a
-              href="/location/izmir/developers"
+              href="/location/izmir"
               onClick={[Function]}
             >
-              768
-               Geliştirici
+              İzmir
             </a>
           </Link>
-          <Link
-            replace={false}
-            to="/location/izmir/repositories"
-          >
-            <a
-              href="/location/izmir/repositories"
-              onClick={[Function]}
+          <div>
+            <Link
+              replace={false}
+              to="/location/izmir/developers"
             >
-              2,150
-               Repo
-            </a>
-          </Link>
-          <Link
-            className=""
-            replace={false}
-            to="/language/javascript"
-          >
-            <a
+              <a
+                href="/location/izmir/developers"
+                onClick={[Function]}
+              >
+                768
+                 Geliştirici
+              </a>
+            </Link>
+            <Link
+              replace={false}
+              to="/location/izmir/repositories"
+            >
+              <a
+                href="/location/izmir/repositories"
+                onClick={[Function]}
+              >
+                2,150
+                 Repo
+              </a>
+            </Link>
+            <Link
               className=""
-              href="/language/javascript"
-              onClick={[Function]}
+              replace={false}
+              to="/language/javascript"
             >
-              JavaScript
-            </a>
-          </Link>
+              <a
+                className=""
+                href="/language/javascript"
+                onClick={[Function]}
+              >
+                JavaScript
+              </a>
+            </Link>
+          </div>
         </div>
-      </div>
+      </Box>
     </LocationCard>
   </Router>
 </MemoryRouter>
@@ -154,58 +160,64 @@ exports[`renders correctly with rank 1`] = `
       totalDevelopers={768}
       totalRepositories={2150}
     >
-      <div>
-        <Link
-          replace={false}
-          to="/location/izmir"
+      <Box
+        className=""
+      >
+        <div
+          className=""
         >
-          <a
-            href="/location/izmir"
-            onClick={[Function]}
-          >
-            #1 İzmir
-          </a>
-        </Link>
-        <div>
           <Link
             replace={false}
-            to="/location/izmir/developers"
+            to="/location/izmir"
           >
             <a
-              href="/location/izmir/developers"
+              href="/location/izmir"
               onClick={[Function]}
             >
-              768
-               Geliştirici
+              #1 İzmir
             </a>
           </Link>
-          <Link
-            replace={false}
-            to="/location/izmir/repositories"
-          >
-            <a
-              href="/location/izmir/repositories"
-              onClick={[Function]}
+          <div>
+            <Link
+              replace={false}
+              to="/location/izmir/developers"
             >
-              2,150
-               Repo
-            </a>
-          </Link>
-          <Link
-            className=""
-            replace={false}
-            to="/language/javascript"
-          >
-            <a
+              <a
+                href="/location/izmir/developers"
+                onClick={[Function]}
+              >
+                768
+                 Geliştirici
+              </a>
+            </Link>
+            <Link
+              replace={false}
+              to="/location/izmir/repositories"
+            >
+              <a
+                href="/location/izmir/repositories"
+                onClick={[Function]}
+              >
+                2,150
+                 Repo
+              </a>
+            </Link>
+            <Link
               className=""
-              href="/language/javascript"
-              onClick={[Function]}
+              replace={false}
+              to="/language/javascript"
             >
-              JavaScript
-            </a>
-          </Link>
+              <a
+                className=""
+                href="/language/javascript"
+                onClick={[Function]}
+              >
+                JavaScript
+              </a>
+            </Link>
+          </div>
         </div>
-      </div>
+      </Box>
     </LocationCard>
   </Router>
 </MemoryRouter>
@@ -254,45 +266,51 @@ exports[`renders correctly without language 1`] = `
       totalDevelopers={768}
       totalRepositories={2150}
     >
-      <div>
-        <Link
-          replace={false}
-          to="/location/izmir"
+      <Box
+        className=""
+      >
+        <div
+          className=""
         >
-          <a
-            href="/location/izmir"
-            onClick={[Function]}
-          >
-            #1 İzmir
-          </a>
-        </Link>
-        <div>
           <Link
             replace={false}
-            to="/location/izmir/developers"
+            to="/location/izmir"
           >
             <a
-              href="/location/izmir/developers"
+              href="/location/izmir"
               onClick={[Function]}
             >
-              768
-               Geliştirici
+              #1 İzmir
             </a>
           </Link>
-          <Link
-            replace={false}
-            to="/location/izmir/repositories"
-          >
-            <a
-              href="/location/izmir/repositories"
-              onClick={[Function]}
+          <div>
+            <Link
+              replace={false}
+              to="/location/izmir/developers"
             >
-              2,150
-               Repo
-            </a>
-          </Link>
+              <a
+                href="/location/izmir/developers"
+                onClick={[Function]}
+              >
+                768
+                 Geliştirici
+              </a>
+            </Link>
+            <Link
+              replace={false}
+              to="/location/izmir/repositories"
+            >
+              <a
+                href="/location/izmir/repositories"
+                onClick={[Function]}
+              >
+                2,150
+                 Repo
+              </a>
+            </Link>
+          </div>
         </div>
-      </div>
+      </Box>
     </LocationCard>
   </Router>
 </MemoryRouter>

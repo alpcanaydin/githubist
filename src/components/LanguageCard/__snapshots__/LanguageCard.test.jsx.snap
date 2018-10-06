@@ -42,45 +42,51 @@ exports[`renders correctly 1`] = `
       totalDevelopers={768}
       totalRepositories={2150}
     >
-      <div>
-        <Link
-          replace={false}
-          to="/language/javascript"
+      <Box
+        className=""
+      >
+        <div
+          className=""
         >
-          <a
-            href="/language/javascript"
-            onClick={[Function]}
-          >
-            JavaScript
-          </a>
-        </Link>
-        <div>
           <Link
             replace={false}
-            to="/language/javascript/developers"
+            to="/language/javascript"
           >
             <a
-              href="/language/javascript/developers"
+              href="/language/javascript"
               onClick={[Function]}
             >
-              768
-               Geliştirici
+              JavaScript
             </a>
           </Link>
-          <Link
-            replace={false}
-            to="/language/javascript/repositories"
-          >
-            <a
-              href="/language/javascript/repositories"
-              onClick={[Function]}
+          <div>
+            <Link
+              replace={false}
+              to="/language/javascript/developers"
             >
-              2,150
-               Repo
-            </a>
-          </Link>
+              <a
+                href="/language/javascript/developers"
+                onClick={[Function]}
+              >
+                768
+                 Geliştirici
+              </a>
+            </Link>
+            <Link
+              replace={false}
+              to="/language/javascript/repositories"
+            >
+              <a
+                href="/language/javascript/repositories"
+                onClick={[Function]}
+              >
+                2,150
+                 Repo
+              </a>
+            </Link>
+          </div>
         </div>
-      </div>
+      </Box>
     </LanguageCard>
   </Router>
 </MemoryRouter>
@@ -129,45 +135,51 @@ exports[`renders correctly with rank 1`] = `
       totalDevelopers={768}
       totalRepositories={2150}
     >
-      <div>
-        <Link
-          replace={false}
-          to="/language/javascript"
+      <Box
+        className=""
+      >
+        <div
+          className=""
         >
-          <a
-            href="/language/javascript"
-            onClick={[Function]}
-          >
-            #1 JavaScript
-          </a>
-        </Link>
-        <div>
           <Link
             replace={false}
-            to="/language/javascript/developers"
+            to="/language/javascript"
           >
             <a
-              href="/language/javascript/developers"
+              href="/language/javascript"
               onClick={[Function]}
             >
-              768
-               Geliştirici
+              #1 JavaScript
             </a>
           </Link>
-          <Link
-            replace={false}
-            to="/language/javascript/repositories"
-          >
-            <a
-              href="/language/javascript/repositories"
-              onClick={[Function]}
+          <div>
+            <Link
+              replace={false}
+              to="/language/javascript/developers"
             >
-              2,150
-               Repo
-            </a>
-          </Link>
+              <a
+                href="/language/javascript/developers"
+                onClick={[Function]}
+              >
+                768
+                 Geliştirici
+              </a>
+            </Link>
+            <Link
+              replace={false}
+              to="/language/javascript/repositories"
+            >
+              <a
+                href="/language/javascript/repositories"
+                onClick={[Function]}
+              >
+                2,150
+                 Repo
+              </a>
+            </Link>
+          </div>
         </div>
-      </div>
+      </Box>
     </LanguageCard>
   </Router>
 </MemoryRouter>

@@ -4,6 +4,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
 
+import { Box } from '..';
+
 import styles from './LocationCard.scss';
 
 type Props = {
@@ -26,7 +28,7 @@ const LocationCard = ({
   totalDevelopers,
   language,
 }: Props) => (
-  <div className={styles.locationCard}>
+  <Box>
     <Link to={`/location/${slug}`} className={styles.name}>
       {rank ? `#${rank} ${name}` : name}
     </Link>
@@ -44,7 +46,7 @@ const LocationCard = ({
         </Link>
       )}
     </div>
-  </div>
+  </Box>
 );
 
 LocationCard.defaultProps = {

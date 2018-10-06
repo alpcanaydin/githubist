@@ -6,6 +6,8 @@ import cx from 'classnames';
 
 import toDateString from '../../utils/toDateString';
 
+import { Box } from '..';
+
 import styles from './RepoCard.scss';
 
 type Props = {
@@ -22,7 +24,7 @@ type Props = {
 };
 
 const RepoCard = ({ rank, slug, description, language, stars, forks, githubCreatedAt }: Props) => (
-  <div className={styles.repoCard}>
+  <Box>
     <div>
       <Link to={`/${slug}`} className={styles.name}>
         {rank ? `#${rank} ${slug}` : slug}
@@ -42,7 +44,7 @@ const RepoCard = ({ rank, slug, description, language, stars, forks, githubCreat
         </span>
       )}
     </div>
-  </div>
+  </Box>
 );
 
 RepoCard.defaultProps = {

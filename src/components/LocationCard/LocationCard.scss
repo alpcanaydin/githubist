@@ -1,16 +1,5 @@
 @import '../../theme/theme';
 
-.locationCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: map-get($spacers, large);
-  border: 1px solid $text-muted;
-  background-color: $white;
-  border-radius: px-to-rem(2px);
-  box-shadow: 3px 3px 0 #d5d5d6;
-}
-
 .name {
   color: $black-color;
   font-weight: 600;

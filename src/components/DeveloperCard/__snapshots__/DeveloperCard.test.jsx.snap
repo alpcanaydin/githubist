@@ -52,29 +52,12 @@ exports[`renders correctly 1`] = `
       totalStarred={612}
       username="alpcanaydin"
     >
-      <div>
-        <div>
-          <Link
-            replace={false}
-            to="/alpcanaydin"
-          >
-            <a
-              href="/alpcanaydin"
-              onClick={[Function]}
-            >
-              <Avatar
-                alt="Alpcan Aydın"
-                size="small"
-                url="https://avatars2.githubusercontent.com/u/1801024?v=4"
-              >
-                <img
-                  alt="Alpcan Aydın"
-                  className="undefined"
-                  src="https://avatars2.githubusercontent.com/u/1801024?v=4"
-                />
-              </Avatar>
-            </a>
-          </Link>
+      <Box
+        className=""
+      >
+        <div
+          className=""
+        >
           <div>
             <Link
               replace={false}
@@ -84,47 +67,70 @@ exports[`renders correctly 1`] = `
                 href="/alpcanaydin"
                 onClick={[Function]}
               >
-                <span>
-                  Alpcan Aydın
-                </span>
-                <span>
-                  alpcanaydin
-                </span>
+                <Avatar
+                  alt="Alpcan Aydın"
+                  size="small"
+                  url="https://avatars2.githubusercontent.com/u/1801024?v=4"
+                >
+                  <img
+                    alt="Alpcan Aydın"
+                    className="undefined"
+                    src="https://avatars2.githubusercontent.com/u/1801024?v=4"
+                  />
+                </Avatar>
               </a>
             </Link>
-            <p>
-              @Atolye15
-            </p>
+            <div>
+              <Link
+                replace={false}
+                to="/alpcanaydin"
+              >
+                <a
+                  href="/alpcanaydin"
+                  onClick={[Function]}
+                >
+                  <span>
+                    Alpcan Aydın
+                  </span>
+                  <span>
+                    alpcanaydin
+                  </span>
+                </a>
+              </Link>
+              <p>
+                @Atolye15
+              </p>
+            </div>
+          </div>
+          <div>
+            <Link
+              className=""
+              replace={false}
+              to="/location/izmir"
+            >
+              <a
+                className=""
+                href="/location/izmir"
+                onClick={[Function]}
+              >
+                İzmir
+              </a>
+            </Link>
+            <span>
+              612
+               Star'lanma
+            </span>
+            <span>
+              404
+               Takipçi
+            </span>
+            <span>
+              23
+               Repo
+            </span>
           </div>
         </div>
-        <div>
-          <Link
-            className=""
-            replace={false}
-            to="/location/izmir"
-          >
-            <a
-              className=""
-              href="/location/izmir"
-              onClick={[Function]}
-            >
-              İzmir
-            </a>
-          </Link>
-          <span>
-            612
-             Star'lanma
-          </span>
-          <span>
-            404
-             Takipçi
-          </span>
-          <span>
-            23
-             Repo
-          </span>
-        </div>
-      </div>
+      </Box>
     </DeveloperCard>
   </Router>
 </MemoryRouter>
@@ -182,29 +188,12 @@ exports[`renders correctly with github creation date 1`] = `
       totalStarred={612}
       username="alpcanaydin"
     >
-      <div>
-        <div>
-          <Link
-            replace={false}
-            to="/alpcanaydin"
-          >
-            <a
-              href="/alpcanaydin"
-              onClick={[Function]}
-            >
-              <Avatar
-                alt="Alpcan Aydın"
-                size="small"
-                url="https://avatars2.githubusercontent.com/u/1801024?v=4"
-              >
-                <img
-                  alt="Alpcan Aydın"
-                  className="undefined"
-                  src="https://avatars2.githubusercontent.com/u/1801024?v=4"
-                />
-              </Avatar>
-            </a>
-          </Link>
+      <Box
+        className=""
+      >
+        <div
+          className=""
+        >
           <div>
             <Link
               replace={false}
@@ -214,52 +203,75 @@ exports[`renders correctly with github creation date 1`] = `
                 href="/alpcanaydin"
                 onClick={[Function]}
               >
-                <span>
-                  Alpcan Aydın
-                </span>
-                <span>
-                  alpcanaydin
-                </span>
+                <Avatar
+                  alt="Alpcan Aydın"
+                  size="small"
+                  url="https://avatars2.githubusercontent.com/u/1801024?v=4"
+                >
+                  <img
+                    alt="Alpcan Aydın"
+                    className="undefined"
+                    src="https://avatars2.githubusercontent.com/u/1801024?v=4"
+                  />
+                </Avatar>
               </a>
             </Link>
-            <p>
-              @Atolye15
-            </p>
+            <div>
+              <Link
+                replace={false}
+                to="/alpcanaydin"
+              >
+                <a
+                  href="/alpcanaydin"
+                  onClick={[Function]}
+                >
+                  <span>
+                    Alpcan Aydın
+                  </span>
+                  <span>
+                    alpcanaydin
+                  </span>
+                </a>
+              </Link>
+              <p>
+                @Atolye15
+              </p>
+            </div>
+          </div>
+          <div>
+            <Link
+              className=""
+              replace={false}
+              to="/location/izmir"
+            >
+              <a
+                className=""
+                href="/location/izmir"
+                onClick={[Function]}
+              >
+                İzmir
+              </a>
+            </Link>
+            <span>
+              612
+               Star'lanma
+            </span>
+            <span>
+              404
+               Takipçi
+            </span>
+            <span>
+              23
+               Repo
+            </span>
+            <span
+              className=""
+            >
+              1 Haziran 2012
+            </span>
           </div>
         </div>
-        <div>
-          <Link
-            className=""
-            replace={false}
-            to="/location/izmir"
-          >
-            <a
-              className=""
-              href="/location/izmir"
-              onClick={[Function]}
-            >
-              İzmir
-            </a>
-          </Link>
-          <span>
-            612
-             Star'lanma
-          </span>
-          <span>
-            404
-             Takipçi
-          </span>
-          <span>
-            23
-             Repo
-          </span>
-          <span
-            className=""
-          >
-            1 Haziran 2012
-          </span>
-        </div>
-      </div>
+      </Box>
     </DeveloperCard>
   </Router>
 </MemoryRouter>
@@ -318,29 +330,12 @@ exports[`renders correctly with rank 1`] = `
       totalStarred={612}
       username="alpcanaydin"
     >
-      <div>
-        <div>
-          <Link
-            replace={false}
-            to="/alpcanaydin"
-          >
-            <a
-              href="/alpcanaydin"
-              onClick={[Function]}
-            >
-              <Avatar
-                alt="Alpcan Aydın"
-                size="small"
-                url="https://avatars2.githubusercontent.com/u/1801024?v=4"
-              >
-                <img
-                  alt="Alpcan Aydın"
-                  className="undefined"
-                  src="https://avatars2.githubusercontent.com/u/1801024?v=4"
-                />
-              </Avatar>
-            </a>
-          </Link>
+      <Box
+        className=""
+      >
+        <div
+          className=""
+        >
           <div>
             <Link
               replace={false}
@@ -350,51 +345,74 @@ exports[`renders correctly with rank 1`] = `
                 href="/alpcanaydin"
                 onClick={[Function]}
               >
-                <span>
-                  #
-                  1
-                </span>
-                <span>
-                  Alpcan Aydın
-                </span>
-                <span>
-                  alpcanaydin
-                </span>
+                <Avatar
+                  alt="Alpcan Aydın"
+                  size="small"
+                  url="https://avatars2.githubusercontent.com/u/1801024?v=4"
+                >
+                  <img
+                    alt="Alpcan Aydın"
+                    className="undefined"
+                    src="https://avatars2.githubusercontent.com/u/1801024?v=4"
+                  />
+                </Avatar>
               </a>
             </Link>
-            <p>
-              @Atolye15
-            </p>
+            <div>
+              <Link
+                replace={false}
+                to="/alpcanaydin"
+              >
+                <a
+                  href="/alpcanaydin"
+                  onClick={[Function]}
+                >
+                  <span>
+                    #
+                    1
+                  </span>
+                  <span>
+                    Alpcan Aydın
+                  </span>
+                  <span>
+                    alpcanaydin
+                  </span>
+                </a>
+              </Link>
+              <p>
+                @Atolye15
+              </p>
+            </div>
+          </div>
+          <div>
+            <Link
+              className=""
+              replace={false}
+              to="/location/izmir"
+            >
+              <a
+                className=""
+                href="/location/izmir"
+                onClick={[Function]}
+              >
+                İzmir
+              </a>
+            </Link>
+            <span>
+              612
+               Star'lanma
+            </span>
+            <span>
+              404
+               Takipçi
+            </span>
+            <span>
+              23
+               Repo
+            </span>
           </div>
         </div>
-        <div>
-          <Link
-            className=""
-            replace={false}
-            to="/location/izmir"
-          >
-            <a
-              className=""
-              href="/location/izmir"
-              onClick={[Function]}
-            >
-              İzmir
-            </a>
-          </Link>
-          <span>
-            612
-             Star'lanma
-          </span>
-          <span>
-            404
-             Takipçi
-          </span>
-          <span>
-            23
-             Repo
-          </span>
-        </div>
-      </div>
+      </Box>
     </DeveloperCard>
   </Router>
 </MemoryRouter>
@@ -452,29 +470,12 @@ exports[`renders correctly without company 1`] = `
       totalStarred={612}
       username="alpcanaydin"
     >
-      <div>
-        <div>
-          <Link
-            replace={false}
-            to="/alpcanaydin"
-          >
-            <a
-              href="/alpcanaydin"
-              onClick={[Function]}
-            >
-              <Avatar
-                alt="Alpcan Aydın"
-                size="small"
-                url="https://avatars2.githubusercontent.com/u/1801024?v=4"
-              >
-                <img
-                  alt="Alpcan Aydın"
-                  className="undefined"
-                  src="https://avatars2.githubusercontent.com/u/1801024?v=4"
-                />
-              </Avatar>
-            </a>
-          </Link>
+      <Box
+        className=""
+      >
+        <div
+          className=""
+        >
           <div>
             <Link
               replace={false}
@@ -484,44 +485,67 @@ exports[`renders correctly without company 1`] = `
                 href="/alpcanaydin"
                 onClick={[Function]}
               >
-                <span>
-                  Alpcan Aydın
-                </span>
-                <span>
-                  alpcanaydin
-                </span>
+                <Avatar
+                  alt="Alpcan Aydın"
+                  size="small"
+                  url="https://avatars2.githubusercontent.com/u/1801024?v=4"
+                >
+                  <img
+                    alt="Alpcan Aydın"
+                    className="undefined"
+                    src="https://avatars2.githubusercontent.com/u/1801024?v=4"
+                  />
+                </Avatar>
               </a>
             </Link>
+            <div>
+              <Link
+                replace={false}
+                to="/alpcanaydin"
+              >
+                <a
+                  href="/alpcanaydin"
+                  onClick={[Function]}
+                >
+                  <span>
+                    Alpcan Aydın
+                  </span>
+                  <span>
+                    alpcanaydin
+                  </span>
+                </a>
+              </Link>
+            </div>
+          </div>
+          <div>
+            <Link
+              className=""
+              replace={false}
+              to="/location/izmir"
+            >
+              <a
+                className=""
+                href="/location/izmir"
+                onClick={[Function]}
+              >
+                İzmir
+              </a>
+            </Link>
+            <span>
+              612
+               Star'lanma
+            </span>
+            <span>
+              404
+               Takipçi
+            </span>
+            <span>
+              23
+               Repo
+            </span>
           </div>
         </div>
-        <div>
-          <Link
-            className=""
-            replace={false}
-            to="/location/izmir"
-          >
-            <a
-              className=""
-              href="/location/izmir"
-              onClick={[Function]}
-            >
-              İzmir
-            </a>
-          </Link>
-          <span>
-            612
-             Star'lanma
-          </span>
-          <span>
-            404
-             Takipçi
-          </span>
-          <span>
-            23
-             Repo
-          </span>
-        </div>
-      </div>
+      </Box>
     </DeveloperCard>
   </Router>
 </MemoryRouter>

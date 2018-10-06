@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
 
-import { Avatar } from '..';
+import { Avatar, Box } from '..';
 
 import toDateString from '../../utils/toDateString';
 
@@ -35,7 +35,7 @@ const DeveloperCard = ({
   location,
   githubCreatedAt,
 }: Props) => (
-  <div className={styles.developerCard}>
+  <Box>
     <div className={styles.profile}>
       <Link to={`/${username}`} className={styles.avatar}>
         <Avatar size="small" url={profilePicture} alt={name} />
@@ -64,7 +64,7 @@ const DeveloperCard = ({
         </span>
       )}
     </div>
-  </div>
+  </Box>
 );
 
 DeveloperCard.defaultProps = {

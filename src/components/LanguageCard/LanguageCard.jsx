@@ -3,6 +3,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { Box } from '..';
+
 import styles from './LanguageCard.scss';
 
 type Props = {
@@ -14,7 +16,7 @@ type Props = {
 };
 
 const LanguageCard = ({ rank, name, slug, totalRepositories, totalDevelopers }: Props) => (
-  <div className={styles.languageCard}>
+  <Box>
     <Link to={`/language/${slug}`} className={styles.name}>
       {rank ? `#${rank} ${name}` : name}
     </Link>
@@ -27,7 +29,7 @@ const LanguageCard = ({ rank, name, slug, totalRepositories, totalDevelopers }: 
         {totalRepositories.toLocaleString()} Repo
       </Link>
     </div>
-  </div>
+  </Box>
 );
 
 LanguageCard.defaultProps = {

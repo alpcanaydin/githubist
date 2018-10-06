@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+import { Box } from '..';
+
 import styles from './Count.scss';
 
 type Props = {
@@ -10,10 +12,10 @@ type Props = {
 };
 
 const Count = ({ count, title }: Props) => (
-  <div className={styles.container}>
+  <Box className={styles.container}>
     <h3 className={styles.count}>{count.toLocaleString()}</h3>
     <p className={styles.title}>{title}</p>
-  </div>
+  </Box>
 );
 
 export default Count;
