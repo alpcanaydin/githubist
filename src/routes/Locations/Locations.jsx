@@ -20,8 +20,6 @@ import ByScore from './tabs/ByScore';
 import ByTotalDevelopers from './tabs/ByTotalDevelopers';
 import ByTotalRepositories from './tabs/ByTotalRepositories';
 
-import styles from './Locations.scss';
-
 const Locations = () => (
   <LocationsQuery query={query}>
     {({ loading, error, data }) => {
@@ -44,7 +42,7 @@ const Locations = () => (
               subtitle={`Github.ist üzerinde toplam ${data.turkey.totalLocations.toLocaleString()} şehir bulunuyor.`}
             />
 
-            <LinkBar className={styles.linkBar}>
+            <LinkBar>
               <LinkBarItem exact to="/locations">
                 Sıralama
               </LinkBarItem>

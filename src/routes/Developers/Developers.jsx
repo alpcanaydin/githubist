@@ -21,8 +21,6 @@ import ByTotalStarred from './tabs/ByTotalStarred';
 import ByFollowers from './tabs/ByFollowers';
 import ByDate from './tabs/ByDate';
 
-import styles from './Developers.scss';
-
 const Developers = () => (
   <DevelopersQuery query={query}>
     {({ loading, error, data }) => {
@@ -45,7 +43,7 @@ const Developers = () => (
               subtitle={`Github.ist üzerinde toplam ${data.turkey.totalDevelopers.toLocaleString()} geliştirici bulunuyor.`}
             />
 
-            <LinkBar className={styles.linkBar}>
+            <LinkBar>
               <LinkBarItem exact to="/developers">
                 Sıralama
               </LinkBarItem>

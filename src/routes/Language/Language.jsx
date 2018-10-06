@@ -21,8 +21,6 @@ import Repositories from './tabs/Repositories';
 import Developers from './tabs/Developers';
 import Locations from './tabs/Locations';
 
-import styles from './Language.scss';
-
 type Props = {
   match: Match,
 };
@@ -49,7 +47,7 @@ const Language = ({ match }: Props) => (
               subtitle={`Bu dil için toplam ${data.language.totalDevelopers.toLocaleString()} geliştrici ve ${data.language.totalRepositories.toLocaleString()} repo bulunuyor.`}
             />
 
-            <LinkBar className={styles.linkBar}>
+            <LinkBar>
               <LinkBarItem exact to={`/language/${data.language.slug}`}>
                 Genel Bilgiler
               </LinkBarItem>

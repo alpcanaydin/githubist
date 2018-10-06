@@ -20,8 +20,6 @@ import ByScore from './tabs/ByScore';
 import ByTotalDevelopers from './tabs/ByTotalDevelopers';
 import ByTotalRepositories from './tabs/ByTotalRepositories';
 
-import styles from './Languages.scss';
-
 const Languages = () => (
   <LanguagesQuery query={query}>
     {({ loading, error, data }) => {
@@ -44,7 +42,7 @@ const Languages = () => (
               subtitle={`Github.ist üzerinde toplam ${data.turkey.totalLanguages.toLocaleString()} dil bulunuyor.`}
             />
 
-            <LinkBar className={styles.linkBar}>
+            <LinkBar>
               <LinkBarItem exact to="/languages">
                 Sıralama
               </LinkBarItem>

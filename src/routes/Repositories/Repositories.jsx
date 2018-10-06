@@ -20,8 +20,6 @@ import ByStars from './tabs/ByStars';
 import ByForks from './tabs/ByForks';
 import ByDate from './tabs/ByDate';
 
-import styles from './Repositories.scss';
-
 const Repos = () => (
   <RepositoriesQuery query={query}>
     {({ loading, error, data }) => {
@@ -44,7 +42,7 @@ const Repos = () => (
               subtitle={`Github.ist üzerinde toplam ${data.turkey.totalRepositories.toLocaleString()} repository bulunuyor.`}
             />
 
-            <LinkBar className={styles.linkBar}>
+            <LinkBar>
               <LinkBarItem exact to="/repositories">
                 Star&apos;a Göre
               </LinkBarItem>
