@@ -22,4 +22,17 @@ storiesOf('LinkBar', module)
         </LinkBar>
       </MemoryRouter>
     </div>
+  ))
+  .add('without gap', () => (
+    <div style={{ backgroundColor: '#fff' }}>
+      <MemoryRouter>
+        <LinkBar withoutGap>
+          <Item to="/link-1" isActive={() => true}>
+            Link 1
+          </Item>
+          <Item to="/link-2">Link 2</Item>
+          <Item to="/link-3">Link 3</Item>
+        </LinkBar>
+      </MemoryRouter>
+    </div>
   ));

@@ -3,6 +3,11 @@
 .linkBar {
   display: flex;
   flex-direction: row;
+  padding-bottom: map-get($spacers, x-large);
+}
+
+.withoutGap {
+  padding-bottom: 0;
 }
 
 .item {

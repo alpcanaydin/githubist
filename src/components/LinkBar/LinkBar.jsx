@@ -7,16 +7,18 @@ import styles from './LinkBar.scss';
 
 type Props = {
   children: Node,
+  withoutGap?: boolean,
   className?: string,
 };
 
-const LinkBar = ({ children, className }: Props) => {
-  const classNames = cx(styles.linkBar, className);
+const LinkBar = ({ children, withoutGap, className }: Props) => {
+  const classNames = cx(styles.linkBar, { [styles.withoutGap]: withoutGap }, className);
 
   return <div className={classNames}>{children}</div>;
 };
 
 LinkBar.defaultProps = {
+  withoutGap: false,
   className: '',
 };
 

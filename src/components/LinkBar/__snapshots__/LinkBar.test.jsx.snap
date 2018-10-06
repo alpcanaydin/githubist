@@ -38,6 +38,7 @@ exports[`renders correctly 1`] = `
   >
     <LinkBar
       className=""
+      withoutGap={false}
     >
       <div
         className=""
@@ -191,6 +192,7 @@ exports[`renders correctly with active item 1`] = `
   >
     <LinkBar
       className=""
+      withoutGap={false}
     >
       <div
         className=""
@@ -227,6 +229,160 @@ exports[`renders correctly with active item 1`] = `
                   href="/link-1"
                   onClick={[Function]}
                   style={Object {}}
+                >
+                  Link 1
+                </a>
+              </Link>
+            </Route>
+          </NavLink>
+        </Item>
+        <Item
+          activeClassName=""
+          className=""
+          exact={false}
+          to="/link-2"
+        >
+          <NavLink
+            activeClassName=""
+            ariaCurrent="true"
+            className=""
+            exact={false}
+            to="/link-2"
+          >
+            <Route
+              exact={false}
+              path="/link-2"
+            >
+              <Link
+                aria-current={false}
+                className=""
+                replace={false}
+                to="/link-2"
+              >
+                <a
+                  aria-current={false}
+                  className=""
+                  href="/link-2"
+                  onClick={[Function]}
+                >
+                  Link 2
+                </a>
+              </Link>
+            </Route>
+          </NavLink>
+        </Item>
+        <Item
+          activeClassName=""
+          className=""
+          exact={false}
+          to="/link-3"
+        >
+          <NavLink
+            activeClassName=""
+            ariaCurrent="true"
+            className=""
+            exact={false}
+            to="/link-3"
+          >
+            <Route
+              exact={false}
+              path="/link-3"
+            >
+              <Link
+                aria-current={false}
+                className=""
+                replace={false}
+                to="/link-3"
+              >
+                <a
+                  aria-current={false}
+                  className=""
+                  href="/link-3"
+                  onClick={[Function]}
+                >
+                  Link 3
+                </a>
+              </Link>
+            </Route>
+          </NavLink>
+        </Item>
+      </div>
+    </LinkBar>
+  </Router>
+</MemoryRouter>
+`;
+
+exports[`renders correctly without bottom gap 1`] = `
+<MemoryRouter
+  keyLength={0}
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <LinkBar
+      className=""
+      withoutGap={true}
+    >
+      <div
+        className="undefined"
+      >
+        <Item
+          activeClassName=""
+          className=""
+          exact={false}
+          to="/link-1"
+        >
+          <NavLink
+            activeClassName=""
+            ariaCurrent="true"
+            className=""
+            exact={false}
+            to="/link-1"
+          >
+            <Route
+              exact={false}
+              path="/link-1"
+            >
+              <Link
+                aria-current={false}
+                className=""
+                replace={false}
+                to="/link-1"
+              >
+                <a
+                  aria-current={false}
+                  className=""
+                  href="/link-1"
+                  onClick={[Function]}
                 >
                   Link 1
                 </a>
