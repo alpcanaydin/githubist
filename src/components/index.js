@@ -15,6 +15,7 @@ export { default as LanguageBox } from './LanguageBox';
 export { default as LanguageCard } from './LanguageCard';
 export { default as LinkBar, LinkBarItem } from './LinkBar';
 export { default as LinkButton } from './LinkButton';
+export { default as List } from './List';
 export { default as Loading } from './Loading';
 export { default as LocationCard } from './LocationCard';
 export { default as LocationChart } from './LocationChart';

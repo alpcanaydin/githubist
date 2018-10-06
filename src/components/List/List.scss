@@ -1,0 +1,20 @@
+@import '../../theme/theme';
+
+.list {
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-column-gap: map-get($spacers, large);
+  grid-row-gap: map-get($spacers, large);
+}
+
+.columns1 {
+  grid-template-columns: 1fr;
+}
+
+.columns2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.columns3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
