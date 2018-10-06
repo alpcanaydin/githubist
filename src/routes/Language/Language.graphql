@@ -1,0 +1,7 @@
+#import "../../fragments/basicLanguage.graphql"
+
+query($slug: String!) {
+  language(slug: $slug) {
+    ...BasicLanguage
+  }
+}

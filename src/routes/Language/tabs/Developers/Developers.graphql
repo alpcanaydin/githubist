@@ -1,0 +1,22 @@
+#import "../../../../fragments/basicLanguage.graphql"
+#import "../../../../fragments/basicDeveloper.graphql"
+
+query($slug: String!, $limit: Int!, $offset: Int!) {
+  language(slug: $slug) {
+    ...BasicLanguage
+    developerUsage(limit: $limit, offset: $offset) {
+      developer {
+        ...BasicDeveloper
+        totalStarred
+        followers
+        company
+        location {
+          name
+          slug
+        }
+      }
+
+      repositoriesCount
+    }
+  }
+}

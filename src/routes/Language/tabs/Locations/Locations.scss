@@ -1,0 +1,9 @@
+@import '../../../../theme/theme';
+
+.locations {
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-column-gap: map-get($spacers, large);
+  grid-row-gap: map-get($spacers, large);
+  grid-template-columns: 1fr 1fr 1fr;
+}

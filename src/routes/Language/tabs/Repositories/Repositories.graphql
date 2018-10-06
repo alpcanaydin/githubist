@@ -1,0 +1,11 @@
+#import "../../../../fragments/basicLanguage.graphql"
+#import "../../../../fragments/basicRepository.graphql"
+
+query($slug: String!, $limit: Int!, $offset: Int!, $orderBy: RepositoryOrder!) {
+  language(slug: $slug) {
+    ...BasicLanguage
+    repositories(limit: $limit, offset: $offset, orderBy: $orderBy) {
+      ...BasicRepository
+    }
+  }
+}
