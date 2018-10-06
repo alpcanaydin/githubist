@@ -8,9 +8,7 @@ import { type QueryRenderProps } from 'react-apollo';
 import DevelopersQuery, { type Data, type Variables } from './DevelopersQuery';
 import query from './Developers.graphql';
 
-import { ErrorState, Loading, DeveloperCard, ScrollOnBottom } from '../../../../components';
-
-import styles from './Developers.scss';
+import { ErrorState, Loading, List, DeveloperCard, ScrollOnBottom } from '../../../../components';
 
 type Props = {
   match: Match,
@@ -112,7 +110,7 @@ class Developers extends PureComponent<Props, State> {
                   this.getMore({ loading, data, error, fetchMore });
                 }}
               >
-                <div className={styles.developers}>
+                <List columns={2}>
                   {data.language.developerUsage.map((developerUsage, index) => (
                     <DeveloperCard
                       key={developerUsage.developer.username}
@@ -127,7 +125,7 @@ class Developers extends PureComponent<Props, State> {
                       location={developerUsage.developer.location}
                     />
                   ))}
-                </div>
+                </List>
 
                 {loading && <Loading />}
               </ScrollOnBottom>

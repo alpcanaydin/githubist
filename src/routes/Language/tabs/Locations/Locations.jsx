@@ -8,9 +8,7 @@ import { type QueryRenderProps } from 'react-apollo';
 import LocationsQuery, { type Data, type Variables } from './LocationsQuery';
 import query from './Locations.graphql';
 
-import { ErrorState, Loading, LocationCard, ScrollOnBottom } from '../../../../components';
-
-import styles from './Locations.scss';
+import { ErrorState, Loading, List, LocationCard, ScrollOnBottom } from '../../../../components';
 
 type Props = {
   match: Match,
@@ -112,7 +110,7 @@ class Locations extends PureComponent<Props, State> {
                   this.getMore({ loading, data, error, fetchMore });
                 }}
               >
-                <div className={styles.locations}>
+                <List columns={3}>
                   {data.language.locationUsage.map((locationUsage, index) => (
                     <LocationCard
                       key={locationUsage.location.slug}
@@ -123,7 +121,7 @@ class Locations extends PureComponent<Props, State> {
                       totalDevelopers={locationUsage.location.totalDevelopers}
                     />
                   ))}
-                </div>
+                </List>
 
                 {loading && <Loading />}
               </ScrollOnBottom>

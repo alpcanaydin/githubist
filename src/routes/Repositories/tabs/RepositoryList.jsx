@@ -9,9 +9,7 @@ import { type RepositoryOrder } from '../../../types/repository';
 import RepositoryListQuery, { type Data, type Variables } from './RepositoryListQuery';
 import query from './RepositoryList.graphql';
 
-import { ErrorState, Loading, RepoCard, ScrollOnBottom } from '../../../components';
-
-import styles from './RepositoryList.scss';
+import { ErrorState, Loading, List, RepoCard, ScrollOnBottom } from '../../../components';
 
 type Props = {
   title: string,
@@ -110,7 +108,7 @@ class RepositoryList extends PureComponent<Props, State> {
                   this.getMore({ loading, data, error, fetchMore });
                 }}
               >
-                <div className={styles.repositories}>
+                <List columns={2}>
                   {data.repositories.map((repo, index) => (
                     <RepoCard
                       key={repo.slug}
@@ -123,7 +121,7 @@ class RepositoryList extends PureComponent<Props, State> {
                       githubCreatedAt={repo.githubCreatedAt}
                     />
                   ))}
-                </div>
+                </List>
 
                 {loading && <Loading />}
               </ScrollOnBottom>

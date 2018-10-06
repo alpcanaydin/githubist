@@ -9,9 +9,7 @@ import { type LanguageOrder } from '../../../types/language';
 import LanguageListQuery, { type Data, type Variables } from './LanguageListQuery';
 import query from './LanguageList.graphql';
 
-import { ErrorState, Loading, LanguageCard, ScrollOnBottom } from '../../../components';
-
-import styles from './LanguageList.scss';
+import { ErrorState, Loading, List, LanguageCard, ScrollOnBottom } from '../../../components';
 
 type Props = {
   title: string,
@@ -104,7 +102,7 @@ class LanguageList extends PureComponent<Props, State> {
                   this.getMore({ loading, data, error, fetchMore });
                 }}
               >
-                <div className={styles.languages}>
+                <List columns={3}>
                   {data.languages.map((language, index) => (
                     <LanguageCard
                       key={language.slug}
@@ -115,7 +113,7 @@ class LanguageList extends PureComponent<Props, State> {
                       totalDevelopers={language.totalDevelopers}
                     />
                   ))}
-                </div>
+                </List>
 
                 {loading && <Loading />}
               </ScrollOnBottom>

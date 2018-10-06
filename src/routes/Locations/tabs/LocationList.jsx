@@ -9,9 +9,7 @@ import { type LocationOrder } from '../../../types/location';
 import LocationListQuery, { type Data, type Variables } from './LocationListQuery';
 import query from './LocationList.graphql';
 
-import { ErrorState, Loading, LocationCard, ScrollOnBottom } from '../../../components';
-
-import styles from './LocationList.scss';
+import { ErrorState, Loading, List, LocationCard, ScrollOnBottom } from '../../../components';
 
 type Props = {
   title: string,
@@ -105,7 +103,7 @@ class LocationList extends PureComponent<Props, State> {
                   this.getMore({ loading, data, error, fetchMore });
                 }}
               >
-                <div className={styles.locations}>
+                <List columns={3}>
                   {data.locations.map((location, index) => [
                     <LocationCard
                       key={location.slug}
@@ -121,7 +119,7 @@ class LocationList extends PureComponent<Props, State> {
                       }
                     />,
                   ])}
-                </div>
+                </List>
 
                 {loading && <Loading />}
               </ScrollOnBottom>

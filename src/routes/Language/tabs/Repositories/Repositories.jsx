@@ -8,9 +8,7 @@ import { type QueryRenderProps } from 'react-apollo';
 import RepositoriesQuery, { type Data, type Variables } from './RepositoriesQuery';
 import query from './Repositories.graphql';
 
-import { ErrorState, Loading, RepoCard, ScrollOnBottom } from '../../../../components';
-
-import styles from './Repositories.scss';
+import { ErrorState, Loading, List, RepoCard, ScrollOnBottom } from '../../../../components';
 
 type Props = {
   match: Match,
@@ -113,7 +111,7 @@ class Repositories extends PureComponent<Props, State> {
                   this.getMore({ loading, data, error, fetchMore });
                 }}
               >
-                <div className={styles.repositories}>
+                <List columns={2}>
                   {data.language.repositories.map((repo, index) => (
                     <RepoCard
                       key={repo.slug}
@@ -125,7 +123,7 @@ class Repositories extends PureComponent<Props, State> {
                       forks={repo.forks}
                     />
                   ))}
-                </div>
+                </List>
 
                 {loading && <Loading />}
               </ScrollOnBottom>

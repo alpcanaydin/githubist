@@ -9,9 +9,7 @@ import { type DeveloperOrder } from '../../../types/developer';
 import DeveloperListQuery, { type Data, type Variables } from './DeveloperListQuery';
 import query from './DeveloperList.graphql';
 
-import { ErrorState, Loading, DeveloperCard, ScrollOnBottom } from '../../../components';
-
-import styles from './DeveloperList.scss';
+import { ErrorState, Loading, List, DeveloperCard, ScrollOnBottom } from '../../../components';
 
 type Props = {
   title: string,
@@ -110,7 +108,7 @@ class DeveloperList extends PureComponent<Props, State> {
                   this.getMore({ loading, data, error, fetchMore });
                 }}
               >
-                <div className={styles.developers}>
+                <List columns={2}>
                   {data.developers.map((developer, index) => (
                     <DeveloperCard
                       key={developer.username}
@@ -126,7 +124,7 @@ class DeveloperList extends PureComponent<Props, State> {
                       githubCreatedAt={developer.githubCreatedAt}
                     />
                   ))}
-                </div>
+                </List>
 
                 {loading && <Loading />}
               </ScrollOnBottom>
