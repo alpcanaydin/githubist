@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <h3>
+    3,250
+  </h3>
+  <p>
+    Geliştirici
+  </p>
+</div>
+`;

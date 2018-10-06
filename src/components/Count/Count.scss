@@ -1,0 +1,23 @@
+@import '../../theme/theme';
+
+.container {
+  padding: map-get($spacers, normal);
+  border: 1px solid $text-muted;
+  background-color: $white;
+  border-radius: px-to-rem(2px);
+  box-shadow: 3px 3px 0 #d5d5d6;
+  text-align: center;
+}
+
+.count {
+  margin: 0;
+  color: $black-color;
+  font-size: map-get($heading-sizes, h2);
+  font-weight: 600;
+}
+
+.title {
+  margin: 0 0 map-get($spacers, small);
+  color: $text-muted;
+  font-size: map-get($font-sizes, large);
+}
