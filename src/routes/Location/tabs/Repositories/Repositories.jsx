@@ -5,10 +5,10 @@ import Helmet from 'react-helmet';
 import { withRouter, type Match } from 'react-router-dom';
 import { type QueryRenderProps } from 'react-apollo';
 
-import LocationsQuery, { type Data, type Variables } from './LocationsQuery';
-import query from './Locations.graphql';
+import RepositoriesQuery, { type Data, type Variables } from './RepositoriesQuery';
+import query from './Repositories.graphql';
 
-import { ErrorState, Loading, List, LocationCard, ScrollOnBottom } from '../../../../components';
+import { ErrorState, Loading, List, RepoCard, ScrollOnBottom } from '../../../../components';
 
 type Props = {
   match: Match,
@@ -19,7 +19,7 @@ type State = {
   loadMoreLoading: boolean,
 };
 
-class Locations extends PureComponent<Props, State> {
+class Repositories extends PureComponent<Props, State> {
   state = {
     stopScrollListening: false,
     loadMoreLoading: false,
@@ -34,7 +34,7 @@ class Locations extends PureComponent<Props, State> {
       return;
     }
 
-    if (error || !data || !data.language) {
+    if (error || !data || !data.location) {
       this.setState({ stopScrollListening: true });
       return;
     }
@@ -42,14 +42,14 @@ class Locations extends PureComponent<Props, State> {
     this.setState({ loadMoreLoading: true }, () => {
       fetchMore({
         variables: {
-          offset: data.language.locationUsage.length,
+          offset: data.location.repositories.length,
         },
         updateQuery: (prev, { fetchMoreResult }) => {
           if (!fetchMoreResult) {
             return prev;
           }
 
-          if (fetchMoreResult.language.locationUsage.length === 0) {
+          if (fetchMoreResult.location.repositories.length === 0) {
             this.setState({ stopScrollListening: true, loadMoreLoading: false }, () => prev);
           }
 
@@ -57,11 +57,11 @@ class Locations extends PureComponent<Props, State> {
 
           return {
             ...prev,
-            language: {
-              ...prev.language,
-              locationUsage: [
-                ...prev.language.locationUsage,
-                ...fetchMoreResult.language.locationUsage,
+            location: {
+              ...prev.location,
+              repositories: [
+                ...prev.location.repositories,
+                ...fetchMoreResult.location.repositories,
               ],
             },
           };
@@ -75,17 +75,18 @@ class Locations extends PureComponent<Props, State> {
     const { stopScrollListening, loadMoreLoading } = this.state;
 
     return (
-      <LocationsQuery
+      <RepositoriesQuery
         query={query}
         variables={{
           slug: match.params.slug || '',
           limit: 30,
           offset: 0,
+          orderBy: { field: 'STARS', direction: 'DESC' },
         }}
         fetchPolicy="cache-and-network"
       >
         {({ loading, error, data, fetchMore }) => {
-          if (loading && !loadMoreLoading && (data && !data.language)) {
+          if (loading && !loadMoreLoading && (data && !data.location)) {
             return <Loading />;
           }
 
@@ -93,14 +94,14 @@ class Locations extends PureComponent<Props, State> {
             return <ErrorState />;
           }
 
-          if (!data || !data.language) {
+          if (!data || !data.location) {
             return null;
           }
 
           return (
             <Fragment>
               <Helmet>
-                <title>{`${data.language.name} İçin Şehir Dağılımı`}</title>
+                <title>{`${data.location.name} İçin Meşhur Repolar`}</title>
               </Helmet>
 
               <ScrollOnBottom
@@ -110,14 +111,16 @@ class Locations extends PureComponent<Props, State> {
                   this.getMore({ loading, data, error, fetchMore });
                 }}
               >
-                <List columns={3}>
-                  {data.language.locationUsage.map((locationUsage, index) => (
-                    <LocationCard
-                      key={locationUsage.location.slug}
+                <List columns={2}>
+                  {data.location.repositories.map((repo, index) => (
+                    <RepoCard
+                      key={repo.slug}
                       rank={index + 1}
-                      name={locationUsage.location.name}
-                      slug={locationUsage.location.slug}
-                      totalRepositories={locationUsage.repositoriesCount}
+                      slug={repo.slug}
+                      description={repo.description}
+                      language={repo.language}
+                      stars={repo.stars}
+                      forks={repo.forks}
                     />
                   ))}
                 </List>
@@ -127,9 +130,9 @@ class Locations extends PureComponent<Props, State> {
             </Fragment>
           );
         }}
-      </LocationsQuery>
+      </RepositoriesQuery>
     );
   }
 }
 
-export default withRouter(Locations);
+export default withRouter(Repositories);

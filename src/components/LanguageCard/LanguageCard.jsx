@@ -12,7 +12,7 @@ type Props = {
   name: string,
   slug: string,
   totalRepositories: number,
-  totalDevelopers: number,
+  totalDevelopers?: number,
 };
 
 const LanguageCard = ({ rank, name, slug, totalRepositories, totalDevelopers }: Props) => (
@@ -22,9 +22,11 @@ const LanguageCard = ({ rank, name, slug, totalRepositories, totalDevelopers }: 
     </Link>
 
     <div className={styles.meta}>
-      <Link to={`/language/${slug}/developers`} className={styles.metaItem}>
-        {totalDevelopers.toLocaleString()} Geliştirici
-      </Link>
+      {totalDevelopers && (
+        <Link to={`/language/${slug}/developers`} className={styles.metaItem}>
+          {totalDevelopers.toLocaleString()} Geliştirici
+        </Link>
+      )}
       <Link to={`/language/${slug}/repositories`} className={styles.metaItem}>
         {totalRepositories.toLocaleString()} Repo
       </Link>
@@ -34,6 +36,7 @@ const LanguageCard = ({ rank, name, slug, totalRepositories, totalDevelopers }: 
 
 LanguageCard.defaultProps = {
   rank: undefined,
+  totalDevelopers: undefined,
 };
 
 export default LanguageCard;

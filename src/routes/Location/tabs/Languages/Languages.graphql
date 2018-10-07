@@ -1,0 +1,15 @@
+#import "../../../../fragments/basicLocation.graphql"
+#import "../../../../fragments/basicLanguage.graphql"
+
+query($slug: String!, $limit: Int!, $offset: Int!) {
+  location(slug: $slug) {
+    ...BasicLocation
+    languageUsage(limit: $limit, offset: $offset) {
+      language {
+        ...BasicLanguage
+      }
+
+      repositoriesCount
+    }
+  }
+}

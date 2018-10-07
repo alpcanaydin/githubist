@@ -48,4 +48,17 @@ storiesOf('LocationCard', module)
         />
       </div>
     </MemoryRouter>
+  ))
+  .add('without developers count', () => (
+    <MemoryRouter>
+      <div style={{ width: '500px', margin: '16px' }}>
+        <LocationCard
+          rank={1}
+          name="İzmir"
+          slug="izmir"
+          totalRepositories={2150}
+          language={{ name: 'JavaScript', slug: 'javascript' }}
+        />
+      </div>
+    </MemoryRouter>
   ));

@@ -1,0 +1,11 @@
+#import "../../../../fragments/basicLocation.graphql"
+#import "../../../../fragments/basicRepository.graphql"
+
+query($slug: String!, $limit: Int!, $offset: Int!, $orderBy: RepositoryOrder!) {
+  location(slug: $slug) {
+    ...BasicLocation
+    repositories(limit: $limit, offset: $offset, orderBy: $orderBy) {
+      ...BasicRepository
+    }
+  }
+}

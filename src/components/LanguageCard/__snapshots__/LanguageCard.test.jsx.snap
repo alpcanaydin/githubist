@@ -184,3 +184,83 @@ exports[`renders correctly with rank 1`] = `
   </Router>
 </MemoryRouter>
 `;
+
+exports[`renders correctly without developers count 1`] = `
+<MemoryRouter
+  keyLength={0}
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <LanguageCard
+      name="JavaScript"
+      rank={1}
+      slug="javascript"
+      totalRepositories={2150}
+    >
+      <Box
+        className=""
+      >
+        <div
+          className=""
+        >
+          <Link
+            replace={false}
+            to="/language/javascript"
+          >
+            <a
+              href="/language/javascript"
+              onClick={[Function]}
+            >
+              #1 JavaScript
+            </a>
+          </Link>
+          <div>
+            <Link
+              replace={false}
+              to="/language/javascript/repositories"
+            >
+              <a
+                href="/language/javascript/repositories"
+                onClick={[Function]}
+              >
+                2,150
+                 Repo
+              </a>
+            </Link>
+          </div>
+        </div>
+      </Box>
+    </LanguageCard>
+  </Router>
+</MemoryRouter>
+`;

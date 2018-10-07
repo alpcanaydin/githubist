@@ -1,0 +1,15 @@
+#import "../../../../fragments/basicLocation.graphql"
+
+query($slug: String!) {
+  location(slug: $slug) {
+    ...BasicLocation
+    stats {
+      rank
+    }
+    languageUsage(limit: 1) {
+      language {
+        name
+      }
+    }
+  }
+}

@@ -7,6 +7,7 @@ import Homepage from './Homepage';
 import Developers from './Developers';
 import Language from './Language';
 import Languages from './Languages';
+import Location from './Location';
 import Locations from './Locations';
 import Repository from './Repository';
 import Repositories from './Repositories';
@@ -18,6 +19,7 @@ const Routes = () => (
     <Route path="/languages" component={Languages} />
     <Route path="/language/:slug" component={Language} />
     <Route path="/locations" component={Locations} />
+    <Route path="/location/:slug" component={Location} />
     <Route path="/repositories" component={Repositories} />
     <Route path="/:username/:repoName" component={Repository} />
   </Switch>

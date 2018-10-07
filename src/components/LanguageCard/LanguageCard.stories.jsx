@@ -33,4 +33,11 @@ storiesOf('LanguageCard', module)
         />
       </div>
     </MemoryRouter>
+  ))
+  .add('without developers count', () => (
+    <MemoryRouter>
+      <div style={{ width: '320px', margin: '16px' }}>
+        <LanguageCard rank={1} name="JavaScript" slug="javascript" totalRepositories={2150} />
+      </div>
+    </MemoryRouter>
   ));

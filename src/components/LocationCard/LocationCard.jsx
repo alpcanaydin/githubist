@@ -13,7 +13,7 @@ type Props = {
   name: string,
   slug: string,
   totalRepositories: number,
-  totalDevelopers: number,
+  totalDevelopers?: number,
   language?: {
     name: string,
     slug: string,
@@ -34,9 +34,11 @@ const LocationCard = ({
     </Link>
 
     <div className={styles.meta}>
-      <Link to={`/location/${slug}/developers`} className={styles.metaItem}>
-        {totalDevelopers.toLocaleString()} Geliştirici
-      </Link>
+      {totalDevelopers && (
+        <Link to={`/location/${slug}/developers`} className={styles.metaItem}>
+          {totalDevelopers.toLocaleString()} Geliştirici
+        </Link>
+      )}
       <Link to={`/location/${slug}/repositories`} className={styles.metaItem}>
         {totalRepositories.toLocaleString()} Repo
       </Link>
@@ -52,6 +54,7 @@ const LocationCard = ({
 LocationCard.defaultProps = {
   rank: undefined,
   language: undefined,
+  totalDevelopers: undefined,
 };
 
 export default LocationCard;

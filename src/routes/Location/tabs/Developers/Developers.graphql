@@ -1,0 +1,21 @@
+#import "../../../../fragments/basicLocation.graphql"
+#import "../../../../fragments/basicDeveloper.graphql"
+
+query($slug: String!, $limit: Int!, $offset: Int!, $orderBy: DeveloperOrder!) {
+  location(slug: $slug) {
+    ...BasicLocation
+    developers(limit: $limit, offset: $offset, orderBy: $orderBy) {
+      ...BasicDeveloper
+      totalStarred
+      followers
+      company
+      location {
+        name
+        slug
+      }
+      stats {
+        repositoriesCount
+      }
+    }
+  }
+}

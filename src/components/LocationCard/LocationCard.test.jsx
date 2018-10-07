@@ -54,3 +54,19 @@ it('renders correctly without language', () => {
 
   expect(wrapper).toMatchSnapshot();
 });
+
+it('renders correctly without developers count', () => {
+  const wrapper = mount(
+    <MemoryRouter keyLength={0}>
+      <LocationCard
+        rank={1}
+        name="İzmir"
+        slug="izmir"
+        totalRepositories={2150}
+        language={{ name: 'JavaScript', slug: 'javascript' }}
+      />
+    </MemoryRouter>,
+  );
+
+  expect(wrapper).toMatchSnapshot();
+});

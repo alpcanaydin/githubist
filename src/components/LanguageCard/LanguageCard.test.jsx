@@ -36,3 +36,13 @@ it('renders correctly with rank', () => {
 
   expect(wrapper).toMatchSnapshot();
 });
+
+it('renders correctly without developers count', () => {
+  const wrapper = mount(
+    <MemoryRouter keyLength={0}>
+      <LanguageCard rank={1} name="JavaScript" slug="javascript" totalRepositories={2150} />
+    </MemoryRouter>,
+  );
+
+  expect(wrapper).toMatchSnapshot();
+});
