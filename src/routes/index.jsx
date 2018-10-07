@@ -8,6 +8,7 @@ import Developers from './Developers';
 import Language from './Language';
 import Languages from './Languages';
 import Locations from './Locations';
+import Repository from './Repository';
 import Repositories from './Repositories';
 
 const Routes = () => (
@@ -18,6 +19,7 @@ const Routes = () => (
     <Route path="/language/:slug" component={Language} />
     <Route path="/locations" component={Locations} />
     <Route path="/repositories" component={Repositories} />
+    <Route path="/:username/:repoName" component={Repository} />
   </Switch>
 );
 

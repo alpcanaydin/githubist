@@ -1,0 +1,16 @@
+@import '../../theme/theme';
+
+.links {
+  display: flex;
+  flex-direction: row;
+}
+
+.githubLink {
+  color: $text-muted;
+  font-size: map-get($font-sizes, large);
+  text-decoration: none;
+
+  &:hover {
+    color: $black-color;
+  }
+}

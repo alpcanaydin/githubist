@@ -4,7 +4,7 @@ import React, { Fragment } from 'react';
 import Helmet from 'react-helmet';
 import { withRouter, type Match } from 'react-router-dom';
 
-import { Count, ErrorState, Loading, List } from '../../../../components';
+import { ErrorState, Loading, Highlight, List } from '../../../../components';
 
 import GeneralInfoQuery from './GeneralInfoQuery';
 import query from './GeneralInfo.graphql';
@@ -31,12 +31,21 @@ const GeneralInfo = ({ match }: Props) => (
           </Helmet>
 
           <List columns={3}>
-            <Count count={data.language.stats.rank} title="Sıralama" />
-            <Count count={data.language.stats.developersCountRank} title="Geliştirici Sıralaması" />
-            <Count count={data.language.stats.repositoriesCountRank} title="Repo Sıralaması" />
-            <Count count={data.language.totalDevelopers} title="Geliştirici" />
-            <Count count={data.language.totalRepositories} title="Repo" />
-            <Count count={data.language.totalStars} title="Star" />
+            <Highlight subject={data.language.stats.rank.toLocaleString()} title="Sıralama" />
+            <Highlight
+              subject={data.language.stats.developersCountRank.toLocaleString()}
+              title="Geliştirici Sıralaması"
+            />
+            <Highlight
+              subject={data.language.stats.repositoriesCountRank.toLocaleString()}
+              title="Repo Sıralaması"
+            />
+            <Highlight
+              subject={data.language.totalDevelopers.toLocaleString()}
+              title="Geliştirici"
+            />
+            <Highlight subject={data.language.totalRepositories.toLocaleString()} title="Repo" />
+            <Highlight subject={data.language.totalStars.toLocaleString()} title="Star" />
           </List>
         </Fragment>
       );

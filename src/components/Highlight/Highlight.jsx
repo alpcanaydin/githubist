@@ -4,18 +4,18 @@ import React from 'react';
 
 import { Box } from '..';
 
-import styles from './Count.scss';
+import styles from './Highlight.scss';
 
 type Props = {
-  count: number,
+  subject: string,
   title: string,
 };
 
-const Count = ({ count, title }: Props) => (
+const Highlight = ({ subject, title }: Props) => (
   <Box className={styles.container}>
-    <h3 className={styles.count}>{count.toLocaleString()}</h3>
+    <h3 className={styles.subject}>{subject}</h3>
     <p className={styles.title}>{title}</p>
   </Box>
 );
 
-export default Count;
+export default Highlight;

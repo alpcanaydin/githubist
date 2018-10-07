@@ -1,0 +1,16 @@
+#import "../../fragments/basicRepository.graphql"
+
+query($slug: String!) {
+  repository(slug: $slug) {
+    ...BasicRepository
+    developer {
+      username
+    }
+    stats {
+      rank
+      languageRank
+    }
+    githubUrl
+    githubCreatedAt
+  }
+}

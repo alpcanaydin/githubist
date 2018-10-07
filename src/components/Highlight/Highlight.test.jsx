@@ -3,10 +3,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Count from './Count';
+import Highlight from './Highlight';
 
 it('renders correctly', () => {
-  const wrapper = shallow(<Count count={3250} title="Geliştirici" />);
+  const wrapper = shallow(<Highlight subject="3,250" title="Geliştirici" />);
 
   expect(wrapper).toMatchSnapshot();
 });
