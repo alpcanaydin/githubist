@@ -19,6 +19,7 @@ type Props = {
   followers: number,
   totalStarred: number,
   repositoriesCount: number,
+  repoText?: string,
   location: { name: string, slug: string },
   githubCreatedAt?: string,
 };
@@ -32,6 +33,7 @@ const DeveloperCard = ({
   followers,
   totalStarred,
   repositoriesCount,
+  repoText,
   location,
   githubCreatedAt,
 }: Props) => (
@@ -57,7 +59,9 @@ const DeveloperCard = ({
       </Link>
       <span className={styles.metaItem}>{totalStarred.toLocaleString()} Star&apos;lanma</span>
       <span className={styles.metaItem}>{followers.toLocaleString()} Takipçi</span>
-      <span className={styles.metaItem}>{repositoriesCount.toLocaleString()} Repo</span>
+      <span className={styles.metaItem}>
+        {repositoriesCount.toLocaleString()} {repoText}
+      </span>
       {githubCreatedAt && (
         <span className={cx(styles.metaItem, styles.githubCreatedAt)}>
           {toDateString(githubCreatedAt)}
@@ -71,6 +75,7 @@ DeveloperCard.defaultProps = {
   rank: undefined,
   githubCreatedAt: '',
   company: '',
+  repoText: 'Repo',
 };
 
 export default DeveloperCard;

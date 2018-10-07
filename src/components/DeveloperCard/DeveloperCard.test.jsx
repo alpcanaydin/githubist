@@ -82,3 +82,22 @@ it('renders correctly without company', () => {
 
   expect(wrapper).toMatchSnapshot();
 });
+
+it('renders correctly with custom repo text', () => {
+  const wrapper = mount(
+    <MemoryRouter keyLength={0}>
+      <DeveloperCard
+        name="Alpcan Aydın"
+        username="alpcanaydin"
+        profilePicture="https://avatars2.githubusercontent.com/u/1801024?v=4"
+        totalStarred={612}
+        followers={404}
+        repositoriesCount={23}
+        repoText="Java Reposu"
+        location={{ name: 'İzmir', slug: 'izmir' }}
+      />
+    </MemoryRouter>,
+  );
+
+  expect(wrapper).toMatchSnapshot();
+});

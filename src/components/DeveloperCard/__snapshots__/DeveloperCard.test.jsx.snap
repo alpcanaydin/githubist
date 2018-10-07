@@ -48,6 +48,7 @@ exports[`renders correctly 1`] = `
       }
       name="Alpcan Aydın"
       profilePicture="https://avatars2.githubusercontent.com/u/1801024?v=4"
+      repoText="Repo"
       repositoriesCount={23}
       totalStarred={612}
       username="alpcanaydin"
@@ -126,7 +127,143 @@ exports[`renders correctly 1`] = `
             </span>
             <span>
               23
-               Repo
+               
+              Repo
+            </span>
+          </div>
+        </div>
+      </Box>
+    </DeveloperCard>
+  </Router>
+</MemoryRouter>
+`;
+
+exports[`renders correctly with custom repo text 1`] = `
+<MemoryRouter
+  keyLength={0}
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <DeveloperCard
+      company=""
+      followers={404}
+      githubCreatedAt=""
+      location={
+        Object {
+          "name": "İzmir",
+          "slug": "izmir",
+        }
+      }
+      name="Alpcan Aydın"
+      profilePicture="https://avatars2.githubusercontent.com/u/1801024?v=4"
+      repoText="Java Reposu"
+      repositoriesCount={23}
+      totalStarred={612}
+      username="alpcanaydin"
+    >
+      <Box
+        className=""
+      >
+        <div
+          className=""
+        >
+          <div>
+            <Link
+              replace={false}
+              to="/alpcanaydin"
+            >
+              <a
+                href="/alpcanaydin"
+                onClick={[Function]}
+              >
+                <Avatar
+                  alt="Alpcan Aydın"
+                  size="small"
+                  url="https://avatars2.githubusercontent.com/u/1801024?v=4"
+                >
+                  <img
+                    alt="Alpcan Aydın"
+                    className="undefined"
+                    src="https://avatars2.githubusercontent.com/u/1801024?v=4"
+                  />
+                </Avatar>
+              </a>
+            </Link>
+            <div>
+              <Link
+                replace={false}
+                to="/alpcanaydin"
+              >
+                <a
+                  href="/alpcanaydin"
+                  onClick={[Function]}
+                >
+                  <span>
+                    Alpcan Aydın
+                  </span>
+                  <span>
+                    alpcanaydin
+                  </span>
+                </a>
+              </Link>
+            </div>
+          </div>
+          <div>
+            <Link
+              className=""
+              replace={false}
+              to="/location/izmir"
+            >
+              <a
+                className=""
+                href="/location/izmir"
+                onClick={[Function]}
+              >
+                İzmir
+              </a>
+            </Link>
+            <span>
+              612
+               Star'lanma
+            </span>
+            <span>
+              404
+               Takipçi
+            </span>
+            <span>
+              23
+               
+              Java Reposu
             </span>
           </div>
         </div>
@@ -184,6 +321,7 @@ exports[`renders correctly with github creation date 1`] = `
       }
       name="Alpcan Aydın"
       profilePicture="https://avatars2.githubusercontent.com/u/1801024?v=4"
+      repoText="Repo"
       repositoriesCount={23}
       totalStarred={612}
       username="alpcanaydin"
@@ -262,7 +400,8 @@ exports[`renders correctly with github creation date 1`] = `
             </span>
             <span>
               23
-               Repo
+               
+              Repo
             </span>
             <span
               className=""
@@ -326,6 +465,7 @@ exports[`renders correctly with rank 1`] = `
       name="Alpcan Aydın"
       profilePicture="https://avatars2.githubusercontent.com/u/1801024?v=4"
       rank={1}
+      repoText="Repo"
       repositoriesCount={23}
       totalStarred={612}
       username="alpcanaydin"
@@ -408,7 +548,8 @@ exports[`renders correctly with rank 1`] = `
             </span>
             <span>
               23
-               Repo
+               
+              Repo
             </span>
           </div>
         </div>
@@ -466,6 +607,7 @@ exports[`renders correctly without company 1`] = `
       }
       name="Alpcan Aydın"
       profilePicture="https://avatars2.githubusercontent.com/u/1801024?v=4"
+      repoText="Repo"
       repositoriesCount={23}
       totalStarred={612}
       username="alpcanaydin"
@@ -541,7 +683,8 @@ exports[`renders correctly without company 1`] = `
             </span>
             <span>
               23
-               Repo
+               
+              Repo
             </span>
           </div>
         </div>

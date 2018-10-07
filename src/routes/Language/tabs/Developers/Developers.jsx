@@ -122,6 +122,7 @@ class Developers extends PureComponent<Props, State> {
                       totalStarred={developerUsage.developer.totalStarred}
                       followers={developerUsage.developer.followers}
                       repositoriesCount={developerUsage.repositoriesCount}
+                      repoText={`${data.language.name} Reposu`}
                       location={developerUsage.developer.location}
                     />
                   ))}

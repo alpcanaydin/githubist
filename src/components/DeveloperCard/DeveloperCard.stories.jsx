@@ -73,4 +73,20 @@ storiesOf('DeveloperCard', module)
         />
       </div>
     </MemoryRouter>
+  ))
+  .add('with custom repo text', () => (
+    <MemoryRouter>
+      <div style={{ width: '500px', margin: '16px' }}>
+        <DeveloperCard
+          name="Alpcan Aydın"
+          username="alpcanaydin"
+          profilePicture="https://avatars2.githubusercontent.com/u/1801024?v=4"
+          totalStarred={612}
+          followers={404}
+          repositoriesCount={23}
+          repoText="Java Reposu"
+          location={{ name: 'İzmir', slug: 'izmir' }}
+        />
+      </div>
+    </MemoryRouter>
   ));
