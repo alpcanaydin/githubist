@@ -31,7 +31,10 @@ const GeneralInfo = ({ match }: Props) => (
           </Helmet>
 
           <List columns={2}>
-            <Highlight subject={data.location.stats.rank.toLocaleString()} title="Sıralama" />
+            <Highlight
+              subject={data.location.stats.rank.toLocaleString()}
+              title="Github.ist Sıralaması"
+            />
             <Highlight
               subject={data.location.totalDevelopers.toLocaleString()}
               title="Geliştirici"

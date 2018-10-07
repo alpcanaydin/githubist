@@ -75,7 +75,10 @@ const Repository = ({ match }: Props) => (
 
             <List columns={3}>
               <Highlight subject={data.repository.language.name.toLocaleString()} title="Dil" />
-              <Highlight subject={data.repository.stats.rank.toLocaleString()} title="Sıralama" />
+              <Highlight
+                subject={data.repository.stats.rank.toLocaleString()}
+                title="Github.ist Sıralaması"
+              />
               <Highlight
                 subject={data.repository.stats.languageRank.toLocaleString()}
                 title="Dil Sıralaması"
