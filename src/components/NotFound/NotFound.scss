@@ -1,0 +1,11 @@
+@import '../../theme/theme';
+
+.notFound {
+  padding: $section-gap / 2 0;
+  text-align: center;
+}
+
+.text {
+  color: $text-muted;
+  font-size: map-get($font-sizes, large);
+}

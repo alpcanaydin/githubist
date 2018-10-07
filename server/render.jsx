@@ -36,27 +36,31 @@ export default ({ clientStats }: any) => async (req: express$Request, res: expre
 
   try {
     await getDataFromTree(root);
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.log(err);
+  }
 
-    const content = ReactDOM.renderToString(root);
+  const content = ReactDOM.renderToString(root);
 
-    const helmet = Helmet.renderStatic();
-    const chunkNames = flushChunkNames();
+  const helmet = Helmet.renderStatic();
+  const chunkNames = flushChunkNames();
 
-    const { js, styles } = flushChunks(clientStats, { chunkNames });
+  const { js, styles } = flushChunks(clientStats, { chunkNames });
 
-    const { url } = context;
+  const { url, serverStatusCode = 200 } = context;
 
-    if (url) {
-      res.redirect(url);
-      return;
-    }
+  if (url) {
+    res.redirect(url);
+    return;
+  }
 
-    const initialState = JSON.stringify(client.extract())
-      .replace(/</g, '\\u003c')
-      .replace(/\u2028/g, '\\u2028')
-      .replace(/\u2029/g, '\\u2029');
+  const initialState = JSON.stringify(client.extract())
+    .replace(/</g, '\\u003c')
+    .replace(/\u2028/g, '\\u2028')
+    .replace(/\u2029/g, '\\u2029');
 
-    const html = `<!doctype html>
+  const html = `<!doctype html>
     <html ${helmet.htmlAttributes.toString()}>
       <head>
         <meta charset="utf-8">
@@ -74,15 +78,11 @@ export default ({ clientStats }: any) => async (req: express$Request, res: expre
       </body>
     </html>`;
 
-    const output =
-      process.env.NODE_ENV === 'production'
-        ? html.replace(/\s{2,}/g, '').replace(/(\r\n|\n|\r)/gm, '')
-        : html;
+  const output =
+    process.env.NODE_ENV === 'production'
+      ? html.replace(/\s{2,}/g, '').replace(/(\r\n|\n|\r)/gm, '')
+      : html;
 
-    res.send(output);
-  } catch (err) {
-    // eslint-disable-next-line no-console
-    console.log(err);
-    res.end('Server error.');
-  }
+  res.status(serverStatusCode);
+  res.send(output);
 };

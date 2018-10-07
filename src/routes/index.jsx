@@ -3,6 +3,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
+import NotFound from '../components/NotFound';
+
 import Homepage from './Homepage';
 import Developers from './Developers';
 import Language from './Language';
@@ -22,6 +24,7 @@ const Routes = () => (
     <Route path="/location/:slug" component={Location} />
     <Route path="/repositories" component={Repositories} />
     <Route path="/:username/:repoName" component={Repository} />
+    <Route component={NotFound} />
   </Switch>
 );
 

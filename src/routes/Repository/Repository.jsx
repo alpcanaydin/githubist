@@ -13,6 +13,7 @@ import {
   LinkBar,
   LinkBarItem,
   List,
+  NotFound,
 } from '../../components';
 
 import toDateString from '../../utils/toDateString';
@@ -34,6 +35,10 @@ const Repository = ({ match }: Props) => (
     {({ loading, error, data }) => {
       if (loading) {
         return <Loading />;
+      }
+
+      if (error && error.graphQLErrors.length > 0 && error.graphQLErrors[0].code === 404) {
+        return <NotFound />;
       }
 
       if (error || !data || !data.repository) {

@@ -11,6 +11,7 @@ import {
   PageHeading,
   LinkBar,
   LinkBarItem,
+  NotFound,
 } from '../../components';
 
 import LanguageQuery from './LanguageQuery';
@@ -30,6 +31,10 @@ const Language = ({ match }: Props) => (
     {({ loading, error, data }) => {
       if (loading) {
         return <Loading />;
+      }
+
+      if (error && error.graphQLErrors.length > 0 && error.graphQLErrors[0].code === 404) {
+        return <NotFound />;
       }
 
       if (error || !data || !data.language) {

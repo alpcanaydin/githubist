@@ -1,9 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div>
-  <p>
-    Bir hata meydana geldi.
-  </p>
-</div>
+<Status
+  code={500}
+>
+  <div>
+    <p>
+      Bir hata meydana geldi.
+    </p>
+  </div>
+</Status>
 `;

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Status
+  code={404}
+>
+  <div>
+    <p>
+      Aradığınız sayfa bulunamadı.
+    </p>
+    <LinkButton
+      className=""
+      primary={true}
+      secondary={false}
+      small={false}
+      to="/"
+    >
+      Anasayfaya Dön
+    </LinkButton>
+  </div>
+</Status>
+`;

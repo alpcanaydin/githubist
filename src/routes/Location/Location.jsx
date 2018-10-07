@@ -8,6 +8,7 @@ import {
   Container,
   ErrorState,
   Loading,
+  NotFound,
   PageHeading,
   LinkBar,
   LinkBarItem,
@@ -30,6 +31,10 @@ const Location = ({ match }: Props) => (
     {({ loading, error, data }) => {
       if (loading) {
         return <Loading />;
+      }
+
+      if (error && error.graphQLErrors.length > 0 && error.graphQLErrors[0].code === 404) {
+        return <NotFound />;
       }
 
       if (error || !data || !data.location) {
