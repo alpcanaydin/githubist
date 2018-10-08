@@ -5,6 +5,7 @@ query($slug: String!) {
     ...BasicRepository
     developer {
       username
+      avatarUrl
     }
     stats {
       rank

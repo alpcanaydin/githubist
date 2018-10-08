@@ -32,10 +32,21 @@ const Developers = () => (
         return <ErrorState />;
       }
 
+      const metaTitle = 'Geliştiriciler - Github.ist';
+      const metaDesc =
+        'Github üzerinde lokasyonu Türkiye olarak gözüken geliştiriciler için istatistikler.';
+
       return (
         <Fragment>
           <Helmet>
             <title>Geliştiriciler</title>
+            <meta name="description" content={metaDesc} />
+
+            <meta name="og:description" content={metaDesc} />
+            <meta name="og:title" content={metaTitle} />
+
+            <meta name="twitter:title" content={metaTitle} />
+            <meta name="twitter:description" content={metaDesc} />
           </Helmet>
           <Container>
             <PageHeading

@@ -45,10 +45,22 @@ const Repository = ({ match }: Props) => (
         return <ErrorState />;
       }
 
+      const metaTitle = `${data.repository.slug} - Github.ist`;
+      const metaDesc = `${data.repository.slug} için Github Türkiye istatistikleri`;
+
       return (
         <Fragment>
           <Helmet>
             <title>{data.repository.slug}</title>
+            <meta name="description" content={metaDesc} />
+
+            <meta name="og:description" content={metaDesc} />
+            <meta name="og:title" content={metaTitle} />
+            <meta name="og:image" content={data.repository.developer.avatarUrl} />
+
+            <meta name="twitter:title" content={metaTitle} />
+            <meta name="twitter:description" content={metaDesc} />
+            <meta name="twitter:image" content={data.repository.developer.avatarUrl} />
           </Helmet>
           <Container>
             <PageHeading

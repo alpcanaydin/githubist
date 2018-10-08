@@ -41,10 +41,20 @@ const Language = ({ match }: Props) => (
         return <ErrorState />;
       }
 
+      const metaTitle = `${data.language.name} - Github.ist`;
+      const metaDesc = `${data.language.name} dili için Github Türkiye istatistikleri`;
+
       return (
         <Fragment>
           <Helmet>
             <title>{data.language.name}</title>
+            <meta name="description" content={metaDesc} />
+
+            <meta name="og:description" content={metaDesc} />
+            <meta name="og:title" content={metaTitle} />
+
+            <meta name="twitter:title" content={metaTitle} />
+            <meta name="twitter:description" content={metaDesc} />
           </Helmet>
           <Container>
             <PageHeading

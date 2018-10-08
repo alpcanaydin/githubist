@@ -31,10 +31,20 @@ const Locations = () => (
         return <ErrorState />;
       }
 
+      const metaTitle = 'Şehirler - Github.ist';
+      const metaDesc = 'Github için Türkiye şehirleri için istatikler.';
+
       return (
         <Fragment>
           <Helmet>
             <title>Şehirler</title>
+            <meta name="description" content={metaDesc} />
+
+            <meta name="og:description" content={metaDesc} />
+            <meta name="og:title" content={metaTitle} />
+
+            <meta name="twitter:title" content={metaTitle} />
+            <meta name="twitter:description" content={metaDesc} />
           </Helmet>
           <Container>
             <PageHeading

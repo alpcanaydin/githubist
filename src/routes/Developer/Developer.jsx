@@ -42,10 +42,22 @@ const Developer = ({ match }: Props) => (
         return <ErrorState />;
       }
 
+      const metaTitle = `${data.developer.name} - Github.ist`;
+      const metaDesc = `${data.developer.name} için Github Türkiye istatistikleri`;
+
       return (
         <Fragment>
           <Helmet>
             <title>{data.developer.name}</title>
+            <meta name="description" content={metaDesc} />
+
+            <meta name="og:description" content={metaDesc} />
+            <meta name="og:title" content={metaTitle} />
+            <meta name="og:image" content={data.developer.avatarUrl} />
+
+            <meta name="twitter:title" content={metaTitle} />
+            <meta name="twitter:description" content={metaDesc} />
+            <meta name="twitter:image" content={data.developer.avatarUrl} />
           </Helmet>
           <Container>
             <section className={styles.heading}>

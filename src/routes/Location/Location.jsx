@@ -41,10 +41,20 @@ const Location = ({ match }: Props) => (
         return <ErrorState />;
       }
 
+      const metaTitle = `${data.location.name} - Github.ist`;
+      const metaDesc = `${data.location.name} için Github Türkiye istatistikleri`;
+
       return (
         <Fragment>
           <Helmet>
             <title>{data.location.name}</title>
+            <meta name="description" content={metaDesc} />
+
+            <meta name="og:description" content={metaDesc} />
+            <meta name="og:title" content={metaTitle} />
+
+            <meta name="twitter:title" content={metaTitle} />
+            <meta name="twitter:description" content={metaDesc} />
           </Helmet>
           <Container>
             <PageHeading

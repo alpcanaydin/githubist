@@ -8,6 +8,7 @@ type Data = {
   repository: BasicRepository & {
     developer: {
       username: string,
+      avatarUrl: string,
     },
     stats: {
       rank: number,
