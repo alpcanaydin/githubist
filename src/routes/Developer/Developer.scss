@@ -1,0 +1,53 @@
+@import '../../theme/theme';
+
+.heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: $section-gap / 2 0;
+}
+
+.info {
+  margin-left: map-get($spacers, x-large);
+}
+
+.nameAndUsername {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.name {
+  margin: 0;
+  color: $black-color;
+  font-size: map-get($heading-sizes, h1);
+  font-weight: 600;
+}
+
+.username {
+  margin-left: map-get($spacers, x-small);
+  color: $body-color;
+  font-size: map-get($heading-sizes, h1) * 0.8;
+  font-weight: 400;
+}
+
+.bio {
+  margin: 0;
+  color: $body-color;
+  font-size: map-get($font-sizes, large);
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+}
+
+.githubLink {
+  color: $text-muted;
+  font-size: map-get($font-sizes, large);
+  text-decoration: none;
+
+  &:hover {
+    color: $black-color;
+  }
+}

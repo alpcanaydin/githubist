@@ -1,0 +1,9 @@
+#import "../../fragments/basicDeveloper.graphql"
+
+query($username: String!) {
+  developer(username: $username) {
+    ...BasicDeveloper
+    bio
+    githubUrl
+  }
+}

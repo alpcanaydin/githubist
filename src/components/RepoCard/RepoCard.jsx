@@ -26,7 +26,7 @@ type Props = {
 const RepoCard = ({ rank, slug, description, language, stars, forks, githubCreatedAt }: Props) => (
   <Box>
     <div>
-      <Link to={`/${slug}`} className={styles.name}>
+      <Link to={`/repository/${slug}`} className={styles.name}>
         {rank ? `#${rank} ${slug}` : slug}
       </Link>
       {description && <p className={styles.description}>{description}</p>}

@@ -57,7 +57,7 @@ const Repository = ({ match }: Props) => (
             />
             <div className={styles.links}>
               <LinkBar>
-                <LinkBarItem exact to={`/${data.repository.slug}`}>
+                <LinkBarItem exact to={`/repository/${data.repository.slug}`}>
                   Genel Bilgiler
                 </LinkBarItem>
                 <LinkBarItem exact to={`/${data.repository.developer.username}`}>

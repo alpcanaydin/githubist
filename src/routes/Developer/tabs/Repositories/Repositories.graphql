@@ -1,0 +1,11 @@
+#import "../../../../fragments/basicDeveloper.graphql"
+#import "../../../../fragments/basicRepository.graphql"
+
+query($username: String!, $limit: Int!, $offset: Int!, $orderBy: RepositoryOrder!) {
+  developer(username: $username) {
+    ...BasicDeveloper
+    repositories(limit: $limit, offset: $offset, orderBy: $orderBy) {
+      ...BasicRepository
+    }
+  }
+}

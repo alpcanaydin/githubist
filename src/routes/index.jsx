@@ -6,6 +6,7 @@ import { Switch, Route } from 'react-router-dom';
 import NotFound from '../components/NotFound';
 
 import Homepage from './Homepage';
+import Developer from './Developer';
 import Developers from './Developers';
 import Language from './Language';
 import Languages from './Languages';
@@ -23,7 +24,8 @@ const Routes = () => (
     <Route path="/locations" component={Locations} />
     <Route path="/location/:slug" component={Location} />
     <Route path="/repositories" component={Repositories} />
-    <Route path="/:username/:repoName" component={Repository} />
+    <Route path="/repository/:username/:repoName" component={Repository} />
+    <Route path="/:username" component={Developer} />
     <Route component={NotFound} />
   </Switch>
 );
