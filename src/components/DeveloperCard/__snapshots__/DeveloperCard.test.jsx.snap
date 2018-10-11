@@ -121,11 +121,15 @@ exports[`renders correctly 1`] = `
               612
                Star'lanma
             </span>
-            <span>
+            <span
+              className=""
+            >
               404
                Takipçi
             </span>
-            <span>
+            <span
+              className=""
+            >
               23
                
               Repo
@@ -256,11 +260,15 @@ exports[`renders correctly with custom repo text 1`] = `
               612
                Star'lanma
             </span>
-            <span>
+            <span
+              className=""
+            >
               404
                Takipçi
             </span>
-            <span>
+            <span
+              className=""
+            >
               23
                
               Java Reposu
@@ -394,11 +402,15 @@ exports[`renders correctly with github creation date 1`] = `
               612
                Star'lanma
             </span>
-            <span>
+            <span
+              className=""
+            >
               404
                Takipçi
             </span>
-            <span>
+            <span
+              className=""
+            >
               23
                
               Repo
@@ -542,11 +554,15 @@ exports[`renders correctly with rank 1`] = `
               612
                Star'lanma
             </span>
-            <span>
+            <span
+              className=""
+            >
               404
                Takipçi
             </span>
-            <span>
+            <span
+              className=""
+            >
               23
                
               Repo
@@ -677,11 +693,15 @@ exports[`renders correctly without company 1`] = `
               612
                Star'lanma
             </span>
-            <span>
+            <span
+              className=""
+            >
               404
                Takipçi
             </span>
-            <span>
+            <span
+              className=""
+            >
               23
                
               Repo
