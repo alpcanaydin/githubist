@@ -12,7 +12,20 @@
 
 .copyright {
   margin: 0;
+}
+
+.copyright,
+.dataWarn {
   color: $text-muted;
+}
+
+.twitterLink {
+  color: $text-muted;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .menus {

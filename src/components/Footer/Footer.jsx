@@ -15,10 +15,20 @@ const Footer = () => (
           <div styles={styles.info}>
             <Logo />
             <p className={styles.copyright}>
-              Alpcan Aydın, 2018
+              <a
+                href="https://twitter.com/alpcanaydin"
+                className={styles.twitterLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Alpcan Aydın
+              </a>
+              , 2018
               <br />
               MIT lisansı ile lisanslanmıştır.
             </p>
+
+            <p className={styles.dataWarn}>Veri en son 08 Ekim 2018 tarihinde çekilmiştir.</p>
           </div>
 
           <div className={styles.menus}>
