@@ -64,6 +64,7 @@ export default ({ clientStats }: any) => async (req: express$Request, res: expre
     <html ${helmet.htmlAttributes.toString()}>
       <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         ${helmet.title.toString()}
         ${helmet.meta.toString()}
         ${helmet.link.toString()}
