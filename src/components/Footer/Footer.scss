@@ -6,13 +6,19 @@
 
 .inner {
   display: grid;
-  grid-column-gap: map-get($spacers, x-large);
-  grid-template-columns: 4fr 1fr 1fr 1fr;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr;
 }
 
 .copyright {
   margin: 0;
   color: $text-muted;
+}
+
+.menus {
+  display: grid;
+  grid-row-gap: map-get($spacers, x-large);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
 .menuTitle {
@@ -41,5 +47,15 @@
 
   &:hover {
     text-decoration: underline;
+  }
+}
+
+@media only screen and (max-width: px-to-rem(1000px)) {
+  .inner {
+    display: block;
+  }
+
+  .menus {
+    margin-top: map-get($spacers, 2x-large);
   }
 }

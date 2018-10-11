@@ -5,11 +5,11 @@
 }
 
 .default {
-  width: 150px;
-  height: 150px;
+  width: px-to-rem(150px);
+  height: px-to-rem(150px);
 }
 
 .small {
-  width: 75px;
-  height: 75px;
+  width: px-to-rem(75px);
+  height: px-to-rem(75px);
 }

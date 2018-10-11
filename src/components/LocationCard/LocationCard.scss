@@ -38,7 +38,7 @@
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: px-to-rem(1000px)) {
   .meta {
     flex-direction: column;
   }

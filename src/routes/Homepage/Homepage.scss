@@ -9,7 +9,7 @@
   padding: map-get($spacers, 2x-large);
   grid-column-gap: map-get($spacers, x-large);
   grid-row-gap: map-get($spacers, x-large);
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .locationLink {
@@ -25,7 +25,8 @@
   display: grid;
   padding: map-get($spacers, 2x-large) 0;
   grid-column-gap: map-get($spacers, x-large);
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row-gap: map-get($spacers, x-large);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .firstExplorers {
@@ -33,14 +34,15 @@
   padding: map-get($spacers, 2x-large) map-get($spacers, 2x-large) 0 map-get($spacers, 2x-large);
   grid-column-gap: map-get($spacers, x-large);
   grid-row-gap: map-get($spacers, x-large);
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .repositories {
   display: grid;
   padding: map-get($spacers, 2x-large) 0;
   grid-auto-rows: 1fr;
+  grid-auto-rows: inherit;
   grid-column-gap: map-get($spacers, large);
   grid-row-gap: map-get($spacers, large);
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }

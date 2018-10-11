@@ -25,7 +25,7 @@ const Hero = ({ description }: Props) => (
         <p className={styles.description}>{description}</p>
       </div>
 
-      <img src={githubLogo} className={styles.image} alt="Github" width={431} height={420} />
+      <img src={githubLogo} className={styles.image} alt="Github" />
     </div>
   </Container>
 );

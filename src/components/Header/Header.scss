@@ -29,18 +29,20 @@
 .burgerMenu {
   position: relative;
   display: block;
+  width: px-to-rem(16px);
   height: px-to-rem(16px);
   border: 0;
   margin-left: auto;
   background: none;
+  color: $black-color;
   cursor: pointer;
   outline: 0;
 
   span {
     position: absolute;
-    left: calc(50% - 8px);
+    left: calc(50% - px-to-rem(8px));
     display: block;
-    width: 16px;
+    width: px-to-rem(16px);
     height: 1px;
     background-color: currentColor;
     transform-origin: center;
@@ -66,6 +68,7 @@
 
 .isNavActive {
   display: block !important;
+  margin-top: map-get($spacers, normal);
   box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
 }
 
@@ -85,7 +88,7 @@
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: px-to-rem(1000px)) {
   .burgerMenu {
     display: none;
   }
@@ -133,7 +136,7 @@
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: px-to-rem(1000px)) {
   .inner {
     display: block;
   }

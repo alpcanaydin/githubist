@@ -9,3 +9,9 @@
   color: $text-muted;
   font-size: map-get($font-sizes, large);
 }
+
+@media only screen and (max-width: px-to-rem(1000px)) {
+  .loading {
+    padding: $section-gap / 2.5 0;
+  }
+}

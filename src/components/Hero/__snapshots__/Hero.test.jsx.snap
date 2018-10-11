@@ -20,13 +20,11 @@ exports[`renders correctly 1`] = `
     </div>
     <img
       alt="Github"
-      height={420}
       src={
         Object {
           "process": [Function],
         }
       }
-      width={431}
     />
   </div>
 </Container>

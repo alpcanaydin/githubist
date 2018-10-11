@@ -28,5 +28,21 @@
 }
 
 .image {
+  width: 100%;
+  max-width: px-to-rem(430px);
+  height: auto;
   margin-left: map-get($spacers, 2x-large);
+}
+
+@media only screen and (max-width: px-to-rem(1000px)) {
+  .hero {
+    flex-direction: column-reverse;
+    padding: $section-gap 0;
+  }
+
+  .image {
+    max-width: px-to-rem(320px);
+    margin-bottom: map-get($spacers, 2x-large);
+    margin-left: 0;
+  }
 }

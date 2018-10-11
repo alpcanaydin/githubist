@@ -1,11 +1,13 @@
+@import '../../theme/theme';
+
 .logo {
-  width: 147px;
-  height: 41px;
+  width: px-to-rem(147px);
+  height: px-to-rem(41px);
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: px-to-rem(1000px)) {
   .logo {
-    width: 120px;
-    height: 33px;
+    width: px-to-rem(120px);
+    height: px-to-rem(33px);
   }
 }

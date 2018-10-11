@@ -30,7 +30,9 @@ class Header extends Component<Props, State> {
     }
   }
 
-  toggleHamburger = () => {
+  toggleHamburger = (event: SyntheticEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+
     const { isHamburgerActive } = this.state;
 
     this.setState({ isHamburgerActive: !isHamburgerActive });
@@ -47,8 +49,10 @@ class Header extends Component<Props, State> {
               <Logo />
             </Link>
 
-            <button
-              type="button"
+            {/* eslint-disable-next-line jsx-a11y/interactive-supports-focus, jsx-a11y/click-events-have-key-events, jsx-a11y/anchor-is-valid */}
+            <a
+              href="#"
+              role="button"
               className={cx(styles.burgerMenu, {
                 [styles.isActive]: isHamburgerActive,
               })}
@@ -59,7 +63,7 @@ class Header extends Component<Props, State> {
               <span aria-hidden="true" />
               <span aria-hidden="true" />
               <span aria-hidden="true" />
-            </button>
+            </a>
           </div>
 
           <nav className={cx(styles.menu, { [styles.isNavActive]: isHamburgerActive })}>
