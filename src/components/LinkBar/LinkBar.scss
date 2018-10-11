@@ -2,15 +2,7 @@
 
 .linkBar {
   display: flex;
-  flex-wrap: nowrap;
   padding-bottom: map-get($spacers, x-large);
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  overflow-x: auto;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 .withoutGap {
@@ -27,5 +19,16 @@
   &:hover,
   &.isActive {
     color: $black-color;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .linkBar {
+    flex-direction: column;
+  }
+
+  .item {
+    margin-right: 0;
+    margin-bottom: map-get($spacers, x-small);
   }
 }

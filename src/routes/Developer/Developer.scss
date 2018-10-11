@@ -41,6 +41,7 @@
 @media only screen and (max-width: 1000px) {
   .heading {
     flex-direction: column;
+    padding: $section-gap / 2.5 0;
     text-align: center;
   }
 

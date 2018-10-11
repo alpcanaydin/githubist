@@ -1,37 +1,89 @@
 // @flow
 
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import React, { Component } from 'react';
+import { withRouter, Link, NavLink, type Location } from 'react-router-dom';
+import cx from 'classnames';
 
 import { Container, Logo } from '..';
 
 import styles from './Header.scss';
 
-const Header = () => (
-  <header className={styles.header}>
-    <Container>
-      <div className={styles.inner}>
-        <Link to="/">
-          <Logo />
-        </Link>
+type Props = {
+  location: Location,
+};
 
-        <nav className={styles.menu}>
-          <NavLink to="/developers" className={styles.menuItem} activeClassName={styles.isActive}>
-            Geliştiriciler
-          </NavLink>
-          <NavLink to="/locations" className={styles.menuItem} activeClassName={styles.isActive}>
-            Şehirler
-          </NavLink>
-          <NavLink to="/languages" className={styles.menuItem} activeClassName={styles.isActive}>
-            Diller
-          </NavLink>
-          <NavLink to="/repositories" className={styles.menuItem} activeClassName={styles.isActive}>
-            Repolar
-          </NavLink>
-        </nav>
-      </div>
-    </Container>
-  </header>
-);
+type State = {
+  isHamburgerActive: boolean,
+};
 
-export default Header;
+class Header extends Component<Props, State> {
+  state = {
+    isHamburgerActive: false,
+  };
+
+  componentDidUpdate(prevProps: Props) {
+    const { location } = this.props;
+
+    if (window && location !== prevProps.location) {
+      // eslint-disable-next-line react/no-did-update-set-state
+      this.setState({ isHamburgerActive: false });
+    }
+  }
+
+  toggleHamburger = () => {
+    const { isHamburgerActive } = this.state;
+
+    this.setState({ isHamburgerActive: !isHamburgerActive });
+  };
+
+  render() {
+    const { isHamburgerActive } = this.state;
+
+    return (
+      <header className={styles.header}>
+        <Container className={styles.inner}>
+          <div className={styles.brand}>
+            <Link to="/" className={styles.logo}>
+              <Logo />
+            </Link>
+
+            <button
+              type="button"
+              className={cx(styles.burgerMenu, {
+                [styles.isActive]: isHamburgerActive,
+              })}
+              aria-label="menu"
+              aria-expanded="false"
+              onClick={this.toggleHamburger}
+            >
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+            </button>
+          </div>
+
+          <nav className={cx(styles.menu, { [styles.isNavActive]: isHamburgerActive })}>
+            <NavLink to="/developers" className={styles.menuItem} activeClassName={styles.isActive}>
+              Geliştiriciler
+            </NavLink>
+            <NavLink to="/locations" className={styles.menuItem} activeClassName={styles.isActive}>
+              Şehirler
+            </NavLink>
+            <NavLink to="/languages" className={styles.menuItem} activeClassName={styles.isActive}>
+              Diller
+            </NavLink>
+            <NavLink
+              to="/repositories"
+              className={styles.menuItem}
+              activeClassName={styles.isActive}
+            >
+              Repolar
+            </NavLink>
+          </nav>
+        </Container>
+      </header>
+    );
+  }
+}
+
+export default withRouter(Header);

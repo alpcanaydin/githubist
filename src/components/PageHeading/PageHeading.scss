@@ -18,3 +18,9 @@
   color: $body-color;
   font-size: map-get($font-sizes, large);
 }
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    padding: $section-gap / 2.5 0;
+  }
+}
