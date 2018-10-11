@@ -119,8 +119,6 @@ class Developers extends PureComponent<Props, State> {
                       username={developerUsage.developer.username}
                       profilePicture={developerUsage.developer.avatarUrl}
                       company={developerUsage.developer.company}
-                      totalStarred={developerUsage.developer.totalStarred}
-                      followers={developerUsage.developer.followers}
                       repositoriesCount={developerUsage.repositoriesCount}
                       repoText={`${data.language.name} Reposu`}
                       location={developerUsage.developer.location}

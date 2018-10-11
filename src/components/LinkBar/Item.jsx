@@ -11,13 +11,22 @@ type Props = {
   to: string | LocationShape,
   isActive?: (match: Match, location: Location) => boolean,
   exact?: boolean,
+  outside?: boolean,
   className?: string,
   activeClassName?: string,
 };
 
-const Item = ({ children, to, isActive, exact, className, activeClassName }: Props) => {
+const Item = ({ children, to, isActive, exact, outside, className, activeClassName }: Props) => {
   const classNames = cx(styles.item, className);
   const activeClassNames = cx(styles.isActive, activeClassName);
+
+  if (outside) {
+    return (
+      <a href={to} className={classNames} target="_blank" rel="noopener noreferrer">
+        {children}
+      </a>
+    );
+  }
 
   return (
     <NavLink
@@ -35,6 +44,7 @@ const Item = ({ children, to, isActive, exact, className, activeClassName }: Pro
 Item.defaultProps = {
   isActive: undefined,
   exact: false,
+  outside: false,
   className: '',
   activeClassName: '',
 };

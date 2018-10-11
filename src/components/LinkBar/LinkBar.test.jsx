@@ -21,6 +21,21 @@ it('renders correctly', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
+it('renders correctly with outside link', () => {
+  const wrapper = mount(
+    <MemoryRouter keyLength={0}>
+      <LinkBar>
+        <Item to="/link-1">Link 1</Item>
+        <Item to="/link-2">Link 2</Item>
+        <Item to="/link-3">Link 3</Item>
+        <Item to="https://github.com">Github</Item>
+      </LinkBar>
+    </MemoryRouter>,
+  );
+
+  expect(wrapper).toMatchSnapshot();
+});
+
 it('renders correctly without bottom gap', () => {
   const wrapper = mount(
     <MemoryRouter keyLength={0}>

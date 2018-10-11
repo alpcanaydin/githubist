@@ -2,8 +2,15 @@
 
 .linkBar {
   display: flex;
-  flex-direction: row;
+  flex-wrap: nowrap;
   padding-bottom: map-get($spacers, x-large);
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .withoutGap {
@@ -11,6 +18,7 @@
 }
 
 .item {
+  flex: 0 0 auto;
   margin-right: map-get($spacers, normal);
   color: $text-muted;
   font-size: map-get($font-sizes, large);

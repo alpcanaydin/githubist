@@ -21,8 +21,6 @@ import toDateString from '../../utils/toDateString';
 import RepositoryQuery from './RepositoryQuery';
 import query from './Repository.graphql';
 
-import styles from './Repository.scss';
-
 type Props = {
   match: Match,
 };
@@ -67,28 +65,20 @@ const Repository = ({ match }: Props) => (
               title={data.repository.slug}
               subtitle={data.repository.description || 'Bu repo için bir açıklama bulunmuyor.'}
             />
-            <div className={styles.links}>
-              <LinkBar>
-                <LinkBarItem exact to={`/repository/${data.repository.slug}`}>
-                  Genel Bilgiler
-                </LinkBarItem>
-                <LinkBarItem exact to={`/${data.repository.developer.username}`}>
-                  Geliştiriciyi Görüntüle
-                </LinkBarItem>
-                <LinkBarItem exact to={`/language/${data.repository.language.slug}`}>
-                  Dili Görüntüle
-                </LinkBarItem>
-              </LinkBar>
-
-              <a
-                href={data.repository.githubUrl}
-                className={styles.githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+            <LinkBar>
+              <LinkBarItem exact to={`/repository/${data.repository.slug}`}>
+                Genel Bilgiler
+              </LinkBarItem>
+              <LinkBarItem exact to={`/${data.repository.developer.username}`}>
+                Geliştiriciyi Görüntüle
+              </LinkBarItem>
+              <LinkBarItem exact to={`/language/${data.repository.language.slug}`}>
+                Dili Görüntüle
+              </LinkBarItem>
+              <LinkBarItem to={data.repository.githubUrl} outside>
                 Github&apos;ta Görüntüle
-              </a>
-            </div>
+              </LinkBarItem>
+            </LinkBar>
 
             <List columns={3}>
               <Highlight subject={data.repository.language.name.toLocaleString()} title="Dil" />

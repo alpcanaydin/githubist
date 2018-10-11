@@ -11,11 +11,17 @@
 }
 
 .info {
+  min-width: 0;
   margin-left: map-get($spacers, normal);
 }
 
 .nameAndUsername {
+  display: block;
+  width: 100%;
+  overflow-x: hidden;
   text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
   &:hover {
     color: $black-color;
@@ -39,9 +45,12 @@
 }
 
 .company {
+  overflow: hidden;
   margin: 0;
   color: $body-color;
   font-size: map-get($font-sizes, small);
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .meta {
@@ -54,6 +63,10 @@
   margin-right: map-get($spacers, normal);
   font-size: map-get($font-sizes, small);
   font-weight: 600;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .location {
@@ -65,7 +78,12 @@
   }
 }
 
-.githubCreatedAt {
-  margin-right: 0;
-  margin-left: auto;
+@media only screen and (max-width: 1000px) {
+  .meta {
+    flex-direction: column;
+  }
+
+  .metaItem {
+    margin-right: 0;
+  }
 }

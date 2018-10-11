@@ -2,7 +2,6 @@
 
 .list {
   display: grid;
-  grid-auto-rows: 1fr;
   grid-column-gap: map-get($spacers, large);
   grid-row-gap: map-get($spacers, large);
 }
@@ -17,4 +16,10 @@
 
 .columns3 {
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media only screen and (max-width: 1000px) {
+  .list {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
 }

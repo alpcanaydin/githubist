@@ -58,10 +58,10 @@ exports[`renders correctly 1`] = `
           <div>
             <Link
               replace={false}
-              to="/alpcanaydin/github.ist"
+              to="/repository/alpcanaydin/github.ist"
             >
               <a
-                href="/alpcanaydin/github.ist"
+                href="/repository/alpcanaydin/github.ist"
                 onClick={[Function]}
               >
                 alpcanaydin/github.ist
@@ -159,10 +159,10 @@ exports[`renders correctly with github creation date 1`] = `
           <div>
             <Link
               replace={false}
-              to="/alpcanaydin/github.ist"
+              to="/repository/alpcanaydin/github.ist"
             >
               <a
-                href="/alpcanaydin/github.ist"
+                href="/repository/alpcanaydin/github.ist"
                 onClick={[Function]}
               >
                 alpcanaydin/github.ist
@@ -266,10 +266,10 @@ exports[`renders correctly with rank 1`] = `
           <div>
             <Link
               replace={false}
-              to="/alpcanaydin/github.ist"
+              to="/repository/alpcanaydin/github.ist"
             >
               <a
-                href="/alpcanaydin/github.ist"
+                href="/repository/alpcanaydin/github.ist"
                 onClick={[Function]}
               >
                 #1 alpcanaydin/github.ist
@@ -367,10 +367,10 @@ exports[`renders correctly without description 1`] = `
           <div>
             <Link
               replace={false}
-              to="/alpcanaydin/github.ist"
+              to="/repository/alpcanaydin/github.ist"
             >
               <a
-                href="/alpcanaydin/github.ist"
+                href="/repository/alpcanaydin/github.ist"
                 onClick={[Function]}
               >
                 alpcanaydin/github.ist

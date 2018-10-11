@@ -29,12 +29,21 @@
 
 .language {
   margin-right: 0;
-  margin-left: auto;
   color: $secondary-color;
   font-weight: 600;
   text-decoration: none;
 
   &:hover {
     text-decoration: underline;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .meta {
+    flex-direction: column;
+  }
+
+  .metaItem {
+    margin-right: 0;
   }
 }

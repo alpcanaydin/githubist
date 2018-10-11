@@ -119,7 +119,9 @@ class DeveloperList extends PureComponent<Props, State> {
                       company={developer.company}
                       totalStarred={developer.totalStarred}
                       followers={developer.followers}
-                      repositoriesCount={developer.stats.repositoriesCount}
+                      repositoriesCount={
+                        developer.githubCreatedAt ? undefined : developer.stats.repositoriesCount
+                      }
                       location={developer.location}
                       githubCreatedAt={developer.githubCreatedAt}
                     />

@@ -7,6 +7,7 @@ import cx from 'classnames';
 import { Avatar, Box } from '..';
 
 import toDateString from '../../utils/toDateString';
+import abbrNumber from '../../utils/abbrNumber';
 
 import styles from './DeveloperCard.scss';
 
@@ -16,11 +17,11 @@ type Props = {
   username: string,
   profilePicture: string,
   company?: string,
-  followers: number,
-  totalStarred: number,
-  repositoriesCount: number,
+  followers?: number,
+  totalStarred?: number,
+  repositoriesCount?: number,
   repoText?: string,
-  location: { name: string, slug: string },
+  location?: { name: string, slug: string },
   githubCreatedAt?: string,
 };
 
@@ -54,18 +55,24 @@ const DeveloperCard = ({
     </div>
 
     <div className={styles.meta}>
-      <Link to={`/location/${location.slug}`} className={cx(styles.metaItem, styles.location)}>
-        {location.name}
-      </Link>
-      <span className={styles.metaItem}>{totalStarred.toLocaleString()} Star&apos;lanma</span>
-      <span className={styles.metaItem}>{followers.toLocaleString()} Takipçi</span>
-      <span className={styles.metaItem}>
-        {repositoriesCount.toLocaleString()} {repoText}
-      </span>
-      {githubCreatedAt && (
-        <span className={cx(styles.metaItem, styles.githubCreatedAt)}>
-          {toDateString(githubCreatedAt)}
+      {location && (
+        <Link to={`/location/${location.slug}`} className={cx(styles.metaItem, styles.location)}>
+          {location.name}
+        </Link>
+      )}
+      {typeof totalStarred !== 'undefined' && (
+        <span className={styles.metaItem}>{abbrNumber(totalStarred)} Star&apos;lanma</span>
+      )}
+      {typeof followers !== 'undefined' && (
+        <span className={cx(styles.metaItem)}>{abbrNumber(followers)} Takipçi</span>
+      )}
+      {typeof repositoriesCount !== 'undefined' && (
+        <span className={cx(styles.metaItem)}>
+          {repositoriesCount.toLocaleString()} {repoText}
         </span>
+      )}
+      {githubCreatedAt && (
+        <span className={cx(styles.metaItem)}>{toDateString(githubCreatedAt)}</span>
       )}
     </div>
   </Box>
@@ -73,8 +80,12 @@ const DeveloperCard = ({
 
 DeveloperCard.defaultProps = {
   rank: undefined,
+  followers: undefined,
+  totalStarred: undefined,
+  location: undefined,
   githubCreatedAt: '',
   company: '',
+  repositoriesCount: undefined,
   repoText: 'Repo',
 };
 

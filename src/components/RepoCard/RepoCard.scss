@@ -4,6 +4,7 @@
   color: $black-color;
   font-weight: 600;
   text-decoration: none;
+  word-break: break-all;
 
   &:hover {
     text-decoration: underline;
@@ -12,6 +13,7 @@
 
 .description {
   margin: 0;
+  word-break: break-word;
 }
 
 .meta {
@@ -38,4 +40,14 @@
 .githubCreatedAt {
   margin-right: 0;
   margin-left: auto;
+}
+
+@media only screen and (max-width: 1000px) {
+  .meta {
+    flex-direction: column;
+  }
+
+  .metaItem {
+    margin-right: 0;
+  }
 }

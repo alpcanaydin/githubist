@@ -85,15 +85,10 @@ const Developer = ({ match }: Props) => (
                 <LinkBarItem exact to={`/${data.developer.username}/languages`}>
                   Dil Kullanımı
                 </LinkBarItem>
+                <LinkBarItem to={data.developer.githubUrl} outside>
+                  Github&apos;ta Görüntüle
+                </LinkBarItem>
               </LinkBar>
-              <a
-                href={data.developer.githubUrl}
-                className={styles.githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Github&apos;ta Görüntüle
-              </a>
             </div>
 
             <Switch>

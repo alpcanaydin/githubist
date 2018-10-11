@@ -9,6 +9,8 @@
   color: $black-color;
   font-size: map-get($heading-sizes, h1);
   font-weight: 600;
+  line-height: $heading-line-height;
+  word-wrap: break-word;
 }
 
 .subtitle {
