@@ -12,5 +12,5 @@
     "stage-0",
     "react"
   ],
-  "plugins": ["universal-import", "react-hot-loader/babel"]
+  "plugins": ["universal-import"]
 }
