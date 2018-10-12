@@ -15,8 +15,6 @@ process.on('unhandledRejection', err => {
   throw err;
 });
 
-// TODO: Dotenv
-
 const { measureFileSizesBeforeBuild } = FileSizeReporter;
 const { printFileSizesAfterBuild } = FileSizeReporter;
 const WARN_AFTER_BUNDLE_GZIP_SIZE = 512 * 1024;
