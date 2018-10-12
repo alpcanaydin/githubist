@@ -69,6 +69,8 @@ export default ({ clientStats }: any) => async (req: express$Request, res: expre
         ${helmet.meta.toString()}
         ${helmet.link.toString()}
         ${styles.toString()}
+
+        <link rel="shortcut icon" href="/favicon.png">
       </head>
       <body ${helmet.bodyAttributes.toString()}>
         <div id="react-root">${content}</div>
