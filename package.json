@@ -6,7 +6,7 @@
     "start": "npm run clear:dev && cross-env NODE_ENV=development node scripts/start.js",
     "build": "cross-env NODE_ENV=production node scripts/build.js",
     "test": "TZ=Europe/Istanbul node scripts/test.js",
-    "coverage": "node scripts/test.js --coverage",
+    "coverage": "TZ=Europe/Istanbul node scripts/test.js --coverage",
     "lint:js": "eslint .",
     "lint:flow": "flow check",
     "lint:css": "stylelint 'src/**/*.scss'",
