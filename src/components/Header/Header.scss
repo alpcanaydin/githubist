@@ -17,8 +17,11 @@
 
 .brand {
   display: flex;
+  flex-direction: row;
+  flex-grow: 1;
   flex-shrink: 0;
   align-items: center;
+  justify-content: space-around;
 }
 
 .menuItem {
@@ -29,7 +32,7 @@
 .burgerMenu {
   position: relative;
   display: block;
-  width: px-to-rem(16px);
+  width: px-to-rem(28px);
   height: px-to-rem(16px);
   border: 0;
   margin-left: auto;
@@ -100,7 +103,6 @@
 
   .menu {
     display: flex;
-    flex-grow: 1;
     flex-shrink: 0;
     align-items: center;
     justify-content: flex-end;

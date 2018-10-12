@@ -6,6 +6,8 @@ import cx from 'classnames';
 
 import { Container, Logo } from '..';
 
+import Search from '../../containers/Search';
+
 import styles from './Header.scss';
 
 type Props = {
@@ -48,6 +50,8 @@ class Header extends Component<Props, State> {
             <Link to="/" className={styles.logo}>
               <Logo />
             </Link>
+
+            <Search />
 
             {/* eslint-disable-next-line jsx-a11y/interactive-supports-focus, jsx-a11y/click-events-have-key-events, jsx-a11y/anchor-is-valid */}
             <a

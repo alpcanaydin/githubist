@@ -1,0 +1,61 @@
+@import '../../theme/theme';
+
+$z-index: 2;
+
+.container {
+  position: relative;
+  width: 100%;
+  margin: 0 map-get($spacers, x-large);
+}
+
+.input {
+  width: px-to-rem(420px);
+  padding: map-get($spacers, small);
+  border: 1px solid darken($hint-of-red, 2%);
+  background-color: $hint-of-red;
+  border-radius: px-to-rem(2px);
+  color: $black-color;
+  outline: 0;
+}
+
+.suggestionsContainerOpen {
+  position: absolute;
+  z-index: $z-index;
+  top: 51px;
+  display: block;
+  width: 100%;
+  background-color: $white;
+  box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+}
+
+.suggestionsList {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.suggestion {
+  padding: map-get($spacers, small);
+  cursor: pointer;
+}
+
+.suggestionHighlighted {
+  background-color: $primary-color;
+  color: $white;
+}
+
+.suggestionName {
+  display: block;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: px-to-rem(1000px)) {
+  .container {
+    margin: 0 map-get($spacers, normal);
+  }
+
+  .input {
+    width: 100%;
+  }
+}

@@ -35,6 +35,7 @@
     "number-abbreviate": "^2.0.0",
     "react": "^16.5.2",
     "react-apollo": "^2.2.4",
+    "react-autosuggest": "^9.4.2",
     "react-dom": "^16.5.2",
     "react-helmet": "^5.2.0",
     "react-hot-loader": "^4.3.11",
@@ -148,13 +149,9 @@
       "enzyme-to-json/serializer"
     ],
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx}",
-      "!src/index.{js,jsx}",
+      "src/components/**/*.{js,jsx}",
       "!src/components/**/index.{js,jsx}",
-      "!src/components/**/*.stories.{js,jsx}",
-      "!src/routes/*/**/index.{js,jsx}",
-      "!src/types/**/*.js",
-      "!src/styleMock.js"
+      "!src/components/**/*.stories.{js,jsx}"
     ],
     "coverageThreshold": {
       "global": {

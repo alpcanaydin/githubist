@@ -1,0 +1,7 @@
+query($query: String!) {
+  search(query: $query) {
+    name
+    slug
+    type
+  }
+}
