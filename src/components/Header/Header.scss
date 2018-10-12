@@ -43,7 +43,7 @@
 
   span {
     position: absolute;
-    left: calc(50% - px-to-rem(8px));
+    left: calc(50% - 8px);
     display: block;
     width: px-to-rem(16px);
     height: 1px;
