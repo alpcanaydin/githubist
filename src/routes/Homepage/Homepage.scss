@@ -44,5 +44,11 @@
   grid-auto-rows: inherit;
   grid-column-gap: map-get($spacers, large);
   grid-row-gap: map-get($spacers, large);
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: 1fr 1fr;
+}
+
+@media only screen and (max-width: px-to-rem(1000px)) {
+  .repositories {
+    grid-template-columns: 1fr;
+  }
 }
