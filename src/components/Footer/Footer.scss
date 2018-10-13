@@ -15,8 +15,17 @@
 }
 
 .copyright,
-.dataWarn {
+.dataWarn,
+.sponsor {
   color: $text-muted;
+}
+
+.sponsor {
+  img {
+    width: 70px;
+    margin-left: map-get($spacers, x-small);
+    vertical-align: middle;
+  }
 }
 
 .twitterLink {

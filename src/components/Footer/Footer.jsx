@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 
 import { Container, Logo, Section } from '..';
 
+import sponsor from '../../img/atolye15.svg';
+
 import styles from './Footer.scss';
 
 const Footer = () => (
@@ -26,6 +28,13 @@ const Footer = () => (
               , 2018
               <br />
               MIT lisansı ile lisanslanmıştır.
+            </p>
+
+            <p className={styles.sponsor}>
+              Sunucu sponsoru{' '}
+              <a href="https://www.atolye15.com/career" target="_blank" rel="noopener noreferrer">
+                <img src={sponsor} alt="Atölye15" />
+              </a>
             </p>
 
             <p className={styles.dataWarn}>Veri en son 08 Ekim 2018 tarihinde çekilmiştir.</p>
