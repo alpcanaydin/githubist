@@ -20,6 +20,7 @@ export { default as Loading } from './Loading';
 export { default as LocationCard } from './LocationCard';
 export { default as LocationChart } from './LocationChart';
 export { default as Logo } from './Logo';
+export { default as NoData } from './NoData';
 export { default as NotFound } from './NotFound';
 export { default as PageHeading } from './PageHeading';
 export { default as RepoCard } from './RepoCard';

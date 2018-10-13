@@ -34,7 +34,7 @@ const LocationCard = ({
     </Link>
 
     <div className={styles.meta}>
-      {totalDevelopers && (
+      {typeof totalDevelopers !== 'undefined' && (
         <Link to={`/location/${slug}/developers`} className={styles.metaItem}>
           {totalDevelopers.toLocaleString()} Geliştirici
         </Link>
