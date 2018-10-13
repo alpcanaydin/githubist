@@ -112,7 +112,9 @@ class Repositories extends PureComponent<Props, State> {
           return (
             <Fragment>
               <Helmet>
-                <title>{`${data.developer.name} İçin Meşhur Repolar`}</title>
+                <title>
+                  {`${data.developer.name || data.developer.username} İçin Meşhur Repolar`}
+                </title>
               </Helmet>
 
               <ScrollOnBottom

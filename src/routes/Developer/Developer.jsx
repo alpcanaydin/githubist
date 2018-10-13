@@ -48,7 +48,7 @@ const Developer = ({ match }: Props) => (
       return (
         <Fragment>
           <Helmet>
-            <title>{data.developer.name}</title>
+            <title>{data.developer.name || data.developer.username}</title>
             <meta name="description" content={metaDesc} />
 
             <meta name="og:description" content={metaDesc} />

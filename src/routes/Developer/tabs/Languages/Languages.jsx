@@ -111,7 +111,9 @@ class Languages extends PureComponent<Props, State> {
           return (
             <Fragment>
               <Helmet>
-                <title>{`${data.developer.name} İçin Dil Kullanımı`}</title>
+                <title>
+                  {`${data.developer.name || data.developer.username} İçin Dil Kullanımı`}
+                </title>
               </Helmet>
 
               <ScrollOnBottom

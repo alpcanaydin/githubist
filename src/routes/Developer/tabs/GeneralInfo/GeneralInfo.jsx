@@ -29,7 +29,7 @@ const GeneralInfo = ({ match }: Props) => (
       return (
         <Fragment>
           <Helmet>
-            <title>{`${data.developer.name} İçin Genel Bilgiler`}</title>
+            <title>{`${data.developer.name || data.developer.username} İçin Genel Bilgiler`}</title>
           </Helmet>
 
           <List columns={2}>
