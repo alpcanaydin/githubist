@@ -6,7 +6,7 @@ import DeveloperList from '../DeveloperList';
 
 const ByDate = () => (
   <DeveloperList
-    title="İlk Keşfedenler"
+    title="İlk Keşfeden Geliştiriciler"
     orderBy={{ field: 'GITHUB_CREATED_AT', direction: 'ASC' }}
     includeDate
   />

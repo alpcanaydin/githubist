@@ -6,7 +6,7 @@ import LocationList from '../LocationList';
 
 const ByTotalDevelopers = () => (
   <LocationList
-    title="Geliştirici Sayısına Göre"
+    title="Geliştirici Sayısına Göre Şehirler"
     orderBy={{ field: 'TOTAL_DEVELOPERS', direction: 'DESC' }}
   />
 );

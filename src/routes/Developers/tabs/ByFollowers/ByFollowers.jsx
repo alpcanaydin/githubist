@@ -6,7 +6,7 @@ import DeveloperList from '../DeveloperList';
 
 const ByFollowers = () => (
   <DeveloperList
-    title="Takipçi Sayısına Göre"
+    title="Takipçi Sayısına Göre Geliştiriciler"
     orderBy={{ field: 'FOLLOWERS', direction: 'DESC' }}
   />
 );
