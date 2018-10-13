@@ -8,7 +8,14 @@ import { type QueryRenderProps } from 'react-apollo';
 import DevelopersQuery, { type Data, type Variables } from './DevelopersQuery';
 import query from './Developers.graphql';
 
-import { ErrorState, Loading, List, DeveloperCard, ScrollOnBottom } from '../../../../components';
+import {
+  ErrorState,
+  Loading,
+  NoData,
+  List,
+  DeveloperCard,
+  ScrollOnBottom,
+} from '../../../../components';
 
 type Props = {
   match: Match,
@@ -93,6 +100,10 @@ class Developers extends PureComponent<Props, State> {
 
           if (!data || !data.location) {
             return null;
+          }
+
+          if (data.location.developers.length === 0) {
+            return <NoData text="Bu şehir için geliştirici bulunamadi." />;
           }
 
           return (

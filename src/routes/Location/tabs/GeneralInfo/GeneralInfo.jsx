@@ -41,7 +41,11 @@ const GeneralInfo = ({ match }: Props) => (
             />
             <Highlight subject={data.location.totalRepositories.toLocaleString()} title="Repo" />
             <Highlight
-              subject={data.location.languageUsage[0].language.name}
+              subject={
+                data.location.languageUsage.length > 0
+                  ? data.location.languageUsage[0].language.name
+                  : 'Yok'
+              }
               title="En Sevilen Dil"
             />
           </List>

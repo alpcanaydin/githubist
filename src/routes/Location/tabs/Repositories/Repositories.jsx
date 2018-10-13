@@ -8,7 +8,14 @@ import { type QueryRenderProps } from 'react-apollo';
 import RepositoriesQuery, { type Data, type Variables } from './RepositoriesQuery';
 import query from './Repositories.graphql';
 
-import { ErrorState, Loading, List, RepoCard, ScrollOnBottom } from '../../../../components';
+import {
+  ErrorState,
+  Loading,
+  NoData,
+  List,
+  RepoCard,
+  ScrollOnBottom,
+} from '../../../../components';
 
 type Props = {
   match: Match,
@@ -96,6 +103,10 @@ class Repositories extends PureComponent<Props, State> {
 
           if (!data || !data.location) {
             return null;
+          }
+
+          if (data.location.repositories.length === 0) {
+            return <NoData text="Bu şehir için repo bulunamadı." />;
           }
 
           return (

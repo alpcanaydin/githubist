@@ -8,7 +8,14 @@ import { type QueryRenderProps } from 'react-apollo';
 import LanguagesQuery, { type Data, type Variables } from './LanguagesQuery';
 import query from './Languages.graphql';
 
-import { ErrorState, Loading, List, LanguageCard, ScrollOnBottom } from '../../../../components';
+import {
+  ErrorState,
+  Loading,
+  NoData,
+  List,
+  LanguageCard,
+  ScrollOnBottom,
+} from '../../../../components';
 
 type Props = {
   match: Match,
@@ -95,6 +102,10 @@ class Languages extends PureComponent<Props, State> {
 
           if (!data || !data.location) {
             return null;
+          }
+
+          if (data.location.languageUsage.length === 0) {
+            return <NoData text="Bu şehir için dil kullanımı verisi bulunamadı." />;
           }
 
           return (
