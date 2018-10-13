@@ -6,7 +6,7 @@ This is the Web application repo for https://github.ist. You may also want to ta
 
 You need to have `yarn` installed in your computer. After, simple run the command `yarn` in project directory in order to install dependencies. As last step, please copy `.env.sample` file as `.env` and update the variables with the actual values you want to use.
 
-## Start the Application
+## Starting the Application
 
 You can run `yarn start` command in the project directory. Browser window will pop up and you'll able to see development server.
 
