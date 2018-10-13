@@ -55,8 +55,6 @@ export default ({ clientStats }: any) => async (req: express$Request, res: expre
     return;
   }
 
-  const { GA_TRACKING_ID } = process.env;
-
   const initialState = JSON.stringify(client.extract())
     .replace(/</g, '\\u003c')
     .replace(/\u2028/g, '\\u2028')
@@ -72,7 +70,7 @@ export default ({ clientStats }: any) => async (req: express$Request, res: expre
         ${helmet.link.toString()}
         ${styles.toString()}
 
-        <link rel="shortcut icon" href="/favicon.png">
+        <link rel="shortcut icon" href="${process.env.PUBLIC_PATH || ''}/favicon.png">
       </head>
       <body ${helmet.bodyAttributes.toString()}>
         <div id="react-root">${content}</div>
@@ -81,14 +79,14 @@ export default ({ clientStats }: any) => async (req: express$Request, res: expre
         </script>
         ${js.toString()}
 
-        <script async src="https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID ||
-          ''}"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=${process.env
+          .GA_TRACKING_ID || ''}"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', '${GA_TRACKING_ID || ''}');
+          gtag('config', '${process.env.GA_TRACKING_ID || ''}');
         </script>
 
       </body>

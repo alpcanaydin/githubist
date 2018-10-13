@@ -34,7 +34,7 @@ const App = () => (
         title="github.ist"
         rel="search"
         type="application/opensearchdescription+xml"
-        href="/search.xml"
+        href={`${process.env.PUBLIC_PATH || ''}/search.xml`}
       />
     </Helmet>
 

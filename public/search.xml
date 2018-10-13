@@ -2,7 +2,7 @@
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
   <ShortName>github.ist</ShortName>
   <Description>Github Türkiye istatistikleri</Description>
-  <Image height="72" width="72" type="image/x-icon">https://github.ist/favicon.png</Image>
+  <Image height="72" width="72" type="image/x-icon">https://github.ist/static/favicon.png</Image>
   <Url type="text/html" method="get" template="https://github.ist/{searchTerms}"/>
   <Language>tr-tr</Language>
 </OpenSearchDescription>
