@@ -11,7 +11,7 @@ it('renders correctly', () => {
     <MemoryRouter keyLength={0}>
       <RepoCard
         slug="alpcanaydin/github.ist"
-        description="Github Türkiye istatistikleri 2018"
+        description="Github Türkiye istatistikleri 2019"
         language={{ name: 'JavaScript', slug: 'javascript' }}
         stars={200}
         forks={30}
@@ -28,7 +28,7 @@ it('renders correctly with rank', () => {
       <RepoCard
         rank={1}
         slug="alpcanaydin/github.ist"
-        description="Github Türkiye istatistikleri 2018"
+        description="Github Türkiye istatistikleri 2019"
         language={{ name: 'JavaScript', slug: 'javascript' }}
         stars={200}
         forks={30}
@@ -44,7 +44,7 @@ it('renders correctly with github creation date', () => {
     <MemoryRouter keyLength={0}>
       <RepoCard
         slug="alpcanaydin/github.ist"
-        description="Github Türkiye istatistikleri 2018"
+        description="Github Türkiye istatistikleri 2019"
         language={{ name: 'JavaScript', slug: 'javascript' }}
         stars={200}
         forks={30}

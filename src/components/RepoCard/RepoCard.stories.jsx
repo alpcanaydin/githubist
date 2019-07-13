@@ -14,7 +14,7 @@ storiesOf('RepoCard', module)
       <div style={{ width: '600px', margin: '16px' }}>
         <RepoCard
           slug="alpcanaydin/github.ist"
-          description="Github Türkiye istatistikleri 2018"
+          description="Github Türkiye istatistikleri 2019"
           language={{ name: 'JavaScript', slug: 'javascript' }}
           stars={200}
           forks={30}
@@ -28,7 +28,7 @@ storiesOf('RepoCard', module)
         <RepoCard
           rank={1}
           slug="alpcanaydin/github.ist"
-          description="Github Türkiye istatistikleri 2018"
+          description="Github Türkiye istatistikleri 2019"
           language={{ name: 'JavaScript', slug: 'javascript' }}
           stars={200}
           forks={30}
@@ -41,7 +41,7 @@ storiesOf('RepoCard', module)
       <div style={{ width: '600px', margin: '16px' }}>
         <RepoCard
           slug="alpcanaydin/github.ist"
-          description="Github Türkiye istatistikleri 2018"
+          description="Github Türkiye istatistikleri 2019"
           language={{ name: 'JavaScript', slug: 'javascript' }}
           stars={200}
           forks={30}

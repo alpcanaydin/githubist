@@ -16,7 +16,7 @@ const Hero = ({ description }: Props) => (
   <Container>
     <div className={styles.hero}>
       <div>
-        <h6 className={styles.badge}>2018</h6>
+        <h6 className={styles.badge}>2019</h6>
         <h1 className={styles.title}>
           Github
           <br />

@@ -37,7 +37,7 @@ exports[`renders correctly 1`] = `
     }
   >
     <RepoCard
-      description="Github Türkiye istatistikleri 2018"
+      description="Github Türkiye istatistikleri 2019"
       forks={30}
       githubCreatedAt=""
       language={
@@ -68,7 +68,7 @@ exports[`renders correctly 1`] = `
               </a>
             </Link>
             <p>
-              Github Türkiye istatistikleri 2018
+              Github Türkiye istatistikleri 2019
             </p>
           </div>
           <div>
@@ -138,7 +138,7 @@ exports[`renders correctly with github creation date 1`] = `
     }
   >
     <RepoCard
-      description="Github Türkiye istatistikleri 2018"
+      description="Github Türkiye istatistikleri 2019"
       forks={30}
       githubCreatedAt="2014-03-24T13:12:26.000000Z"
       language={
@@ -169,7 +169,7 @@ exports[`renders correctly with github creation date 1`] = `
               </a>
             </Link>
             <p>
-              Github Türkiye istatistikleri 2018
+              Github Türkiye istatistikleri 2019
             </p>
           </div>
           <div>
@@ -244,7 +244,7 @@ exports[`renders correctly with rank 1`] = `
     }
   >
     <RepoCard
-      description="Github Türkiye istatistikleri 2018"
+      description="Github Türkiye istatistikleri 2019"
       forks={30}
       githubCreatedAt=""
       language={
@@ -276,7 +276,7 @@ exports[`renders correctly with rank 1`] = `
               </a>
             </Link>
             <p>
-              Github Türkiye istatistikleri 2018
+              Github Türkiye istatistikleri 2019
             </p>
           </div>
           <div>
