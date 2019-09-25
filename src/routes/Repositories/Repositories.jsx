@@ -31,7 +31,7 @@ const Repos = () => (
         return <ErrorState />;
       }
 
-      const metaTitle = 'Repolar - Github.ist';
+      const metaTitle = 'Repolar - GitHub.ist';
       const metaDesc =
         'Github üzerinde lokasyonu Türkiye olarak gözüken geliştiriciler için repository istatistikleri.';
 
@@ -50,7 +50,7 @@ const Repos = () => (
           <Container>
             <PageHeading
               title="Repolar"
-              subtitle={`Github.ist üzerinde toplam ${data.turkey.totalRepositories.toLocaleString()} repository bulunuyor.`}
+              subtitle={`GitHub.ist üzerinde toplam ${data.turkey.totalRepositories.toLocaleString()} repository bulunuyor.`}
             />
 
             <LinkBar>

@@ -32,7 +32,7 @@ const Developers = () => (
         return <ErrorState />;
       }
 
-      const metaTitle = 'Geliştiriciler - Github.ist';
+      const metaTitle = 'Geliştiriciler - GitHub.ist';
       const metaDesc =
         'Github üzerinde lokasyonu Türkiye olarak gözüken geliştiriciler için istatistikler.';
 
@@ -51,7 +51,7 @@ const Developers = () => (
           <Container>
             <PageHeading
               title="Geliştiriciler"
-              subtitle={`Github.ist üzerinde toplam ${data.turkey.totalDevelopers.toLocaleString()} geliştirici bulunuyor.`}
+              subtitle={`GitHub.ist üzerinde toplam ${data.turkey.totalDevelopers.toLocaleString()} geliştirici bulunuyor.`}
             />
 
             <LinkBar>

@@ -42,7 +42,7 @@ const Developer = ({ match }: Props) => (
         return <ErrorState />;
       }
 
-      const metaTitle = `${data.developer.name} - Github.ist`;
+      const metaTitle = `${data.developer.name} - GitHub.ist`;
       const metaDesc = `${data.developer.name} için Github Türkiye istatistikleri`;
 
       return (

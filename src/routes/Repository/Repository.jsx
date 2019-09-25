@@ -43,7 +43,7 @@ const Repository = ({ match }: Props) => (
         return <ErrorState />;
       }
 
-      const metaTitle = `${data.repository.slug} - Github.ist`;
+      const metaTitle = `${data.repository.slug} - GitHub.ist`;
       const metaDesc = `${data.repository.slug} için Github Türkiye istatistikleri`;
 
       return (
@@ -84,7 +84,7 @@ const Repository = ({ match }: Props) => (
               <Highlight subject={data.repository.language.name.toLocaleString()} title="Dil" />
               <Highlight
                 subject={data.repository.stats.rank.toLocaleString()}
-                title="Github.ist Sıralaması"
+                title="GitHub.ist Sıralaması"
               />
               <Highlight
                 subject={data.repository.stats.languageRank.toLocaleString()}

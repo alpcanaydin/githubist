@@ -31,7 +31,7 @@ const Locations = () => (
         return <ErrorState />;
       }
 
-      const metaTitle = 'Şehirler - Github.ist';
+      const metaTitle = 'Şehirler - GitHub.ist';
       const metaDesc = 'Github için Türkiye şehirleri için istatikler.';
 
       return (
@@ -49,7 +49,7 @@ const Locations = () => (
           <Container>
             <PageHeading
               title="Şehirler"
-              subtitle={`Github.ist üzerinde toplam ${data.turkey.totalLocations.toLocaleString()} şehir bulunuyor.`}
+              subtitle={`GitHub.ist üzerinde toplam ${data.turkey.totalLocations.toLocaleString()} şehir bulunuyor.`}
             />
 
             <LinkBar>

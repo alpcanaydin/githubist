@@ -41,7 +41,7 @@ const Location = ({ match }: Props) => (
         return <ErrorState />;
       }
 
-      const metaTitle = `${data.location.name} - Github.ist`;
+      const metaTitle = `${data.location.name} - GitHub.ist`;
       const metaDesc = `${data.location.name} için Github Türkiye istatistikleri`;
 
       return (

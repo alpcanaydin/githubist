@@ -20,7 +20,7 @@ const Logo = ({ className, alt }: Props) => {
 
 Logo.defaultProps = {
   className: '',
-  alt: 'Github.ist',
+  alt: 'GitHub.ist',
 };
 
 export default Logo;

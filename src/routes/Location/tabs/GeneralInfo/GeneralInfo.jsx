@@ -33,7 +33,7 @@ const GeneralInfo = ({ match }: Props) => (
           <List columns={2}>
             <Highlight
               subject={data.location.stats.rank.toLocaleString()}
-              title="Github.ist Sıralaması"
+              title="GitHub.ist Sıralaması"
             />
             <Highlight
               subject={data.location.totalDevelopers.toLocaleString()}

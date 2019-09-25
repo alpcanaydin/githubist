@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <img
-  alt="Github.ist"
+  alt="GitHub.ist"
   className=""
   src={
     Object {

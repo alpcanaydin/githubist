@@ -8,13 +8,13 @@ import './App.scss';
 import Routes from './routes';
 import { Header, Footer, ScrollToTop } from './components';
 
-const metaTitle = 'Github.ist';
+const metaTitle = 'GitHub.ist';
 const metaDesc =
   'Github üzerinde lokasyonu Türkiye olarak gözüken geliştiriciler için şehir, dil, repo ve geliştirici istatistikleri.';
 
 const App = () => (
   <Fragment>
-    <Helmet titleTemplate="%s - Github.ist" defaultTitle="Github.ist">
+    <Helmet titleTemplate="%s - GitHub.ist" defaultTitle="GitHub.ist">
       <html lang="tr" />
 
       <meta name="description" content={metaDesc} />
