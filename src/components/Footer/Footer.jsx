@@ -37,7 +37,7 @@ const Footer = () => (
               </a>
             </p>
 
-            <p className={styles.dataWarn}>Veri en son 13 Temmuz 2019 tarihinde çekilmiştir.</p>
+            <p className={styles.dataWarn}>Veri en son 24 Kasım 2019 tarihinde çekilmiştir.</p>
           </div>
 
           <div className={styles.menus}>
