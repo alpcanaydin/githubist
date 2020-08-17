@@ -25,7 +25,7 @@ const Footer = () => (
               >
                 Alpcan Aydın
               </a>
-              , 2019
+              , 2020
               <br />
               MIT lisansı ile lisanslanmıştır.
             </p>
