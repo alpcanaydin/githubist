@@ -22,7 +22,6 @@ const BasicDeveloperCard = ({ profilePicture, name, username, info }: Props) => 
 
     <Link to={`/${username}`} className={styles.nameAndUsername}>
       <span className={styles.name}>{name}</span>
-      <span className={styles.username}>{username}</span>
     </Link>
 
     {info && <p className={styles.info}>{info}</p>}
