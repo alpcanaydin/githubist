@@ -9,6 +9,9 @@ import sponsor from '../../img/atolye15.svg';
 
 import styles from './Footer.scss';
 
+const now = new Date();
+const CURRENT_YEAR = now.getFullYear();
+
 const Footer = () => (
   <footer className={styles.footer}>
     <Section>
@@ -25,7 +28,7 @@ const Footer = () => (
               >
                 Alpcan Aydın
               </a>
-              , 2020
+              , {CURRENT_YEAR}
               <br />
               MIT lisansı ile lisanslanmıştır.
             </p>
@@ -37,7 +40,9 @@ const Footer = () => (
               </a>
             </p>
 
-            <p className={styles.dataWarn}>Veri en son 17 Ağustos 2020 tarihinde çekilmiştir.</p>
+            <p className={styles.dataWarn}>
+              Veri en son {process.env.LAST_UPDATE_DATE} tarihinde çekilmiştir.
+            </p>
           </div>
 
           <div className={styles.menus}>

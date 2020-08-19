@@ -8,6 +8,9 @@ import { Container } from '..';
 
 import githubLogo from '../../img/github.svg';
 
+const now = new Date();
+const CURRENT_YEAR = now.getFullYear();
+
 type Props = {
   description: string,
 };
@@ -16,7 +19,7 @@ const Hero = ({ description }: Props) => (
   <Container>
     <div className={styles.hero}>
       <div>
-        <h6 className={styles.badge}>2020</h6>
+        <h6 className={styles.badge}>{CURRENT_YEAR} </h6>
         <h1 className={styles.title}>
           Github
           <br />

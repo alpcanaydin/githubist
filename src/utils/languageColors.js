@@ -28,7 +28,7 @@ const colors = {
     backgroundColor: '#57c9ff',
     color: '#2d2e33',
   },
-  
+
   csharp: {
     backgroundColor: '#9857FF',
     color: '#fff',
