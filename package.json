@@ -91,7 +91,7 @@
     "jest": "^23.4.2",
     "jest-transform-graphql": "^2.1.0",
     "lint-staged": "^7.2.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "optimize-css-assets-webpack-plugin": "^5.0.0",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.13.7",
