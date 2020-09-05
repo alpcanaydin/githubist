@@ -31,7 +31,7 @@ const Languages = () => (
         return <ErrorState />;
       }
 
-      const metaTitle = 'Diller - Github.ist';
+      const metaTitle = 'Diller - GitHub.ist';
       const metaDesc =
         'Github üzerinde lokasyonu Türkiye olarak gözüken geliştiriciler için dil istatikleri.';
 
@@ -50,7 +50,7 @@ const Languages = () => (
           <Container>
             <PageHeading
               title="Diller"
-              subtitle={`Github.ist üzerinde toplam ${data.turkey.totalLanguages.toLocaleString()} dil bulunuyor.`}
+              subtitle={`GitHub.ist üzerinde toplam ${data.turkey.totalLanguages.toLocaleString()} dil bulunuyor.`}
             />
 
             <LinkBar>

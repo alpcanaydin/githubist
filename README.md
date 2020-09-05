@@ -1,4 +1,4 @@
-# Github.ist
+# GitHub.ist
 
 This is the Web application repo for https://github.ist. You may also want to take a look to [API](https://github.com/alpcanaydin/githubist-api) and [Fetcher](https://github.com/alpcanaydin/githubist-fetcher)
 
