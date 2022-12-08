@@ -27,7 +27,7 @@
     "apollo-link-http": "^1.5.5",
     "classnames": "^2.2.6",
     "dotenv": "^6.0.0",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "graphql": "^14.0.2",
     "graphql-tag": "^2.10.0",
     "helmet": "^3.13.0",
